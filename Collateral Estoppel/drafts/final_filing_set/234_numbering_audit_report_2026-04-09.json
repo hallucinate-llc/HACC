@@ -1,0 +1,2441 @@
+[
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md",
+    "issues": [
+      {
+        "line": 81,
+        "type": "duplicate_token",
+        "token": "53",
+        "text": "53. The March 31, 2026 guardianship petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport, while also stating that no prior guardian, trustee, health-care representative, or attorney-in-fact previously existed."
+      },
+      {
+        "line": 81,
+        "type": "decrease",
+        "prev": "55",
+        "cur": "53",
+        "text": "53. The March 31, 2026 guardianship petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport, while also stating that no prior guardian, trustee, health-care representative, or attorney-in-fact previously existed."
+      },
+      {
+        "line": 82,
+        "type": "duplicate_token",
+        "token": "54",
+        "text": "54. My earlier review of records in this matter repeatedly raised the possibility that prior authority-related proceedings or appointments may already have addressed overlapping control issues concerning Jane Kay Cortez."
+      },
+      {
+        "line": 83,
+        "type": "duplicate_token",
+        "token": "55",
+        "text": "55. I do not claim final issue preclusion has already been proven. I understand final collateral-estoppel adjudication requires proof of final decision, issue identity, party/privity, and full and fair opportunity, and that clerk-certified copies would strengthen that proof."
+      }
+    ],
+    "count_entries": 80
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/05_certificate_of_service_final.md",
+    "issues": [
+      {
+        "line": 23,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 23,
+        "type": "decrease",
+        "prev": "5",
+        "cur": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 29,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Counsel for Solomon Barber (same-matter notice copy; acceptance disputed)"
+      },
+      {
+        "line": 38,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 38,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Personal service."
+      },
+      {
+        "line": 40,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Email/eService (if permitted by rule/order/acceptance)."
+      },
+      {
+        "line": 41,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Other authorized method: __________________________________________."
+      },
+      {
+        "line": 42,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. Text message/MMS service (if permitted by rule/order or previously authorized alternate service)."
+      }
+    ],
+    "count_entries": 12
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md",
+    "issues": [
+      {
+        "line": 31,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Oregon issue-preclusion elements:"
+      },
+      {
+        "line": 31,
+        "type": "decrease",
+        "prev": "7",
+        "cur": "1",
+        "text": "1. Oregon issue-preclusion elements:"
+      },
+      {
+        "line": 34,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Identical-issue requirement:"
+      },
+      {
+        "line": 37,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Prior separate proceeding requirement / same-case limitation:"
+      },
+      {
+        "line": 41,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Current caution:"
+      },
+      {
+        "line": 46,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Remedial contempt procedure and aggrieved-party initiation:"
+      },
+      {
+        "line": 46,
+        "type": "decrease",
+        "prev": "4",
+        "cur": "1",
+        "text": "1. Remedial contempt procedure and aggrieved-party initiation:"
+      },
+      {
+        "line": 49,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Compelling attendance after failure to appear on an order to appear:"
+      },
+      {
+        "line": 52,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Remedial sanctions available in contempt:"
+      },
+      {
+        "line": 55,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Improper-purpose / unsupported-filing sanctions:"
+      },
+      {
+        "line": 58,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. Discovery / production sanction support if subpoena-related production becomes litigated through motion practice:"
+      },
+      {
+        "line": 64,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Service of orders, motions, notices, and other later-filed papers:"
+      },
+      {
+        "line": 64,
+        "type": "decrease",
+        "prev": "5",
+        "cur": "1",
+        "text": "1. Service of orders, motions, notices, and other later-filed papers:"
+      },
+      {
+        "line": 67,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Time-computation rule:"
+      },
+      {
+        "line": 70,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Additional time after certain service methods:"
+      },
+      {
+        "line": 73,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Subpoena obedience / warning language:"
+      },
+      {
+        "line": 76,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. Clackamas supplementary probate rules:"
+      }
+    ],
+    "count_entries": 21
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/106_motion_deficiency_audit_2026-04-07.md",
+    "issues": [
+      {
+        "line": 62,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Complete and certify service timeline entries in `28_active_service_log_2026-04-07.csv`."
+      },
+      {
+        "line": 62,
+        "type": "decrease",
+        "prev": "5",
+        "cur": "1",
+        "text": "1. Complete and certify service timeline entries in `28_active_service_log_2026-04-07.csv`."
+      },
+      {
+        "line": 63,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Convert recipient prefill compel pairs (`88/89`, `90/91`, `92/93`, `94/95`, `96/97`, `98/99`) using conversion sheets (`100` through `105`)."
+      },
+      {
+        "line": 64,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Attach the completed proofs to each compel/show-cause filing bundle and refresh certificates of service."
+      }
+    ],
+    "count_entries": 8
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/107_motion_deficiency_audit_post_patch_2026-04-07.md",
+    "issues": [
+      {
+        "line": 22,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Certified preclusion packet still incomplete for final merits dismissal."
+      },
+      {
+        "line": 22,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Certified preclusion packet still incomplete for final merits dismissal."
+      },
+      {
+        "line": 25,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Contempt/nonappearance branch still needs certified hearing/service event proof."
+      },
+      {
+        "line": 28,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Compel motions remain non-fileable until actual recipient timelines are populated."
+      },
+      {
+        "line": 33,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Populate real service events in `28_active_service_log_2026-04-07.csv` and attach returns/receipts."
+      },
+      {
+        "line": 33,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Populate real service events in `28_active_service_log_2026-04-07.csv` and attach returns/receipts."
+      },
+      {
+        "line": 34,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Convert recipient compel prefill packets using conversion sheets 100-105."
+      },
+      {
+        "line": 35,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Attach certified records for Exhibits 8-10, then re-run a final readiness check before filing sanctions-dependent requests."
+      }
+    ],
+    "count_entries": 9
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/113_motion_packet_readiness_matrix_2026-04-08.md",
+    "issues": [
+      {
+        "line": 62,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Party-fill required before filing:"
+      },
+      {
+        "line": 62,
+        "type": "decrease",
+        "prev": "24",
+        "cur": "1",
+        "text": "1. Party-fill required before filing:"
+      },
+      {
+        "line": 67,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Court-fill expected (not a defect if left blank in proposed orders):"
+      },
+      {
+        "line": 71,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Evidence gates still affecting merits strength:"
+      },
+      {
+        "line": 77,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Complete `05` and `75` from your actual service proofs (email logs, tracking, affidavits)."
+      },
+      {
+        "line": 77,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Complete `05` and `75` from your actual service proofs (email logs, tracking, affidavits)."
+      },
+      {
+        "line": 78,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Convert `24` to a recipient-specific filed version only after timeline fields are completed from service logs and deficiency notices."
+      },
+      {
+        "line": 79,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. File `74 + 82 + 75 + 76` as a supplemental package when exhibits 8/9/10 are in hand."
+      },
+      {
+        "line": 80,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Keep `03/03A` framed as threshold show-cause/record-completion requests unless and until certified nonappearance and direct actor-identification proofs are attached."
+      }
+    ],
+    "count_entries": 31
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/119_certificate_of_service_for_supplemental_declaration_google_voice_sms_service_chain_final.md",
+    "issues": [
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 21,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 27,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Counsel for Solomon Barber (if appearance is active in this matter)"
+      },
+      {
+        "line": 42,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 42,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 43,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Personal service."
+      },
+      {
+        "line": 44,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Email/eService (if permitted by rule/order/acceptance)."
+      }
+    ],
+    "count_entries": 10
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/140_certificate_of_service_for_supplemental_cross_forum_docket_records_final.md",
+    "issues": [
+      {
+        "line": 29,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Samuel Barber (or counsel of record for same matter)"
+      },
+      {
+        "line": 29,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Solomon Samuel Barber (or counsel of record for same matter)"
+      },
+      {
+        "line": 32,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Additional party/counsel (if any): ___________________________"
+      }
+    ],
+    "count_entries": 5
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/147_motion_issue_preclusion_analysis_2026-04-08.md",
+    "issues": [
+      {
+        "line": 18,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. It strengthens the request to limit this probate matter to guardianship-specific issues while preclusion proof is developed."
+      },
+      {
+        "line": 18,
+        "type": "decrease",
+        "prev": "4",
+        "cur": "1",
+        "text": "1. It strengthens the request to limit this probate matter to guardianship-specific issues while preclusion proof is developed."
+      },
+      {
+        "line": 19,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. It improves the argument for avoiding inconsistent findings across probate, eviction, and federal tracks."
+      },
+      {
+        "line": 20,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. It preserves the dismissal request, but only to the extent admissible records satisfy Oregon preclusion elements."
+      },
+      {
+        "line": 24,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Certified Justice Court docket/order set showing finality and issue identity for any asserted preclusion issue."
+      },
+      {
+        "line": 24,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Certified Justice Court docket/order set showing finality and issue identity for any asserted preclusion issue."
+      },
+      {
+        "line": 25,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Filed-stamped District of Oregon docket sheet with actual case number and status."
+      },
+      {
+        "line": 26,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. If asserting judicial assignment/advisement facts (for example, assignment to a specific federal judge), include a filed docket printout or other admissible record confirming that point."
+      },
+      {
+        "line": 27,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Certified records for Ashley matters (`26P000432`, `26P000433`) if they will be used beyond contextual overlap/venue narrative."
+      },
+      {
+        "line": 31,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. File current motion as threshold narrowing/proof-gating relief first."
+      },
+      {
+        "line": 31,
+        "type": "decrease",
+        "prev": "4",
+        "cur": "1",
+        "text": "1. File current motion as threshold narrowing/proof-gating relief first."
+      },
+      {
+        "line": 32,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Attach presently available overlap exhibits and declaration support."
+      },
+      {
+        "line": 33,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Lodge supplemental certified cross-forum records promptly once obtained."
+      },
+      {
+        "line": 34,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Ask the Court to reserve merits-preclusion adjudication until certified records are in the file."
+      },
+      {
+        "line": 38,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `02_motion_to_dismiss_for_collateral_estoppel_final.md`"
+      },
+      {
+        "line": 38,
+        "type": "decrease",
+        "prev": "4",
+        "cur": "1",
+        "text": "1. `02_motion_to_dismiss_for_collateral_estoppel_final.md`"
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. `04_declaration_of_benjamin_barber_in_support_of_motions_final.md`"
+      },
+      {
+        "line": 40,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. `evidence/email_imports/starworks5-fraud-reimport-20260404/0019-Re-Allegations-of-Fraud---JC-Household-CAMTdTS9_rTXe5kUn5Qea5gNfwanuQFM2RE-dQSkq9-NBquZv7g-mail.gmail.com/message.json`"
+      },
+      {
+        "line": 41,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. `85_case_caption_matrix_2026-04-07.md`"
+      }
+    ],
+    "count_entries": 21
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/150_certificate_of_service_for_notice_of_clerk_relayed_federal_advisement_status_final.md",
+    "issues": [
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 21,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 42,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 42,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 43,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Personal service."
+      },
+      {
+        "line": 44,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Email/eService (if permitted by rule/order/acceptance)."
+      }
+    ],
+    "count_entries": 9
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/153_certificate_of_service_for_joinder_and_fallback_motions_151_152_final.md",
+    "issues": [
+      {
+        "line": 23,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 23,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 29,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Counsel for Solomon Barber (same-matter notice copy; acceptance disputed unless stated otherwise)"
+      },
+      {
+        "line": 44,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 44,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 45,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Personal service."
+      },
+      {
+        "line": 46,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Email/eService (if permitted by rule/order/acceptance)."
+      }
+    ],
+    "count_entries": 10
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/154_certificate_of_service_objection_and_order_final.md",
+    "issues": [
+      {
+        "line": 22,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber (Petitioner)"
+      },
+      {
+        "line": 22,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Solomon Barber (Petitioner)"
+      },
+      {
+        "line": 28,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Counsel for Solomon Barber"
+      },
+      {
+        "line": 38,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 38,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Personal service."
+      },
+      {
+        "line": 40,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Email/eService (if permitted by rule/order/acceptance)."
+      }
+    ],
+    "count_entries": 9
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/155_one_page_guardianship_objection_hearing_checklist_2026-04-09.md",
+    "issues": [
+      {
+        "line": 31,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. [152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md)"
+      },
+      {
+        "line": 31,
+        "type": "decrease",
+        "prev": "6",
+        "cur": "1",
+        "text": "1. [152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md)"
+      },
+      {
+        "line": 32,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. [219_declaration_of_benjamin_barber_short_form_threshold_relief_final_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/219_declaration_of_benjamin_barber_short_form_threshold_relief_final_2026-04-09.md)"
+      },
+      {
+        "line": 33,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. [jane_cortez_declaration_april_8_2026_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/jane_cortez_declaration_april_8_2026_ocr.txt)"
+      },
+      {
+        "line": 34,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. [writ_of_assistance_solomon_barber_ocr.txt](/home/barberb/HACC/workspace/writ_of_assistance_solomon_barber_ocr.txt)"
+      },
+      {
+        "line": 38,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Service occurrence: personally observed and photo-supported (April 9, 2026)."
+      },
+      {
+        "line": 38,
+        "type": "decrease",
+        "prev": "4",
+        "cur": "1",
+        "text": "1. Service occurrence: personally observed and photo-supported (April 9, 2026)."
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Final legal service sufficiency: still tied to filing of official sheriff return/proof-of-service."
+      },
+      {
+        "line": 40,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Hearing ask before return is filed: sequence/notice handling and noncoercive threshold relief only."
+      },
+      {
+        "line": 41,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Any uncertified status note, oral relay, or summary chart is context only and not completed proof for dispositive or enforcement findings."
+      },
+      {
+        "line": 45,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. APS / police allegation omits same-day restraining-order context."
+      },
+      {
+        "line": 45,
+        "type": "decrease",
+        "prev": "4",
+        "cur": "1",
+        "text": "1. APS / police allegation omits same-day restraining-order context."
+      },
+      {
+        "line": 46,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Benjamin did not just recently begin living with Jane; he has lived with her for more than six years."
+      },
+      {
+        "line": 47,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. The housing crisis included HACC / Quantum delay and Section 18 relocation failure, not just alleged Benjamin conduct."
+      },
+      {
+        "line": 48,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. The petition seeks coercive and overbroad relief: transport, placement, plenary authority, and fees from Jane's funds."
+      },
+      {
+        "line": 49,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. Trust / inheritance / authority papers were not cleanly produced even while Solomon sought broad control, and the earlier restraining-order exhibits appear to show Jane describing papers she signed with Sam / Solomon that she did not understand, including one she thought had something to do with her dad's will."
+      },
+      {
+        "line": 50,
+        "type": "duplicate_token",
+        "token": "6",
+        "text": "6. If the petition is materially barred or defect-ridden, the Court may also need to ask whether it should have been filed or maintained in this form."
+      },
+      {
+        "line": 66,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. deny further coercive writ-based relief;"
+      },
+      {
+        "line": 66,
+        "type": "decrease",
+        "prev": "6",
+        "cur": "1",
+        "text": "1. deny further coercive writ-based relief;"
+      },
+      {
+        "line": 67,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. deny plenary and placement authority on the present showing;"
+      },
+      {
+        "line": 68,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. deny fees from Jane's funds;"
+      },
+      {
+        "line": 69,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. set any further hearing only on genuine guardianship questions, with a clean notice and predicate record."
+      },
+      {
+        "line": 70,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. reserve any sanctions decision unless and until the Court decides whether the petition was materially barred or seriously defective."
+      }
+    ],
+    "count_entries": 25
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/157_certificate_of_service_quantum_subpoena_final.md",
+    "issues": [
+      {
+        "line": 24,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Quantum Residential Custodian of Records"
+      },
+      {
+        "line": 24,
+        "type": "decrease",
+        "prev": "5",
+        "cur": "1",
+        "text": "1. Quantum Residential Custodian of Records"
+      },
+      {
+        "line": 30,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Any party or counsel entitled to subpoena notice under ORCP 55"
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Personal service."
+      },
+      {
+        "line": 39,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Personal service."
+      },
+      {
+        "line": 40,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. First-class U.S. Mail."
+      },
+      {
+        "line": 41,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Certified mail/return receipt."
+      },
+      {
+        "line": 42,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Email/eService (if permitted by rule/order/acceptance)."
+      },
+      {
+        "line": 43,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. Other authorized method: __________________________________________."
+      }
+    ],
+    "count_entries": 12
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/159_certificate_of_service_for_supplemental_declaration_re_orcp29a_factors_final.md",
+    "issues": [
+      {
+        "line": 23,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 23,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 29,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Counsel for Solomon Barber (same-matter notice copy; acceptance disputed unless stated otherwise)"
+      },
+      {
+        "line": 44,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 44,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 45,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Personal service."
+      },
+      {
+        "line": 46,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Email/eService (if permitted by rule/order/acceptance)."
+      }
+    ],
+    "count_entries": 10
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/175_motion_set_weakness_gap_and_deontic_closure_audit_2026-04-09.md",
+    "issues": [
+      {
+        "line": 24,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Preclusion finality/identity proof chain remains incomplete in certified form."
+      },
+      {
+        "line": 24,
+        "type": "decrease",
+        "prev": "4",
+        "cur": "1",
+        "text": "1. Preclusion finality/identity proof chain remains incomplete in certified form."
+      },
+      {
+        "line": 30,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Show-cause branch must stay remedial and record-anchored."
+      },
+      {
+        "line": 36,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Alternative service/service-by-counsel pathway requires clean procedural sequence in one place."
+      },
+      {
+        "line": 42,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Cross-forum federal track status remains partially provisional."
+      }
+    ],
+    "count_entries": 20
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/176_motion_set_deficiency_review_findings_2026-04-09.md",
+    "issues": [
+      {
+        "line": 20,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. No currently unresolved critical drafting defect identified in this pass."
+      },
+      {
+        "line": 20,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. No currently unresolved critical drafting defect identified in this pass."
+      },
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Residual critical risk is evidentiary, not drafting: preclusion-finality and cross-forum status proof remains partially `Proof-gated` until certified records are lodged."
+      },
+      {
+        "line": 25,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Prior numbering inconsistency in `02` could create citation confusion in hearing argument."
+      },
+      {
+        "line": 25,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Prior numbering inconsistency in `02` could create citation confusion in hearing argument."
+      },
+      {
+        "line": 30,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Placeholder citation artifact in `151` reduced precision."
+      },
+      {
+        "line": 42,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `03` show-cause branch still relies on conditional nonappearance theory pending certified minutes."
+      },
+      {
+        "line": 42,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. `03` show-cause branch still relies on conditional nonappearance theory pending certified minutes."
+      },
+      {
+        "line": 47,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. `01` prior-GAL continuity argument remains proof-gated."
+      },
+      {
+        "line": 52,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Cross-forum federal status in `02` remains partly provisional by design."
+      },
+      {
+        "line": 59,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. None requiring immediate text changes in this pass."
+      },
+      {
+        "line": 59,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. None requiring immediate text changes in this pass."
+      },
+      {
+        "line": 63,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Cured in this pass:"
+      },
+      {
+        "line": 63,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. Cured in this pass:"
+      },
+      {
+        "line": 69,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Remaining external-proof tasks (not text defects):"
+      },
+      {
+        "line": 75,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Obligation: when citing preclusion, immediately state whether the element is `Admissible-now` or `Proof-gated`."
+      },
+      {
+        "line": 75,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Obligation: when citing preclusion, immediately state whether the element is `Admissible-now` or `Proof-gated`."
+      },
+      {
+        "line": 76,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Obligation: keep sanctions discussion in `03` framed as remedial-only unless separate punitive pathway is properly noticed."
+      },
+      {
+        "line": 77,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Prohibition: do not ask the probate court to decide full Section 18/eviction/federal merits absent proper parties and forum posture."
+      },
+      {
+        "line": 81,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md`:"
+      },
+      {
+        "line": 81,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. `177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md`:"
+      },
+      {
+        "line": 83,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. `178_declaration_versioning_note_internal_vs_court_safe_2026-04-09.md`:"
+      }
+    ],
+    "count_entries": 18
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/17_certificate_of_service_subpoenas_final.md",
+    "issues": [
+      {
+        "line": 56,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Personal service."
+      },
+      {
+        "line": 56,
+        "type": "decrease",
+        "prev": "6",
+        "cur": "1",
+        "text": "1. Personal service."
+      },
+      {
+        "line": 57,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. First-class U.S. Mail."
+      },
+      {
+        "line": 58,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Certified mail/return receipt."
+      },
+      {
+        "line": 59,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Email/eService (if permitted by rule/order/acceptance)."
+      },
+      {
+        "line": 60,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. Other: __________________________________________."
+      }
+    ],
+    "count_entries": 11
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/185_notice_of_filing_sheriff_return_and_service_proof_2026-04-09.md",
+    "issues": [
+      {
+        "line": 24,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. This filing is submitted to supplement the April 9, 2026 service event with personal-observation/photo evidence and formal service-return support to the extent shown by lodged service documents."
+      },
+      {
+        "line": 24,
+        "type": "repeat_plain_number",
+        "token": "3",
+        "text": "3. This filing is submitted to supplement the April 9, 2026 service event with personal-observation/photo evidence and formal service-return support to the extent shown by lodged service documents."
+      }
+    ],
+    "count_entries": 8
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/186_certificate_of_service_for_notice_of_filing_sheriff_return_2026-04-09.md",
+    "issues": [
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 21,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 42,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 42,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 43,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Personal service."
+      },
+      {
+        "line": 44,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Email/eService (if permitted by rule/order/acceptance)."
+      }
+    ],
+    "count_entries": 9
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/190_certificate_of_service_for_notice_of_filing_supplemental_service_and_certified_record_status_update_2026-04-09.md",
+    "issues": [
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Email/eService (same-matter notice copy to counsel; acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 21,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. Email/eService (same-matter notice copy to counsel; acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 27,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Samuel Barber (or counsel of record for same matter)"
+      },
+      {
+        "line": 27,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Solomon Samuel Barber (or counsel of record for same matter)"
+      },
+      {
+        "line": 33,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Additional party/counsel (if any): ___________________________"
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Counsel for Solomon Samuel Barber (same-matter notice copy; acceptance disputed unless stated otherwise)"
+      }
+    ],
+    "count_entries": 7
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/192_certificate_of_service_for_notice_of_filing_sheriff_return_filed_variant_2026-04-09.md",
+    "issues": [
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 21,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 36,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 36,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 37,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Text message/MMS notice transmission."
+      }
+    ],
+    "count_entries": 5
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/193_certificate_of_service_for_notice_of_filing_supplemental_status_update_filed_variant_2026-04-09.md",
+    "issues": [
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Samuel Barber"
+      },
+      {
+        "line": 21,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. Solomon Samuel Barber"
+      },
+      {
+        "line": 36,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 36,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 37,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Text message/MMS notice transmission."
+      }
+    ],
+    "count_entries": 5
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/198_certificate_of_service_for_notice_and_supplemental_declaration_april_9_transmission_records.md",
+    "issues": [
+      {
+        "line": 23,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Samuel Barber"
+      },
+      {
+        "line": 23,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Solomon Samuel Barber"
+      },
+      {
+        "line": 29,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Counsel for Solomon Samuel Barber (same-matter notice copy; acceptance disputed unless stated otherwise)"
+      },
+      {
+        "line": 38,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 38,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Text message/MMS notice transmission."
+      }
+    ],
+    "count_entries": 6
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/200_motion_declaration_memorandum_weakness_review_2026-04-09.md",
+    "issues": [
+      {
+        "line": 20,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `Admissible-now` = currently supportable on filed/admissible record."
+      },
+      {
+        "line": 20,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. `Admissible-now` = currently supportable on filed/admissible record."
+      },
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. `Proof-gated` = needs certified/authenticated supplementation before dispositive use."
+      },
+      {
+        "line": 26,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Dispositive estoppel remains evidence-gated across all mapped rows."
+      },
+      {
+        "line": 26,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Dispositive estoppel remains evidence-gated across all mapped rows."
+      },
+      {
+        "line": 35,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Service-event branch remains vulnerable until official sheriff return is lodged."
+      },
+      {
+        "line": 42,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Court-safe declaration posture is improved, but long-form declaration remains objection-prone if filed in full."
+      },
+      {
+        "line": 64,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Lodge sheriff return and update service-grounding references."
+      },
+      {
+        "line": 64,
+        "type": "decrease",
+        "prev": "5",
+        "cur": "1",
+        "text": "1. Lodge sheriff return and update service-grounding references."
+      },
+      {
+        "line": 65,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Keep `86` bench memo synchronized with the latest `188` row-status posture before any filing or hearing use."
+      },
+      {
+        "line": 66,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Continue certified-record acquisition for `188` row promotion."
+      }
+    ],
+    "count_entries": 13
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/208_notice_of_filing_supplemental_declaration_outbound_records_request_transmissions_2026-04-09.md",
+    "issues": [
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `REQ-26FE0586-001` (Clackamas Justice Court records request),"
+      },
+      {
+        "line": 21,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. `REQ-26FE0586-001` (Clackamas Justice Court records request),"
+      }
+    ],
+    "count_entries": 4
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/210_certificate_of_service_for_notice_and_supplemental_declaration_outbound_records_request_transmissions_2026-04-09.md",
+    "issues": [
+      {
+        "line": 23,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Samuel Barber"
+      },
+      {
+        "line": 23,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Solomon Samuel Barber"
+      },
+      {
+        "line": 29,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Counsel for Solomon Samuel Barber (same-matter notice copy; acceptance disputed unless stated otherwise)"
+      },
+      {
+        "line": 38,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 38,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise)."
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Text message/MMS notice transmission."
+      },
+      {
+        "line": 44,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Replace all bracketed placeholders with actual send date details before filing."
+      },
+      {
+        "line": 44,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Replace all bracketed placeholders with actual send date details before filing."
+      },
+      {
+        "line": 45,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Do not file this certificate unless the service events described above have actually occurred."
+      }
+    ],
+    "count_entries": 8
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/211_motion_set_weakness_review_deontic_grounding_2026-04-09.md",
+    "issues": [
+      {
+        "line": 21,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `01`, `02`, `03`, `151`, `152`, `157`, `177`, `86`, and newly staged `208`-`210`."
+      },
+      {
+        "line": 21,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. `01`, `02`, `03`, `151`, `152`, `157`, `177`, `86`, and newly staged `208`-`210`."
+      },
+      {
+        "line": 25,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Dispositive preclusion relief remains row-gated by certified proof completion."
+      },
+      {
+        "line": 25,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. Dispositive preclusion relief remains row-gated by certified proof completion."
+      },
+      {
+        "line": 34,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Service-proof branch is still transitional until sheriff return is lodged."
+      },
+      {
+        "line": 40,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Bench memo alignment."
+      },
+      {
+        "line": 69,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Sheriff return lodging + service paragraph refresh."
+      },
+      {
+        "line": 69,
+        "type": "decrease",
+        "prev": "6",
+        "cur": "1",
+        "text": "1. Sheriff return lodging + service paragraph refresh."
+      },
+      {
+        "line": 70,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Bench memo `86` conditional-fallback refresh."
+      },
+      {
+        "line": 71,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Certified-record acquisition to promote `188` rows."
+      }
+    ],
+    "count_entries": 13
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/213_supplemental_declaration_re_orcp27_notice_compliance_2026-04-09.md",
+    "issues": [
+      {
+        "line": 25,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. I am over 18 years of age and competent to testify to the matters stated herein."
+      },
+      {
+        "line": 25,
+        "type": "decrease",
+        "prev": "5",
+        "cur": "1",
+        "text": "1. I am over 18 years of age and competent to testify to the matters stated herein."
+      },
+      {
+        "line": 26,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. I submit this declaration in support of the Motion for Appointment and Appearance of Guardian ad Litem."
+      },
+      {
+        "line": 28,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Notice recipients served for ORCP 27 purposes (to the extent applicable in this protective posture):"
+      },
+      {
+        "line": 43,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. If any ORCP 27 notice category was not completed, the reason is:"
+      },
+      {
+        "line": 45,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. If any category was not completed, I request targeted modification/waiver and a cure schedule for supplemental notice."
+      },
+      {
+        "line": 52,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Complete all blanks before filing."
+      },
+      {
+        "line": 52,
+        "type": "decrease",
+        "prev": "6",
+        "cur": "1",
+        "text": "1. Complete all blanks before filing."
+      },
+      {
+        "line": 53,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Do not file this declaration with unfilled placeholders."
+      }
+    ],
+    "count_entries": 13
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/216A_certificate_of_service_solomon_sanctions_packet_88_89_88A_2026-04-09.md",
+    "issues": [
+      {
+        "line": 30,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber"
+      },
+      {
+        "line": 30,
+        "type": "decrease",
+        "prev": "4",
+        "cur": "1",
+        "text": "1. Solomon Barber"
+      },
+      {
+        "line": 36,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Counsel for Solomon Barber (same-matter notice copy unless acceptance expressly confirmed)"
+      },
+      {
+        "line": 44,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Additional party/counsel (if any): ___________________________"
+      },
+      {
+        "line": 52,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 52,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 53,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Personal service."
+      },
+      {
+        "line": 54,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Email/eService (if permitted by rule/order/acceptance)."
+      },
+      {
+        "line": 55,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Other authorized method: __________________________________________."
+      }
+    ],
+    "count_entries": 12
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/217_motion_set_weakness_review_deontic_grounding_round2_2026-04-09.md",
+    "issues": [
+      {
+        "line": 24,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Court-facing filing still contains markdown hyperlink syntax and an absolute filesystem path."
+      },
+      {
+        "line": 24,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Court-facing filing still contains markdown hyperlink syntax and an absolute filesystem path."
+      },
+      {
+        "line": 31,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. `24` compel motion remains template state with unresolved `[INSERT]` fields and a recipient placeholder."
+      },
+      {
+        "line": 38,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Dispositive preclusion branch remains proof-gated (still correctly conditioned, but evidentiary gap persists)."
+      },
+      {
+        "line": 90,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. OBLIGATIONS (O):"
+      },
+      {
+        "line": 90,
+        "type": "decrease",
+        "prev": "9",
+        "cur": "1",
+        "text": "1. OBLIGATIONS (O):"
+      },
+      {
+        "line": 96,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. PROHIBITIONS (F):"
+      },
+      {
+        "line": 101,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. PERMISSIONS (P):"
+      },
+      {
+        "line": 107,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Produce a \"court-safe formatting pass\" for 86 and 152 (remove markdown artifacts and internal-path text)."
+      },
+      {
+        "line": 107,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Produce a \"court-safe formatting pass\" for 86 and 152 (remove markdown artifacts and internal-path text)."
+      },
+      {
+        "line": 108,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Lock `24`/`23` to recipient-specific completed variants before any filing event."
+      },
+      {
+        "line": 109,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Keep `02` dismissal prayer conditional unless at least one `188` row is fully closed with admissible support."
+      },
+      {
+        "line": 110,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. For hearing, use `183` crosswalk as oral script and state status first: `Admissible-now` vs `Proof-gated`."
+      }
+    ],
+    "count_entries": 19
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/218_motion_set_weakness_review_deontic_grounding_round3_2026-04-09.md",
+    "issues": [
+      {
+        "line": 83,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Obligations that are mostly satisfied"
+      },
+      {
+        "line": 83,
+        "type": "decrease",
+        "prev": "9",
+        "cur": "1",
+        "text": "1. Obligations that are mostly satisfied"
+      },
+      {
+        "line": 87,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Obligations not yet fully satisfied"
+      },
+      {
+        "line": 92,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Prohibitions to maintain"
+      },
+      {
+        "line": 98,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Repair exhibit map consistency first (Exhibit 7/AC issue in `03`/`03A` + legend alignment)."
+      },
+      {
+        "line": 98,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Repair exhibit map consistency first (Exhibit 7/AC issue in `03`/`03A` + legend alignment)."
+      },
+      {
+        "line": 99,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Convert `152_fallback` internal numeric source cites to court-facing citation style."
+      },
+      {
+        "line": 100,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Keep `177` as primary threshold declaration and quarantine `04` to context/background use only (or trim `04`)."
+      },
+      {
+        "line": 101,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Normalize `117` authentication declaration to exhibit labels instead of local path references."
+      },
+      {
+        "line": 102,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. Final style pass on residual \"staged record\" and backtick artifacts in filed-facing motions."
+      }
+    ],
+    "count_entries": 17
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/223_solomon_compel_prefill_completion_and_promotion_sheet_2026-04-09.md",
+    "issues": [
+      {
+        "line": 19,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Active log row for Solomon currently shows ready_to_serve with service/cure fields blank."
+      },
+      {
+        "line": 19,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Active log row for Solomon currently shows ready_to_serve with service/cure fields blank."
+      },
+      {
+        "line": 20,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Therefore compel/sanctions branch remains Not Ripe today."
+      },
+      {
+        "line": 24,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Service completion facts:"
+      },
+      {
+        "line": 24,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Service completion facts:"
+      },
+      {
+        "line": 30,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Response window facts:"
+      },
+      {
+        "line": 42,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. 88_motion_to_compel_subpoena_compliance_and_sanctions_solomon_prefill.md"
+      },
+      {
+        "line": 42,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. 88_motion_to_compel_subpoena_compliance_and_sanctions_solomon_prefill.md"
+      },
+      {
+        "line": 46,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. 89_declaration_re_subpoena_noncompliance_solomon_prefill.md"
+      },
+      {
+        "line": 53,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. 88A_proposed_order_on_motion_to_compel_subpoena_compliance_and_sanctions_solomon_prefill.md"
+      },
+      {
+        "line": 61,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Served subpoena packet (11/11A/11B/18/19/21)."
+      },
+      {
+        "line": 61,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Served subpoena packet (11/11A/11B/18/19/21)."
+      },
+      {
+        "line": 62,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Service proof artifact(s) tied to the served date/method in 88 and 89."
+      },
+      {
+        "line": 63,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Deficiency notice + transmittal proof."
+      },
+      {
+        "line": 69,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Subpoena service completed and documented."
+      },
+      {
+        "line": 69,
+        "type": "decrease",
+        "prev": "5",
+        "cur": "1",
+        "text": "1. Subpoena service completed and documented."
+      },
+      {
+        "line": 70,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Response deadline passed (or response received and materially deficient)."
+      },
+      {
+        "line": 71,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Deficiency notice sent."
+      },
+      {
+        "line": 72,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Cure deadline passed without full cure."
+      },
+      {
+        "line": 73,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. All prefill blanks completed in 88, 89, and 88A."
+      },
+      {
+        "line": 78,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Any service/cure timeline field remains blank."
+      },
+      {
+        "line": 78,
+        "type": "decrease",
+        "prev": "6",
+        "cur": "1",
+        "text": "1. Any service/cure timeline field remains blank."
+      },
+      {
+        "line": 79,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Tracker still shows Solomon row as ready_to_serve or equivalent pre-service status."
+      },
+      {
+        "line": 80,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Deficiency notice proof is missing."
+      },
+      {
+        "line": 81,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Attached exhibits do not support the specific factual assertions in the motion/declaration."
+      }
+    ],
+    "count_entries": 25
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/233_subpoena_noncompliance_declaration_review_2026-04-09.md",
+    "issues": [
+      {
+        "line": 10,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Missing core ORCP 55 G chronology fields was a readiness gap."
+      },
+      {
+        "line": 10,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. Missing core ORCP 55 G chronology fields was a readiness gap."
+      },
+      {
+        "line": 13,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Factual predicates were present but not explicitly tied to compel element flow."
+      },
+      {
+        "line": 22,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Added ORCP 55 G predicate statement in both declarations."
+      },
+      {
+        "line": 22,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. Added ORCP 55 G predicate statement in both declarations."
+      },
+      {
+        "line": 23,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Added explicit subpoena response due-date field in both declarations."
+      },
+      {
+        "line": 24,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Renumbered and tightened chronology so the declaration can be completed in element order."
+      },
+      {
+        "line": 28,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Exact service facts (date, method, served person/entity)."
+      },
+      {
+        "line": 28,
+        "type": "decrease",
+        "prev": "4",
+        "cur": "1",
+        "text": "1. Exact service facts (date, method, served person/entity)."
+      },
+      {
+        "line": 29,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Response due-date computation and basis."
+      },
+      {
+        "line": 30,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. What was produced vs. what was missing."
+      },
+      {
+        "line": 31,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Deficiency notice date, transmission proof, and cure deadline."
+      },
+      {
+        "line": 36,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. O: Declarant must provide only true, personal-knowledge facts tied to attached records."
+      },
+      {
+        "line": 36,
+        "type": "decrease",
+        "prev": "6",
+        "cur": "1",
+        "text": "1. O: Declarant must provide only true, personal-knowledge facts tied to attached records."
+      },
+      {
+        "line": 37,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. O: Movant must show service + due date + noncompliance + cure opportunity before compel relief."
+      },
+      {
+        "line": 38,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. F: Do not present blank template fields as operative evidence."
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. P: Request threshold record-completion orders where sanctions predicates are not yet fully matured."
+      }
+    ],
+    "count_entries": 19
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/43_branch_promotion_protocol_2026-04-07.md",
+    "issues": [
+      {
+        "line": 15,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `service_stage_complete` in the Exhibit R audit should move from `missing` to `verified`"
+      },
+      {
+        "line": 15,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. `service_stage_complete` in the Exhibit R audit should move from `missing` to `verified`"
+      },
+      {
+        "line": 16,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. `pre_service_only` should stop being the controlling workflow description"
+      },
+      {
+        "line": 22,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. [28_active_service_log_2026-04-07.csv](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/28_active_service_log_2026-04-07.csv)"
+      },
+      {
+        "line": 22,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. [28_active_service_log_2026-04-07.csv](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/28_active_service_log_2026-04-07.csv)"
+      },
+      {
+        "line": 23,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. [32_deadline_update_log_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/32_deadline_update_log_2026-04-07.md)"
+      },
+      {
+        "line": 24,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. [24_motion_to_compel_subpoena_compliance_and_sanctions_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/24_motion_to_compel_subpoena_compliance_and_sanctions_final.md), if filing is needed"
+      },
+      {
+        "line": 28,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `deficiency_or_compel_stage` in the Exhibit R audit should move from `missing` to `verified`"
+      },
+      {
+        "line": 28,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. `deficiency_or_compel_stage` in the Exhibit R audit should move from `missing` to `verified`"
+      },
+      {
+        "line": 34,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. [README.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/certified_records/README.md)"
+      },
+      {
+        "line": 34,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. [README.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/certified_records/README.md)"
+      },
+      {
+        "line": 38,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. [issue_preclusion_mapping.json](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/certified_records/issue_preclusion_mapping.json)"
+      },
+      {
+        "line": 38,
+        "type": "repeat_plain_number",
+        "token": "1",
+        "text": "1. [issue_preclusion_mapping.json](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/certified_records/issue_preclusion_mapping.json)"
+      },
+      {
+        "line": 39,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. [42_issue_preclusion_certified_packet_checklist_r7_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/42_issue_preclusion_certified_packet_checklist_r7_2026-04-07.md)"
+      },
+      {
+        "line": 43,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `prior_separate_proceeding_record` should move from `missing` once prior-order and docket/register materials are staged"
+      },
+      {
+        "line": 43,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. `prior_separate_proceeding_record` should move from `missing` once prior-order and docket/register materials are staged"
+      },
+      {
+        "line": 44,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. the individual issue-preclusion mapping rows should move from `proof_gated` to `verified` as the mapping manifest is completed"
+      },
+      {
+        "line": 50,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. [orcp17_filing_mapping.json](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/certified_records/orcp17_filing_mapping.json)"
+      },
+      {
+        "line": 50,
+        "type": "decrease",
+        "prev": "2",
+        "cur": "1",
+        "text": "1. [orcp17_filing_mapping.json](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/certified_records/orcp17_filing_mapping.json)"
+      },
+      {
+        "line": 51,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. [47_orcp17_target_selection_worksheet_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/47_orcp17_target_selection_worksheet_2026-04-07.md)"
+      },
+      {
+        "line": 52,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. [motion_for_sanctions_re_frivolous_and_abusive_practice.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md), if argument language needs to become more specific"
+      },
+      {
+        "line": 56,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. `challenged_filing_identified`"
+      },
+      {
+        "line": 56,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. `challenged_filing_identified`"
+      },
+      {
+        "line": 57,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. `improper_purpose_mapped`"
+      },
+      {
+        "line": 58,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. `unsupported_legal_position_mapped`"
+      },
+      {
+        "line": 63,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. [48_orcp17_unsupported_factual_assertion_worksheet_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/48_orcp17_unsupported_factual_assertion_worksheet_2026-04-07.md)"
+      },
+      {
+        "line": 63,
+        "type": "repeat_plain_number",
+        "token": "4",
+        "text": "4. [48_orcp17_unsupported_factual_assertion_worksheet_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/48_orcp17_unsupported_factual_assertion_worksheet_2026-04-07.md)"
+      },
+      {
+        "line": 80,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral%20Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md)"
+      },
+      {
+        "line": 80,
+        "type": "decrease",
+        "prev": "7",
+        "cur": "1",
+        "text": "1. [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral%20Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md)"
+      },
+      {
+        "line": 81,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. [deontic_reasoning_report.md](/home/barberb/HACC/Collateral%20Estoppel/knowledge_graph/generated/deontic_reasoning_report.md)"
+      }
+    ],
+    "count_entries": 27
+  },
+  {
+    "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/75_certificate_of_service_for_supplemental_certified_exhibits_8_9_10_final.md",
+    "issues": [
+      {
+        "line": 24,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 24,
+        "type": "decrease",
+        "prev": "5",
+        "cur": "1",
+        "text": "1. Solomon Barber (Respondent/Petitioner)"
+      },
+      {
+        "line": 30,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Counsel for Solomon Barber (if appearance is active in this matter)"
+      },
+      {
+        "line": 37,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Additional party/counsel (if any): ___________________________"
+      },
+      {
+        "line": 45,
+        "type": "duplicate_token",
+        "token": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 45,
+        "type": "decrease",
+        "prev": "3",
+        "cur": "1",
+        "text": "1. First-class U.S. Mail."
+      },
+      {
+        "line": 46,
+        "type": "duplicate_token",
+        "token": "2",
+        "text": "2. Personal service."
+      },
+      {
+        "line": 47,
+        "type": "duplicate_token",
+        "token": "3",
+        "text": "3. Email/eService (if permitted by rule/order/acceptance)."
+      },
+      {
+        "line": 48,
+        "type": "duplicate_token",
+        "token": "4",
+        "text": "4. Other: __________________________________________."
+      },
+      {
+        "line": 49,
+        "type": "duplicate_token",
+        "token": "5",
+        "text": "5. Text message/MMS service (if permitted by rule/order or previously authorized alternate service)."
+      }
+    ],
+    "count_entries": 13
+  }
+]

@@ -53,11 +53,11 @@ Subpoena recipients served:
 
 Service-method key (select only the method actually used for each recipient entry above):
 
-1. Personal service.
-2. First-class U.S. Mail.
-3. Certified mail/return receipt.
-4. Email/eService (if permitted by rule/order/acceptance).
-5. Other: __________________________________________.
+a. Personal service.
+b. First-class U.S. Mail.
+c. Certified mail/return receipt.
+d. Email/eService (if permitted by rule/order/acceptance).
+e. Other: __________________________________________.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

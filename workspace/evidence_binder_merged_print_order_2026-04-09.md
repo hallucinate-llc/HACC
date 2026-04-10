@@ -13,8 +13,12 @@ Primary control files:
 - [exhibit_cover_page_completion_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_completion_tracker_2026-04-09.md)
 - [evidence_binder_exhibit_and_cover_sheet_index_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_exhibit_and_cover_sheet_index_2026-04-09.md)
 - [evidence_binder_deduplication_plan_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_deduplication_plan_2026-04-09.md)
+- [state_housing_state_court_binder_incorporation_note_2026-04-09.md](/home/barberb/HACC/workspace/state_housing_state_court_binder_incorporation_note_2026-04-09.md)
+- [evidence_binder_safe_to_collapse_now_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_safe_to_collapse_now_2026-04-09.md)
 
 ## 1. Shared Housing / State-Court Binder
+
+Treat this binder family as the `master incorporated exhibit volume` for duplicated housing/state-court source material.
 
 Print using these completed cover-page sets, in this order:
 
@@ -43,6 +47,8 @@ Binder order:
 17. `Exhibit AA`
 
 ## 2. Shared Motion / Probate / Sanctions Binder
+
+If this binder is being carried together with the shared housing/state-court binder, omit repeated exhibit bodies identified in the deduplication plan and use cross-reference sheets that incorporate the master source by reference.
 
 Print using these completed cover-page sets, in this order:
 
@@ -88,6 +94,8 @@ Binder order:
 
 ## 3. Supplemental Background Appendix
 
+If this appendix is being carried together with the shared housing/state-court binder, omit repeated exhibit bodies identified in the deduplication plan and use cross-reference sheets that incorporate the master source by reference.
+
 Print using:
 
 1. [supplemental_background_appendix](/home/barberb/HACC/workspace/exhibit_cover_pages/supplemental_background_appendix)
@@ -122,3 +130,4 @@ Before printing or binding:
 3. confirm the proposition(s) line is present;
 4. confirm limitation notes are present for OCR, mailbox-copy, placeholder, or demonstrative items.
 5. if using a lean print set, apply [evidence_binder_deduplication_plan_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_deduplication_plan_2026-04-09.md) before printing repeated source files.
+6. if a repeated exhibit body is omitted, make the replacement page say that the source is incorporated by reference from the `Shared Housing / State-Court Binder`.

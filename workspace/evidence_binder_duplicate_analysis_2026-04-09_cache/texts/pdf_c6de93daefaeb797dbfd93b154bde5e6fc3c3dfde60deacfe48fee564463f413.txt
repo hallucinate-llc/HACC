@@ -1,0 +1,392 @@
+AI Glasses Impact Grants                                                 Powered by Submittable
+
+
+Title               Hallucinate LLC                                                  03/10/2026
+
+                    by benjamin barber in AI Glasses Impact Grants:                id. 53443970
+                    Catalyst
+                     starworks5@gmail.com
+
+
+
+Original Submission                                                                  03/10/2026
+
+                    ORGANIZATIONAL INFORMATION If you are applying as a partnership or
+                    consortium, please include the legal details of the Lead Organization that
+                    Meta will contract with.
+Lead Organization   Hallucinate LLC
+Legal Name
+Lead Organization   10043 SE 32ND AVE, MILWAUKIE
+Address             MILWAUKIE
+                    milwaukie
+                    OR
+                    97222
+                    US
+About your        We are a small organization, working on decentralized AI infrastructure,
+Organization or   specializing in neurosymbolic systems, largely incorporating the primitives
+Partnership       from protocol labs e.g. IPFS / Libp2p / Filecoin, in order to create secure
+                  and robust multi-agent systems. We are converting the entire legal corpus
+                  into domain specific first order logic, using knowledge graphs and theorem
+                  provers, so that robots will be able to obey the law, and lawyers will have a
+                  hallucination free legal text compiler.
+                  The architecture that I developing involves 4 packages which resemble the
+                  components of an AI operating system, and uses a modification of the
+                  MCP protocol that i call "mcp++", to connect these components together:
+                  A decentralized virtual file system that clusters and composes with most
+                  internet based file storage systems
+                  A decentralized model server that is compatible with every consumer
+                  hardware platform (additionally browser webnn + webgpu)
+                  A decentralized data manipulation library for the operating system to
+                  analyze, synthesize and train on
+                  A virtual desktop that composes these components together into the
+                  desktop with the MCP++ protocol
+                  The difference between the MCP and the MCP++ protocol, is that I use an
+                  interface description language inspired by CORBA, using a IPFS content
+                  addressed contract and code, based on deontic first order logic, frame
+                  logic, and cognitive event calculus, to allow client and server to negotiate
+                  the semantic interface, and I use decentralized ids in addition to formal
+                  logic and theorem provers, to ensure not just the behaviors are
+                  constrained, but that events that are planned do not lead to impermissible
+                  behaviors by the agents.
+                  As a part of the work that we do with the Linux Foundation infiniedge AI,
+                  Tina Tsou is the director of the group and I and Jeff Brower would like to
+                  use the meta glasses to orchestrate robots and quadcopters, to be able to
+                  direct them to perform tasks on behalf of the humans. As part of the work
+                  that we do with Protocol Labs, Dave Grantham who runs the libp2p project,
+                  has been wanting to implement a bluetooth implementation of libp2p and
+                  MLOPS orchestration.
+                  https://github.com/endomorphosis
+                  https://github.com/mwni
+                  https://github.com/the-ride-never-ends
+                  https://huggingface.co/justicedao
+                  http://huggingface.co/endomorphosis
+                  https://huggingface.co/Publicus
+Lead Organization     https://lfedge.org/projects/infiniedge-ai/
+Website or Social
+Media Page
+                      Application Contacts
+Primary Contact       Benjamin
+Name                  Barber
+Primary Contact Title Principal Engineer
+Primary Contact       +19712700855
+Phone
+Primary Contact       starworks5@gmail.com
+Email
+What is the legal     A for-profit organization, including limited liability corporations, benefit
+status of the Lead    corporations, or hybrid organizations
+Organization?
+Annual Operating      Less than $1 Million
+Expenses
+Number of             Fewer than 10 Full-time Employees
+Employees
+Organization          33-2110023
+Employer
+Identification Number
+(EIN)
+I confirm that the     checked
+Lead Organization
+has been in
+operation for at least
+12 months prior to
+January 2026 and is
+in good standing
+under U.S. laws
+                      YOUR TEAM
+Why Your Team   I think that my team is strong, because i have a deep understanding of AI /
+                ML training, including neurosymbolic architectures and reinforcement
+                training. Moreover, i have a long past of building physical robotics, and
+                working in embedded systems, and have the ability to integrate the
+                hardware with the AI training loops. I also have a lot of experience in legal
+                AI, I peer review machine learning papers every weekend with Yannic
+                Kilcher the CTO of Deep Judge, and I participate every weekend in the
+                Stanford Law Codex and law program, and every month I take part in the
+                Protocol Labs engineering + research.
+                The current goal is to make an legal text compiler, and legal assistant
+                (rigged 3d anime character), and to perhaps put the legal assistant in the
+                glasses for police. The goal in the future will be to put the entire
+                decentralized neurosymbolic MLops framework, along with the entire legal
+                corpus which will be converted into formal logic and knowledge graphs, into
+                a reinforcement learning environment so that we can do reinforcement
+                learning, using a visual language action model inside of a autoregressive
+                diffusion world model, and using the neurosymbolic methods to score the
+                rollouts of the robot behaviors to get them to obey laws / rules which are
+                put into the context window.
+                Biographies of Key Staff Please provide the first and last names of the top
+                two project managers, along with the name of their affiliated organization
+                and a brief biographical statement of up to 100 words. .
+Key Staff #1:   Benjamin
+                Barber
+Key Staff #1    I am on the Technical Steering committee of the Linux Foundation
+Biography:      (Inifiniedge AI), which is where i publish my work, but also work with Intel
+                Corporation, LAION AI, Stanford Law School, Protocol Labs, and the
+                Centaur AI Institute, and have 20 years of experience in software
+                engineering. I have one business partner in germany Manuel Otto, who
+                primarily works on XRP blockchain software engineering, and a JR. partner
+                who now works for Edgerunner AI, and we typically employ one college
+                student worker.
+                I have previously been an owner of the original oculus devkit 1, which I
+                used in conjunction with the Intel RealSense camera, to work on
+                augmented reality for people with low sight, as a side project not connected
+                to my former employer Intel, and I found myself continually frustrated with
+                the closed source and restrictive apis of the oculus platform. Moreover a
+                former junior developer of mine Lucas Nestler, now works for John
+                Carmack on artificial general intelligence, and I think this is one of the
+                criticisms that he had previously.
+Key Staff #2:   Marc-Emanuel
+                Otto
+Key Staff #2             I am a game developer and blockchain developer, most notably I have
+Biography:               worked on the game Stick Run which had 6 million which was in 25, in the
+                         facebook games marketplace in 2012. I am currently working on XRP
+                         cryptocurrency exchanges, and doing quantitative analysis of stocks, and
+                         worked with Benjamin Barber on open source Stable Diffusion image
+                         generation in the discord Eleuther AI and LAION AI, and we were the
+                         original authors of the "diffusionkit" package, which was a local inference
+                         package for the apple ecosystem.
+                         QUICK PITCH
+Project Title            IPFS / libp2p / MCP++ Decentralized AI
+Executive Summary        The architecture that I developing involves 4 packages which resemble the
+                         components of an AI operating system, and uses a modification of the
+                         MCP protocol that i call "mcp++", to connect these components together,
+                         and use the glasses as an interface
+Multimedia upload
+Gmail_-_Hiring_for_Systems_Engineer_III_-_100_remote.pdf
+Stanford-codex-2026-03-09_20-07-42.mp4
+
+                         THE CHALLENGE
+Which U.S. States        All States
+benefit from your
+project? Please
+select all that apply.
+Challenge Statement This is to create a decentralized AI infrastructure, that uses neural graph
+                    reasoning and theorum proving, to both solve hallucination, and create a
+                    robust security policy, which is derived from converting the entire legal
+                    corpus into formal logic. This can be extended to behavior by individuals
+                    and robots, for example while police where body cameras that record their
+                    behavior, if the police had meta glasses integrated into a neurosymbolic
+                    legal ai infrastructure, they could avoid lawsuits for violating people's civil
+                    rights. Moreover if people are piloting robots remotely, we need to make
+                    sure that robots are going obey the law, and cannot be commanded to
+                    perform unlawful actions.
+                       Moreover if the multiple agents are embodied robots, they will not only
+                       have to concern themselves with whether what they are doing now
+                       complies with a policy, but what event will follow that policy and lead to
+                       adverse events in the future. e.g. there is no explicit law that says that
+                       robot cannot put soap on the ground, but it is "reasonably foreseeable" that
+                       it is negligent to do so when people are walking around, because one might
+                       slip and fall on the soap. There are so many innumerous ways that an
+                       agent can be negligent, and it is practically impossible to encode every
+                       single rule into the context window of a visual language action model, so
+                       instead what is needed is robust legal reasoning, in the reinforcement
+                       learning pipeline and a neurosymbolic architecture to RAG the rules in a
+                       context dependent way more generally, for example with humans much of
+                       the rules are implcit often those norms "it goes without saying" and do not
+                       appear in training data.
+                       The problem with the existing mcp protocol, is that as long as your security
+                       model is a trusted client and a trusted server, the model works well. But if
+                       you have a peer to peer networking model, often client and server dont
+                       agree about what MCP protocol extensions to expose, and whether the
+                       mcp server will lead to prompt hijacking of the agent, as we have seen with
+                       the "moltbook" experiments. The difference between the MCP and the
+                       MCP++ protocol, is that I use an interface description language inspired by
+                       CORBA, using a IPFS content addressed contract and code, encoded in
+                       deontic first order logic, frame logic, and cognitive event calculus, to allow
+                       client and server to negotiate the semantic interface and plan their
+                       transactions with each other, and I use decentralized ids in addition to
+                       formal logic and theorem provers, to ensure not just the behaviors are
+                       constrained by rules, but that events that are planned do not lead to
+                       impermissible behaviors by the agents.
+
+
+                       YOUR SOLUTION
+Your use of AI         This is a new idea or approach: we have tried the AI glasses but not in a
+glasses                sustained way.
+Project Overview   How does your project use AI Glasses to deliver social and/ or
+                   economic value?
+                   The project is going to create value, because the current
+                   implementation of multi-agent systems architectures suffers from
+                   problems relating to security, both with regards to prompt injection
+                   and data poisoning, and also with regards to unanticipated
+                   hallucinations. Moreover by putting the entire legal corpus into a
+                   neurosymbolic architecture, we can simutaneously help automate
+                   the legal industry, prevent civil rights lawsuits against police
+                   officers, and allow for robots that cannot break the laws.
+                   What problem do you solve by using AI Glasses?
+                   well originally I just wanted to be able to agenticaly write software
+                   while I lifted weights, and allow my girlfriend to get advice while
+                   working on brain organoids, but more generally people are going to
+                   want to have hands free interfaces to interact with robots, and to
+                   get legal insights without having to pull out their cellphone, but is
+                   more sophisticated than simple LLM calls.
+                   How do you plan to increase your impact using AI Glasses?
+                   I will be able to give police, attorneys, citizens, and robots instant
+                   legal reasoning via a hands free interface with cameras, and
+                   thereby reduce the amount of conflict that people have with an
+                   objective hallucination free legal reasoning.
+                   What are your intended outcomes?
+                   The intended outcomes is to have an AI legal assistant, and to get
+                   the MCP++ architecture mature enough that we dont have to worry
+                   about mutli-agent systems getting prompt hijacked and performing
+                   illegal or unintended consequences, a bonus would be to then try
+                   to turn that into a reinforcement learning pipeline for robotics so
+                   that visual language actions can be trained inside of
+                   autoregressive diffusion world models.
+                   How will you know that you are making progress?
+                   I would know that I am making good progress, if I can convince the
+                   Agentic AI section of the linux foundation to adopt mcp++ as a
+                   reference standard, and the glasses are fully integrated into the
+                   decentralized compute infrastructure. I would know that I am
+                   making progress with the legal text compiler if I can convince
+                   stanford law school to make this as a standardized legal text
+                   calculator for law students to use, just as every accountant uses a
+                   numeric calculator, or i can convince police departments to move
+                   from Axon cameras to meta glasses because the meta glasses
+                   have AI lawyer capabilities built in.
+What social and/ or Learning, skills & employment
+economic causes
+does your project
+support? (choose all
+that apply)
+Which communities      Entrepreneurs
+benefit from your      Other
+project? (choose all   Local communities
+that apply)
+Please identify the    Stanford law school
+other communities
+your project           Protocol labs
+supports.
+                       Linux Foundation
+                       law enforcement
+                       public defenders
+                       court officials
+Timing and Impact      The impact of having a neurosymbolic MCP protocol will make the multi-
+                       agent system alot more secure, at the same time as people are
+                       complaining that clawdbot and moltbook are insecure, moreover having a
+                       on device inference will allow for meta to be able to do federated
+                       reinforcement learning from human feedback, and train robotic visual
+                       language action models.
+                       The impact of legal datasets in formal logic with theorum provers and
+                       knowledge graphs, will allow easier access to justice and better ability to
+                       predict the results of ones judgements, and will restore faith in the
+                       government because people can point to logic rather than worry about
+                       arbitrary governmental abuse of discretion, and thus reduce the game
+                       theory dynamics of trying to capture power and abuse that discretion.
+Innovation             The project lead of the libp2p project from protocol labs, asked me to port
+                       the py-libp2p project to the bluetooth driver, and I created a "vibecoding"
+                       interface for my gen 1 meta glasses to use the github cli / copilot cli, so
+                       that i could manage my pull requests via the meta glasses. Subsequently i
+                       have been integrating the MCP++ implementation that I am actively
+                       developing into the meta glasses, so that it can integrate into the
+                       decentralized mlops architecture. The architecture that I developing
+                       involves 4 packages which resemble the components of an AI operating
+                       system, and uses a modification of the MCP protocol that i call "mcp++", to
+                       connect these components together:
+                       A decentralized virtual file system that clusters and composes with most
+                       internet based file storage systems
+                       A decentralized model server that is compatible with every consumer
+                       hardware platform (additionally browser webnn + webgpu)
+                       A decentralized data manipulation library for the operating system to
+analyze, synthesize and train on
+A virtual desktop that composes these components together into the
+desktop with the MCP++ protocol
+The innovation above the MCP protocol, is that i can use libp2p as the
+transport layer for the traffic instead of json-rpc, and that we use the ideas
+taken from CORBA, to create an object request broker that defines the
+behavior that the mcp server / client contract requires using deontic first
+order logic, frame logic, and cognitive event calculus, and use an ipfs
+content id (CID) as a immutable source of that contract and code
+dependencies. furthermore we use decentralized IDs and formal logic as
+the permissioning system, and use IPFS content ids to track and assign
+risk and permission delegations, to agents by maintaining an event DAG
+that tracks all server execution contexts
+https://github.com/endomorphosis/lift_coding ( hands free coding with meta
+glasses)
+https://github.com/endomorphosis/Mcp-Plus-Plus (mcp ++ protocol
+specification (not implementation))
+https://github.com/endomorphosis/ipfs_datasets_py ( decentralized dataset
+manipulation)
+https://github.com/endomorphosis/ipfs_kit_py (decentralized virtual
+filesystem)
+https://github.com/endomorphosis/ipfs_accelerate_py ( decentralized
+huggingface model server and docker runner)
+https://github.com/endomorphosis/swissknife ( decentralized virtual
+desktop)
+https://github.com/navichat/motion ( 3d animated motion training)
+https://github.com/USTypology/socionics_research (personality manifold
+research)
+https://huggingface.co/datasets/justicedao/ipfs_caselaw_access_project
+https://huggingface.co/datasets/justicedao/ipfs_state_laws
+https://huggingface.co/datasets/justicedao/ipfs_federal_register
+https://huggingface.co/datasets/justicedao/ipfs_uscode
+https://huggingface.co/datasets/justicedao/ipfs_state_admin_rules
+https://huggingface.co/datasets/justicedao/ipfs_court_rules
+https://huggingface.co/datasets/justicedao/american_municipal_law
+https://youtu.be/HWW3Lga3htI?si=791qXFtCD5eADBEH&t=1129 (stanford
+law)
+Stakeholder &         Linux Foundation
+Community
+Engagement            Protocol Labs
+                      Stanford Law School
+                      Yannic Kilcher
+                      Brian Behelendorf
+                      Pranay Pasula
+Privacy, data         well, the logic submodule of the ipfs_datasets_py package uses zero
+controls and user     knowledge proofs, which are both useful for not having to reprove a proof
+experience            chain each time for the fundemental theorum provers, but it also allows
+                      people to prove facts about individuals based on their decentralized id e.g.
+                      a visual model can provide a zero knowledge proof about certain image
+                      embeddings, without having to actually produce the image embeddings
+                      themselves, to prove a persons identity from a photo without having to
+                      expose that photo for example. Moreover the use of the decentralized id +
+                      deontic logic policy execution gating, prevents the language models from
+                      being prompt hijacked, to exfiltrate data, because even if the language
+                      model is jailbroken the actions of the rest of the system are behind a formal
+                      logic safety net.
+                      PROJECT IMPACT
+Affirmation of        What gives me confidence that the project is going to work is that I'm
+Approach              already in the middle of implementation and past the prototyping stage, and
+                      into the polishing stage, the main issue is whether or not the solution gains
+                      adoption, and whether or not there is institutional buy in for the solution.
+Ability to Scale      I used to work on the openstack framework, and this is taking inspiration
+                      from dataflow paradigms, and given that i am using infrastructure based on
+                      ipfs / libp2p which has already been shown to scale on public blockchains,
+                      and some experience I have with decentralized training regimes, i dont
+                      think the scaling is a matter of technical limitations of the infrastructure.
+                      The bigger problem is whether or not the hardware, deployment and the
+                      consumer adoption is going to scale, and whether it can amortize the R&D
+                      costs of the features that people will want to use.
+Timeline and          I would expect to work on this project for the next 6 months, and we have
+Milestones            already spent $150k of our own money on this project so far.
+Measuring Progress given that this is mostly a R&D project at this stage, i would be using
+and Responding     project based milestones, and using test driven development to define
+                   whether or not those milestones were being met.
+Risk Mitigation       Ironically, Asmiov's books on the laws of robotics, sort of discussed this to
+                      some end. How even having a tool based system is not enough for safe AI,
+                      and how if the meanings of words can be twisted to make the rules
+                      meaningless. The problem with automated decision making is that you are
+                      liable for the outcomes, unless there are a knowing and intentional waiver,
+                      and even then that might not hold up in court. For any sort of critical
+                      decision making in regulated fields there has to be an insurance provider,
+                      in the state of oregon I talked to the supreme court, and they were
+                      desperate for having a solution, provided that there is symbolic guardrails,
+                      supervised by a licensed attorney.
+                      RESOURCE REQUIREMENTS
+Budget Narrative      the grant money would be spent over the next 6 months on 3 FTE
+                      equivalents, a robot, a DGX spark, and some claude subscriptions, and 3
+                      meta ai glasses.
+Budget detail
+Budget spreadsheet AI Glasses Impact.xlsx
+
+Total Projected       186300
+Costs [Up to
+$200,000]
+Other Considerations I realize that this is an ambitious project and I turned down a job offer at
+                     meta from a recruiter for $140k a year 2 years ago, because i wanted to
+                     work on open source decentralized AI infrastructure, and so just realize that
+                     the mission is more important to me than the money, but if you want the
+                     work to go faster you should give me money to accelerate the rate of work.
+                      Legal Terms and Conditions
+I accept the Meta AI checked
+Glasses Impact
+Grants Terms and
+Conditions
+

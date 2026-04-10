@@ -19,13 +19,13 @@ I certify that on ______________________, 2026, I served true and correct copies
 
 on the following person(s), with the exact method/date/proof reference stated below:
 
-1. Solomon Barber (Petitioner)
+a. Solomon Barber (Petitioner)
    Service address: 4305 NE 125th Ave, Vancouver, WA 98682
    Date served: ______________________
    Service method actually used: ________________________________________
    Proof reference (receipt/tracking/affidavit/email log): ______________________
 
-2. Counsel for Solomon Barber
+b. Counsel for Solomon Barber
    Name: Alex Bluestone
    Service email: alex@salemprobate.com
    Service address: ________________________________________
@@ -35,10 +35,10 @@ on the following person(s), with the exact method/date/proof reference stated be
 
 Service-method key (select only the method actually used for each recipient entry above):
 
-1. First-class U.S. Mail.
-2. Personal service.
-3. Email/eService (if permitted by rule/order/acceptance).
-4. Other authorized method: __________________________________________.
+a. First-class U.S. Mail.
+b. Personal service.
+c. Email/eService (if permitted by rule/order/acceptance).
+d. Other authorized method: __________________________________________.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

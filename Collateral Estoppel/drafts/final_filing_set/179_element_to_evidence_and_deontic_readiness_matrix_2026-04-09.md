@@ -14,6 +14,11 @@ ELEMENT-TO-EVIDENCE AND HANDLING READINESS MATRIX
 Purpose: map each requested relief branch to (a) governing law, (b) required factual elements,
 (c) current support, (d) proof status, and (e) next evidence needed.
 
+Current status note (as of this revision):
+1. No Rule ID `R-PI-01` row is presented as dispositive-ready unless supported by admissible certified records.
+2. No Rule ID `R-SVC-01` final service-sufficiency branch is presented as complete without official sheriff return/proof-of-service.
+3. Rule ID `R-SVC-01` service occurrence evidence is currently supported by personal observation and smartphone photo evidence in the filed declaration set.
+
 Legend:
 1. `Admissible-now` = currently grounded by available record artifacts.
 2. `Proof-gated` = not yet filing-grade without certified or authenticated supplementation.

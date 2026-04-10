@@ -18,9 +18,9 @@ PLEASE TAKE NOTICE that Movant, Benjamin Barber, files the following supplementa
 
 This filing is offered to document request-transmission events for:
 
-1. `REQ-26FE0586-001` (Clackamas Justice Court records request),
-2. `REQ-FED-HAQC-001` (District of Oregon public docket guidance request), and
-3. `REQ-SHERIFF-RETURN-001` (Clackamas Sheriff return/proof-of-service request).
+a. `REQ-26FE0586-001` (Clackamas Justice Court records request),
+b. `REQ-FED-HAQC-001` (District of Oregon public docket guidance request), and
+c. `REQ-SHERIFF-RETURN-001` (Clackamas Sheriff return/proof-of-service request).
 
 This filing does not represent that requested records have been received; records remain pending unless and until produced.
 

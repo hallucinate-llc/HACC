@@ -20,13 +20,13 @@ I certify that on [DATE OF ACTUAL SERVICE], I served true copies of the followin
 
 Service was completed on the following recipients:
 
-1. Solomon Samuel Barber
+a. Solomon Samuel Barber
    Address/Contact used: 4305 NE 125th Ave, Vancouver, WA 98682; text/MMS to (503) 381-6911
    Date served: [DATE OF ACTUAL SERVICE]
    Service method actually used: Text message / MMS notice transmission to (503) 381-6911
    Proof reference: filing-date outbound transmission record(s), to be staged with service supplements.
 
-2. Counsel for Solomon Samuel Barber (same-matter notice copy; acceptance disputed unless stated otherwise)
+b. Counsel for Solomon Samuel Barber (same-matter notice copy; acceptance disputed unless stated otherwise)
    Name: Alex Bluestone
    Address/Email used: alex@salemprobate.com
    Date served: [DATE OF ACTUAL SERVICE]
@@ -35,14 +35,14 @@ Service was completed on the following recipients:
 
 Service-method key (methods used):
 
-1. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise).
-2. Text message/MMS notice transmission.
+a. Email/eService notice copy to counsel (acceptance disputed unless stated otherwise).
+b. Text message/MMS notice transmission.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 
 Filing note:
-1. Replace all bracketed placeholders with actual send date details before filing.
-2. Do not file this certificate unless the service events described above have actually occurred.
+a. Replace all bracketed placeholders with actual send date details before filing.
+b. Do not file this certificate unless the service events described above have actually occurred.
 
 DATED: [DATE SIGNED]
 

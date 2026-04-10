@@ -1,0 +1,458 @@
+4/8/26, 1:16 PM                                       endomorphosis/lift_coding: when you need to code like you're iron man
+
+
+                    endomorphosis     lift_coding
+
+
+        Code            Issues       Pull requests   10          Agents          Actions          Projects      Wiki           Security and quality          Insi
+
+
+          Watch     0
+
+
+
+     when you need to code like you're iron man
+
+         AGPL-3.0 license
+
+         Contributing
+
+         Security policy
+
+         1 star         0 forks     0 watching       Branches         Activity
+                                                     Tags
+
+         Public repository
+
+
+
+
+         Your main branch isn't protected                                                                                Dismiss       Protect this branch
+         Protect this branch from force pushing or deletion, or require status checks before merging. View
+         documentation.
+
+
+
+                    128 Branches      10 Tags                       Go to file             t     Go to file   Add file                      Code
+
+
+
+          endomorphosis fix(docs): update links and references for consistency and accuracy
+
+     65f89ee · last month
+
+
+          .github/workflows                          PR-045: Agent runner apply diff patches                           3 months ago
+
+          .vscode                                    Update dependencies and improve erro…                             3 months ago
+
+          agent-runner                               Fix patch application: ensure trailing ne…                        3 months ago
+
+          config                                     Implement policy configuration file (MV…                          3 months ago
+
+          dev                                        Update documentation and environmen…                                 last month
+
+          docs                                       fix(docs): update links and references fo…                           last month
+
+          external                                   Refactor GitHub authentication and exe…                              last month
+
+          implementation_plan                        Add comprehensive documentation and…                                 last month
+
+          migrations                                 Add comprehensive documentation and…                                 last month
+
+          mobile                                     docs: Add comprehensive documentatio…                                last month
+
+          scripts                                    docs/scripts: clarify draft PR script roles …                        last month
+
+          spec                                       feat: Add dev-only audio upload request…                             last month
+
+          src/handsfree                              Refactor GitHub authentication and exe…                              last month
+
+          tests                                      Refactor GitHub authentication and exe…                              last month
+
+          tracking                                   Update documentation and environmen…                                 last month
+
+                                                     Update documentation and environmen…                                 last month
+          work
+
+https://github.com/endomorphosis/lift_coding                                                                                                                  1/7
+4/8/26, 1:16 PM                                    endomorphosis/lift_coding: when you need to code like you're iron man
+
+         .dockerignore                            Fix Dockerfile and .dockerignore issues f…                3 months ago
+
+         .env.example                             Add comprehensive test coverage and s…                    3 months ago
+
+         .env.example.demo                        Add .env.example.demo and fix notificat…                  3 months ago
+
+         .gitignore                               Add comprehensive tests for Copilot CLI…                    last month
+
+         .gitmodules                              feat: add Meta Wearables DAT submodu…                       last month
+
+         .handsfree_transport_sessions.json       Refactor GitHub authentication and exe…                     last month
+
+         CONTRIBUTING.md                          docs: Add comprehensive documentatio…                       last month
+
+         Dockerfile                               Fix Dockerfile and .dockerignore issues f…                3 months ago
+
+         LICENSE                                  Update README.md                                          3 months ago
+
+         Makefile                                 Merge main into PR #7: resolve API con…                   3 months ago
+
+         README.md                                docs: Add comprehensive documentatio…                       last month
+
+         SECURITY.md                              Update documentation and environmen…                        last month
+
+         docker-compose.agent-runner.yml          Address code review feedback: improve …                   3 months ago
+
+         docker-compose.yml                       Add production containerization with D…                   3 months ago
+
+         pyproject.toml                           Implement AWS Secrets Manager backe…                      3 months ago
+
+         requirements-dev.txt                     Implement GCPSecretManager with full …                    3 months ago
+
+
+
+         README           Contributing         AGPL-3.0 license        Security
+
+
+
+
+        HandsFree Dev Companion
+        HandsFree Dev Companion is a voice-first GitHub workflow assistant with a Python/FastAPI backend and a React
+        Native mobile client.
+
+        It supports command execution, confirmation-gated side effects, agent delegation, notifications, AI capability
+        workflows, and Meta AI Glasses audio integration.
+
+
+        What You Get
+
+            Natural-language command handling through POST /v1/command
+            Safe, policy-aware side effects (request review, rerun checks, comment, merge)
+            Token-based confirmation flow for destructive/high-risk operations
+            Agent task delegation, task tracking, and result retrieval
+            Notification delivery APIs and subscription management
+            AI capability execution endpoints and policy reporting
+            Dev-friendly fixture modes plus live GitHub/OpenAI integrations
+
+
+        Quick Links
+
+            Getting Started
+https://github.com/endomorphosis/lift_coding                                                                               2/7
+4/8/26, 1:16 PM                                endomorphosis/lift_coding: when you need to code like you're iron man
+
+            Documentation Index
+            Package Guide
+            Architecture
+            Configuration Guide
+            Configuration Reference
+            Authentication
+            Mobile App Docs
+            OpenAPI Spec
+
+
+        Architecture Summary
+
+        System layers:
+
+            Mobile/Device layer:
+               React Native app, native Bluetooth audio modules, Meta AI Glasses integration
+            API layer:
+                  FastAPI application in src/handsfree/api.py
+            Domain layer:
+               Commands, actions, agents, AI, GitHub, notifications, policy/rate-limits
+            Persistence/cache layer:
+                DuckDB + optional Redis
+
+
+        Backend Package Map
+
+        Core backend package: src/handsfree
+
+            src/handsfree/api.py: FastAPI app and endpoint handlers
+            src/handsfree/models.py: shared request/response models
+            src/handsfree/auth.py: auth mode and user resolution
+            src/handsfree/commands: intent parsing, routing, profile behavior, pending actions
+            src/handsfree/actions: shared side-effect orchestration
+            src/handsfree/agents: delegation service, task lifecycle, result views
+            src/handsfree/github: GitHub auth/provider/execution logic
+            src/handsfree/ai: AI capability execution and backend policy integration
+            src/handsfree/db: database modules and migrations
+            src/handsfree/notifications: notification delivery providers
+
+        For complete package details and runtime flows, see docs/PACKAGE_GUIDE.md.
+
+
+        API Surface (High-Level)
+
+        Canonical contract: spec/openapi.yaml
+
+        Main endpoint groups:
+
+            Commands and confirmation:
+                  /v1/command
+
+                  /v1/commands/confirm
+
+                  /v1/commands/action
+
+            Side-effect actions:
+                  /v1/actions/request-review
+
+https://github.com/endomorphosis/lift_coding                                                                           3/7
+4/8/26, 1:16 PM                                endomorphosis/lift_coding: when you need to code like you're iron man
+                  /v1/actions/rerun-checks
+
+                  /v1/actions/comment
+
+                  /v1/actions/merge
+
+            Agents:
+                  /v1/agents/tasks*
+
+                  /v1/agents/results
+
+            AI:
+                  /v1/ai/*
+
+                  /v1/admin/ai/*
+
+            Notifications:
+                  /v1/notifications*
+
+                  /v1/repos/subscriptions*
+
+            GitHub OAuth/connections:
+                  /v1/github/oauth/*
+
+                  /v1/github/connections*
+
+            Dev/media utilities:
+                  /v1/tts
+
+                  /v1/dev/audio
+
+                  /v1/dev/media
+
+                  /v1/dev/peer-chat/*
+
+
+
+        Local Development Quick Start
+
+        Prerequisites
+            Python 3.11+
+            Docker + Docker Compose
+            Node.js 18+ (for mobile development)
+
+
+        1. Backend Setup
+
+          git clone https://github.com/endomorphosis/lift_coding.git
+          cd lift_coding
+          make deps
+          make compose-up
+          make dev
+
+
+
+        Backend runs at http://localhost:8080 .
+
+
+        2. Basic Health Check
+
+          curl http://localhost:8080/v1/status
+
+
+
+        3. Quick Command Test (Dev Auth Mode)
+
+          curl -X POST http://localhost:8080/v1/command \
+            -H "Content-Type: application/json" \
+            -H "X-User-Id: 00000000-0000-0000-0000-000000000001" \
+            -d '{
+
+
+https://github.com/endomorphosis/lift_coding                                                                           4/7
+4/8/26, 1:16 PM                                endomorphosis/lift_coding: when you need to code like you're iron man
+              "input": {"type": "text", "text": "show my inbox"},
+              "profile": "default",
+              "client_context": {
+                "device": "cli",
+                "locale": "en-US",
+                "timezone": "UTC",
+                "app_version": "0.1.0"
+              }
+            }'
+
+
+
+        4. Mobile App Setup
+
+          cd mobile
+          npm ci
+          npm start
+
+
+
+        For simulator/device workflows, use mobile/README.md.
+
+
+        Authentication Modes
+
+        Configured via HANDSFREE_AUTH_MODE :
+
+             dev :
+                  Dev-friendly mode; commonly uses X-User-Id
+             jwt :
+                  Authorization: Bearer <jwt-token>
+
+             api_key :
+                  Authorization: Bearer <api-key>
+
+
+        See full details in docs/AUTHENTICATION.md.
+
+
+        Configuration
+
+        Start with:
+
+            CONFIGURATION.md for practical setup paths
+            docs/configuration-reference.md for exhaustive env keys
+
+        Key integrations include:
+
+            GitHub live/fixture modes
+            OpenAI TTS/STT provider selection
+            Notification provider settings (APNS/FCM/WebPush/Expo)
+            Agent delegation provider settings
+
+
+        Agent Delegation and Runners
+
+        HandsFree can delegate tasks to external runners.
+
+        Provider selection precedence:
+
+          1. Explicit provider in request
+          2. HANDSFREE_AGENT_DEFAULT_PROVIDER
+          3. Auto github_issue_dispatch when dispatch repo + token are configured
+
+https://github.com/endomorphosis/lift_coding                                                                           5/7
+4/8/26, 1:16 PM                                endomorphosis/lift_coding: when you need to code like you're iron man
+
+          4. Fallback provider
+
+        Runner setup docs:
+
+            docs/agent-runner-setup.md
+            docs/AGENT_RUNNER_QUICKSTART.md
+            docs/MINIMAL_AGENT_RUNNER.md
+
+
+        Testing and Quality
+
+        Run checks from repo root:
+
+
+          make fmt-check
+          make lint
+          make test
+          make openapi-validate
+
+
+
+        Or run full tests directly:
+
+
+          .venv/bin/pytest -q
+
+
+
+
+        Docker
+
+        Run with Compose
+
+          docker compose up -d
+          docker compose logs -f api
+
+
+
+        Stop
+
+          docker compose down
+
+
+
+
+        Repository Layout
+
+        Top-level directories and key docs:
+
+            src: backend source code
+            tests: test suite
+            mobile: React Native client
+            docs: operational and feature docs
+            spec: OpenAPI and command grammar
+            migrations: SQL migrations
+            implementation_plan: design and rollout docs
+            GETTING_STARTED.md: setup guide
+            DOCUMENTATION_INDEX.md: full docs navigator
+
+
+        Contributing
+
+        See CONTRIBUTING.md for contribution flow, coding standards, and testing expectations.
+
+
+https://github.com/endomorphosis/lift_coding                                                                           6/7
+4/8/26, 1:16 PM                                        endomorphosis/lift_coding: when you need to code like you're iron man
+
+        License
+
+        See LICENSE
+
+
+
+
+   Releases
+
+      10 tags
+
+   Create a new release
+
+
+
+   Packages
+
+   No packages published
+   Publish your first package
+
+
+
+   Contributors 4
+
+          Copilot
+
+          endomorphosis
+
+          hallucinate-llc
+
+          Copilot
+
+
+
+
+   Languages
+
+
+       Python 75.9%             JavaScript 15.1%   Kotlin 3.7%    Swift 2.9%     TypeScript 1.1%     HTML 0.9%       Other 0.4%
+
+
+
+
+https://github.com/endomorphosis/lift_coding                                                                                      7/7
+

@@ -21,6 +21,7 @@ A. RECORDS IDENTIFIED
 3. Supplemental Exhibit AT-1 is a true and correct copy of my April 9, 2026 outbound text/MMS transmission record(s) to (503) 381-6911 for same-matter filing notice.
 4. Supplemental Exhibit AT-2 is a true and correct copy of my April 9, 2026 outbound email transmission record(s) to alex@salemprobate.com for same-matter filing notice.
 5. If available, Supplemental Exhibit AT-3 includes transmission metadata (message identifiers, sent timestamps, headers, or provider-generated send confirmations) associated with AT-1 and AT-2.
+5A. Exhibits AT-1 through AT-3 are treated in this declaration as supplemental external attachments and not master lettered evidence-binder exhibits unless later re-indexed.
 
 B. FOUNDATION FACTS
 

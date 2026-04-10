@@ -35,3 +35,9 @@ Answer:
 Answer:
    a. Decide only the minimum fact issues necessary for guardianship/protective rulings.
    b. Reserve broader housing merits to separate forums.
+
+8. "What is the current status of service proof?"
+Answer:
+   a. Under Rule ID R-SVC-01, service occurrence is supported by personal observation and photo evidence.
+   b. Final legal service sufficiency remains pending filing of the official sheriff return/proof-of-service.
+   c. Any uncertified status note, oral relay, or summary chart is context only and not completed proof for dispositive or enforcement findings.

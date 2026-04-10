@@ -10,7 +10,7 @@
 
 `SOURCE FILE`
 
-`/home/barberb/HACC/hacc_website/knowledge_graph/texts/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt`
+`/home/barberb/HACC/workspace/exhibit-binder-court-ready/exhibits/Exhibit_Z_HACC_Administrative_Plan_excerpts.txt`
 
 `RELIED ON BY`
 
@@ -27,8 +27,8 @@
 
 `AUTHENTICITY / FOUNDATION NOTE`
 
-`Use as the preserved Administrative Plan text source already stored in the repository's local HACC knowledge-graph materials.`
+`Use as the repository-prepared Administrative Plan excerpt sheet. The larger Administrative Plan text dump remains available in the repository as a source reservoir and is incorporated by reference rather than printed in full.`
 
 `LIMITATION NOTE`
 
-`This exhibit shows HACC's program structure and project-role description, but it is not itself the executed management agreement, HAP contract, ground lease, or RAD use agreement.`
+`This exhibit shows HACC's program structure and project-role description, but it is not itself the executed management agreement, HAP contract, ground lease, or RAD use agreement. The full Administrative Plan dump is not printed as the exhibit body and should be cited by reference if broader context is needed.`

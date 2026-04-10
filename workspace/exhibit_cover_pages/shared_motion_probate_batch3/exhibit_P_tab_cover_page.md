@@ -10,16 +10,16 @@
 
 `SHORT TITLE`
 
-`Certified restraining-order docket / register placeholder`
+`Sam Barber restraining-order packet`
 
 `SOURCE FILE`
 
-`Not yet obtained. Placeholder target described in /home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md`
+`/home/barberb/HACC/evidence/history/sam barber restraining order.pdf`
 
 `STATUS`
 
-`Placeholder / future supplementation`
+`Scanned source packet`
 
 `NOTES`
 
-`Reserved for a clerk-certified docket or register printout for the restraining-order matter if obtained.`
+`Repository-staged restraining-order packet concerning Sam / Solomon Barber.`

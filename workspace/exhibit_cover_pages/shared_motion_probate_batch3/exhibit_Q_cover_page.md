@@ -6,26 +6,26 @@
 
 `SHORT TITLE`
 
-`Certified guardian / prior-authority placeholder`
+`Sam Barber restraining-order packet (cross-use copy)`
 
 `SOURCE FILE`
 
-`Not yet obtained. Placeholder target described in /home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md`
+`/home/barberb/HACC/evidence/history/sam barber restraining order.pdf`
 
 `RELIED ON BY`
 
-1. [02_motion_to_dismiss_for_collateral_estoppel_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/02_motion_to_dismiss_for_collateral_estoppel_final.md) as future supplementation
-2. [motion_for_sanctions_re_frivolous_and_abusive_practice.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md) as future supplementation
+1. [02_motion_to_dismiss_for_collateral_estoppel_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/02_motion_to_dismiss_for_collateral_estoppel_final.md)
+2. [motion_for_sanctions_re_frivolous_and_abusive_practice.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md)
 
 `PROPOSITION(S) THIS EXHIBIT IS OFFERED TO SUPPORT`
 
-1. Prior-authority or guardian / guardian-ad-litem record support, if obtained.
-2. Stronger preclusion or repeated-usurpation support for later supplementation, if obtained.
+1. The restraining-order packet preserves the earlier court-created protective framework relevant to later overlap and collateral-interference arguments.
+2. The packet supports cross-forum scope, notice, and repeated-usurpation arguments, even though stronger preclusion proof would still require certified docket/finality records.
 
 `AUTHENTICITY / FOUNDATION NOTE`
 
-`This is a placeholder exhibit slot reserved for future certified prior-authority materials.`
+`Use as the same repository-staged scanned restraining-order packet concerning Sam / Solomon Barber, offered here for cross-use support.`
 
 `LIMITATION NOTE`
 
-`No underlying certified record is presently attached. This exhibit should be treated as a supplementation target only, not as current proof.`
+`This is a scanned packet rather than a certified prior-authority or docket record. It supports the existence and content of the packet itself, but not final certified-docket propositions that would require separate clerk materials.`

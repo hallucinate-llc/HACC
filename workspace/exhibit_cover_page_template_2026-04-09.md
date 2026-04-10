@@ -1,8 +1,15 @@
 # Exhibit Cover Page Template
 
-Use one page like this immediately behind the tab page and immediately before the exhibit itself.
+Use one page immediately behind the tab page and immediately before the exhibit itself.
 
----
+Preferred appearance in the printed binder:
+
+1. formal heading: `EXHIBIT ___ - EXHIBIT COVER PAGE`
+2. short title and source record near the top
+3. separate sections for relying filings, propositions supported, foundation note, and limitation note
+4. footer with exhibit label and `Page x of y`
+
+Field structure:
 
 `EXHIBIT LABEL`
 
@@ -35,8 +42,6 @@ Use one page like this immediately behind the tab page and immediately before th
 `LIMITATION NOTE`
 
 `____________________________________________`
-
----
 
 Suggested use:
 

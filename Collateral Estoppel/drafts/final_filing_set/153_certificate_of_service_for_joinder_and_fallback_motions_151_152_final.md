@@ -20,20 +20,20 @@ I certify that on ____________, 2026, I served true and correct copies of the fo
 
 I served these documents on the following person(s):
 
-1. Solomon Barber (Respondent/Petitioner)
+a. Solomon Barber (Respondent/Petitioner)
    Service address: 4305 NE 125th Ave, Vancouver, WA 98682
    Date served: ____________________________________________
    Service method actually used: ____________________________________________
    Proof reference (receipt/tracking/affidavit/email log): ____________________________________________
 
-2. Counsel for Solomon Barber (same-matter notice copy; acceptance disputed unless stated otherwise)
+b. Counsel for Solomon Barber (same-matter notice copy; acceptance disputed unless stated otherwise)
    Name: Alex Bluestone
    Service email: alex@salemprobate.com
    Date served: ____________________________________________
    Service method actually used: ____________________________________________
    Proof reference (receipt/tracking/affidavit/email log): ____________________________________________
 
-3. Additional party/counsel (if any): ___________________________
+c. Additional party/counsel (if any): ___________________________
    Service address/email: ______________________________________
    Date served: ____________________________________________
    Service method actually used: ____________________________________________
@@ -41,11 +41,11 @@ I served these documents on the following person(s):
 
 Service-method key (select only method(s) actually used for each recipient):
 
-1. First-class U.S. Mail.
-2. Personal service.
-3. Email/eService (if permitted by rule/order/acceptance).
-4. Other authorized method: __________________________________________.
-5. Text message/MMS service (if permitted by rule/order or previously authorized alternate service).
+a. First-class U.S. Mail.
+b. Personal service.
+c. Email/eService (if permitted by rule/order/acceptance).
+d. Other authorized method: __________________________________________.
+e. Text message/MMS service (if permitted by rule/order or previously authorized alternate service).
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

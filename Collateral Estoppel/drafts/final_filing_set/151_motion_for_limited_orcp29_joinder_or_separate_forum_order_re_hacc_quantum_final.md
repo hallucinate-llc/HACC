@@ -49,9 +49,10 @@ III. FACTUAL/PROCEDURAL BASIS
 
 III-A. RULE-ID BRANCH MAPPING
 
-21B. For consistency with the shared deontic mapping attachments, the ORCP 29B fallback branch in this motion is Rule ID `R-JN-01`.
-21C. The ORCP 22C derivative-liability limit branch in this motion is Rule ID `R-JN-02`.
-21D. Any final feasibility finding requested under Rule ID `R-JN-01` is conditioned on the filed service-attempt proof identified in paragraph 21A.
+21B. For consistency with the shared deontic mapping attachments, the ORCP 29B fallback branch in this motion is Rule ID R-JN-01.
+21C. The ORCP 22C derivative-liability limit branch in this motion is Rule ID R-JN-02.
+21D. Any final feasibility finding requested under Rule ID R-JN-01 is conditioned on the filed service-attempt proof identified in paragraph 21A.
+21E. For court readability, Movant incorporates by reference the Memorandum Translating Rule-ID Reasoning Trace in Plain Legal Language, and requests that Rule-ID shorthand in this motion be read using that same trigger, proof-gate, and remedy sequence.
 
 IV. ARGUMENT
 
@@ -85,7 +86,7 @@ B. ORCP 29B FALLBACK FACTORS IF JOINDER IS NOT FEASIBLE
 C. ORCP 22C DERIVATIVE-LIABILITY LIMIT
 
 27. ORCP 22C is not the best procedural vehicle here because third-party practice requires liability-over pleading (nonparty may be liable for all or part of petitioner's claim against defending party), while the present allegations treat HACC and Quantum as primary actors in separate housing disputes rather than derivative indemnitors for the guardianship petition claim.
-28. Unless a clean derivative-liability theory is pleaded, collateral housing claims should remain outside ORCP 22C practice in this probate case under Rule ID `R-JN-02`.
+28. Unless a clean derivative-liability theory is pleaded, collateral housing claims should remain outside ORCP 22C practice in this probate case under Rule ID R-JN-02.
 
 D. REQUESTED SCOPE RESULT
 

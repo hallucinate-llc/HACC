@@ -54,20 +54,24 @@ IV. ADDITIONAL PROCEEDING OVERLAP (CONTEXT FOR THRESHOLD SCOPE CONTROL)
 19. To the extent the present guardianship petition is used to relitigate those same housing-merits issues, threshold issue-screening and forum-narrowing are warranted to reduce inconsistent adjudication risk, even if the present record is not yet sufficient for completed issue preclusion. See Exhibit 2 and Objection to First Amended Petition for Appointment of Guardian, paragraphs 46-49.
 20. If either the Justice Court matter or federal matter has reached a final adjudication on an identical issue, that issue may be precluded here only to the extent the Oregon preclusion elements are established on a fully supported row-by-row certified-element map by admissible records.
 21. If final adjudication has not yet occurred, this Court should still narrow this probate matter to guardianship-specific issues and avoid becoming a parallel merits forum for pending landlord-tenant or federal civil-rights claims, without treating mere overlap itself as completed preclusion.
+21A. The supplemental Parkside screening-approval record (Exhibit PS-1, filed by separate notice/declaration) is additional threshold evidence that the petition's asserted immediate housing-crisis premise is disputed on the present record and should be addressed, if at all, through narrow scope management rather than broad coercive guardianship merits relief.
 22. Any separate constitutional argument branch is reserved for supplemental memorandum only if and when that issue is directly presented for adjudication in this case.
 
 IV-A. RULE-ID BRANCH MAPPING
 
-22A. For consistency with the shared deontic mapping attachments, this motion's dispositive preclusion branch is identified as Rule ID `R-PI-01` (Collateral-estoppel branch).
-22B. Under Rule ID `R-PI-01`, no dispositive dismissal is requested unless the certified row-by-row element map is complete for the specific issue row at issue.
-22C. Any non-dispositive overlap/scope handling requested in this motion is presented as threshold sequencing only and not as completion of Rule ID `R-PI-01`.
+22A. For consistency with the shared deontic mapping attachments, this motion's dispositive preclusion branch is identified as Rule ID R-PI-01 (collateral-estoppel branch).
+22B. Under Rule ID R-PI-01, no dispositive dismissal is requested unless the certified row-by-row element map is complete for the specific issue row at issue.
+22C. Any non-dispositive overlap/scope handling requested in this motion is presented as threshold sequencing only and not as completion of Rule ID R-PI-01.
+22D. To the extent collateral housing-merits scope-control is considered in this motion, that handling is non-dispositive and corresponds to Rule ID R-JN-01 as mapped in the companion scope-control filings.
+22E. Any uncertified status note, oral relay, or summary chart is offered as context only and not as completed proof of a dispositive preclusion element.
+22F. For court readability, Movant incorporates by reference the Memorandum Translating Rule-ID Reasoning Trace in Plain Legal Language, and requests that Rule-ID shorthand in this motion be read using that same trigger, proof-gate, and remedy sequence.
 
 V. COMPANION PARTY-STRUCTURE BRANCH
 
 23. Party-structure consequences for any housing-merits relitigation are addressed in companion scope-control filings and are included here only to explain why threshold narrowing is requested.
 24. This probate proceeding should not be used to bypass proper party structure or to reframe eviction/housing merits against absent entities.
 
-VI. PROOF GATE FOR FINAL DISMISSAL (RULE ID `R-PI-01`)
+VI. PROOF GATE FOR FINAL DISMISSAL (RULE ID R-PI-01)
 
 25. Final dismissal still requires proof of the prior separate proceeding, the exact issue decided, finality, party/privity alignment, and a full and fair opportunity to be heard.
 26. Movant therefore requests threshold control now, with dismissal only to the extent those elements are proven by admissible certified records on a row-specific basis under a filed certified-element map.

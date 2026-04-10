@@ -14,7 +14,7 @@
 
 `SOURCE FILE`
 
-`/home/barberb/HACC/hacc_website/knowledge_graph/texts/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt`
+`/home/barberb/HACC/workspace/exhibit-binder-court-ready/exhibits/Exhibit_Z_HACC_Administrative_Plan_excerpts.txt`
 
 `STATUS`
 
@@ -22,4 +22,4 @@
 
 `NOTES`
 
-`Administrative Plan source excerpt grounding the Hillside / Quantum / RAD-PBV structure in HACC's own program materials.`
+`Administrative Plan excerpt grounding the Hillside / Quantum / RAD-PBV structure in HACC's own program materials; the full Administrative Plan dump remains repository-side source support only.`

@@ -1,0 +1,144 @@
+{
+  "files": 20,
+  "results": [
+    {
+      "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/02_motion_to_dismiss_for_collateral_estoppel_final.md",
+      "labels": 45,
+      "issues": [
+        {
+          "line": 61,
+          "type": "letter_without_seen_base_in_segment",
+          "label": "22A",
+          "segment": 59,
+          "text": "22A. For consistency with the shared deontic mapping attachments, this motion's dispositive preclusion branch is identified as Rule ID R-PI-01 (collateral-estoppel branch)."
+        },
+        {
+          "line": 62,
+          "type": "letter_without_seen_base_in_segment",
+          "label": "22B",
+          "segment": 59,
+          "text": "22B. Under Rule ID R-PI-01, no dispositive dismissal is requested unless the certified row-by-row element map is complete for the specific issue row at issue."
+        },
+        {
+          "line": 63,
+          "type": "letter_without_seen_base_in_segment",
+          "label": "22C",
+          "segment": 59,
+          "text": "22C. Any non-dispositive overlap/scope handling requested in this motion is presented as threshold sequencing only and not as completion of Rule ID R-PI-01."
+        },
+        {
+          "line": 64,
+          "type": "letter_without_seen_base_in_segment",
+          "label": "22D",
+          "segment": 59,
+          "text": "22D. To the extent collateral housing-merits scope-control is considered in this motion, that handling is non-dispositive and corresponds to Rule ID R-JN-01 as mapped in the companion scope-control filings."
+        },
+        {
+          "line": 65,
+          "type": "letter_without_seen_base_in_segment",
+          "label": "22E",
+          "segment": 59,
+          "text": "22E. Any uncertified status note, oral relay, or summary chart is offered as context only and not as completed proof of a dispositive preclusion element."
+        }
+      ]
+    },
+    {
+      "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/151_motion_for_limited_orcp29_joinder_or_separate_forum_order_re_hacc_quantum_final.md",
+      "labels": 43,
+      "issues": [
+        {
+          "line": 52,
+          "type": "letter_without_seen_base_in_segment",
+          "label": "21B",
+          "segment": 50,
+          "text": "21B. For consistency with the shared deontic mapping attachments, the ORCP 29B fallback branch in this motion is Rule ID R-JN-01."
+        },
+        {
+          "line": 53,
+          "type": "letter_without_seen_base_in_segment",
+          "label": "21C",
+          "segment": 50,
+          "text": "21C. The ORCP 22C derivative-liability limit branch in this motion is Rule ID R-JN-02."
+        },
+        {
+          "line": 54,
+          "type": "letter_without_seen_base_in_segment",
+          "label": "21D",
+          "segment": 50,
+          "text": "21D. Any final feasibility finding requested under Rule ID R-JN-01 is conditioned on the filed service-attempt proof identified in paragraph 21A."
+        }
+      ]
+    },
+    {
+      "file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/213_supplemental_declaration_re_orcp27_notice_compliance_2026-04-09.md",
+      "labels": 13,
+      "issues": [
+        {
+          "line": 25,
+          "type": "duplicate_plain_number_same_segment",
+          "label": "1",
+          "segment": 16,
+          "text": "1. I am over 18 years of age and competent to testify to the matters stated herein."
+        },
+        {
+          "line": 25,
+          "type": "numeric_decrease_same_segment",
+          "prev": 5,
+          "cur": 1,
+          "segment": 16,
+          "text": "1. I am over 18 years of age and competent to testify to the matters stated herein."
+        },
+        {
+          "line": 26,
+          "type": "duplicate_plain_number_same_segment",
+          "label": "2",
+          "segment": 16,
+          "text": "2. I submit this declaration in support of the Motion for Appointment and Appearance of Guardian ad Litem."
+        },
+        {
+          "line": 28,
+          "type": "duplicate_plain_number_same_segment",
+          "label": "3",
+          "segment": 16,
+          "text": "3. Notice recipients served for ORCP 27 purposes (to the extent applicable in this protective posture):"
+        },
+        {
+          "line": 43,
+          "type": "duplicate_plain_number_same_segment",
+          "label": "4",
+          "segment": 16,
+          "text": "4. If any ORCP 27 notice category was not completed, the reason is:"
+        },
+        {
+          "line": 45,
+          "type": "duplicate_plain_number_same_segment",
+          "label": "5",
+          "segment": 16,
+          "text": "5. If any category was not completed, I request targeted modification/waiver and a cure schedule for supplemental notice."
+        },
+        {
+          "line": 52,
+          "type": "duplicate_plain_number_same_segment",
+          "label": "1",
+          "segment": 16,
+          "text": "1. Complete all blanks before filing."
+        },
+        {
+          "line": 52,
+          "type": "numeric_decrease_same_segment",
+          "prev": 6,
+          "cur": 1,
+          "segment": 16,
+          "text": "1. Complete all blanks before filing."
+        },
+        {
+          "line": 53,
+          "type": "duplicate_plain_number_same_segment",
+          "label": "2",
+          "segment": 16,
+          "text": "2. Do not file this declaration with unfilled placeholders."
+        }
+      ]
+    }
+  ]
+}

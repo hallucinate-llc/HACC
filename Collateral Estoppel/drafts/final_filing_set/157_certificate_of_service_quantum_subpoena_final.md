@@ -21,13 +21,13 @@ I certify that on ______________________, 2026, I served true and correct copies
 
 on the following person(s), with the exact method/date/proof reference stated below:
 
-1. Quantum Residential Custodian of Records
+a. Quantum Residential Custodian of Records
    Service address actually used: 601 E 16th St, Vancouver, WA 98663, or other confirmed registered-agent/service address
    Date served: ______________________
    Service method actually used: ________________________________________
    Proof reference (return/receipt/affidavit/tracking): ______________________
 
-2. Any party or counsel entitled to subpoena notice under ORCP 55
+b. Any party or counsel entitled to subpoena notice under ORCP 55
    Name(s): ________________________________________
    Service address or email actually used: ________________________________________
    Date served: ______________________
@@ -36,11 +36,11 @@ on the following person(s), with the exact method/date/proof reference stated be
 
 Service-method key (select only the method actually used for each recipient entry above):
 
-1. Personal service.
-2. First-class U.S. Mail.
-3. Certified mail/return receipt.
-4. Email/eService (if permitted by rule/order/acceptance).
-5. Other authorized method: __________________________________________.
+a. Personal service.
+b. First-class U.S. Mail.
+c. Certified mail/return receipt.
+d. Email/eService (if permitted by rule/order/acceptance).
+e. Other authorized method: __________________________________________.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

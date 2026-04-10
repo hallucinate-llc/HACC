@@ -27,13 +27,13 @@ I certify that on ______________________, 2026, I served true and correct copies
 
 I served these documents on the following person(s), with exact method/date/proof references:
 
-1. Solomon Barber
+a. Solomon Barber
    Service address: 4305 NE 125th Ave, Vancouver, WA 98682
    Date served: ______________________
    Service method actually used: ________________________________________
    Proof reference (receipt/tracking/affidavit/email log): ______________________
 
-2. Counsel for Solomon Barber (same-matter notice copy unless acceptance expressly confirmed)
+b. Counsel for Solomon Barber (same-matter notice copy unless acceptance expressly confirmed)
    Name: Alex Bluestone
    Service email: alex@salemprobate.com
    Service address: ________________________________________
@@ -41,7 +41,7 @@ I served these documents on the following person(s), with exact method/date/proo
    Service method actually used: ________________________________________
    Proof reference (receipt/tracking/affidavit/email log): ______________________
 
-3. Additional party/counsel (if any): ___________________________
+c. Additional party/counsel (if any): ___________________________
    Service address/email: ______________________________________
    Date served: ______________________
    Service method actually used: ________________________________________
@@ -49,11 +49,11 @@ I served these documents on the following person(s), with exact method/date/proo
 
 Service-method key (select only method(s) actually used for each recipient):
 
-1. First-class U.S. Mail.
-2. Personal service.
-3. Email/eService (if permitted by rule/order/acceptance).
-4. Other authorized method: __________________________________________.
-5. Text message/MMS service (if permitted by rule/order or previously authorized alternate service).
+a. First-class U.S. Mail.
+b. Personal service.
+c. Email/eService (if permitted by rule/order/acceptance).
+d. Other authorized method: __________________________________________.
+e. Text message/MMS service (if permitted by rule/order or previously authorized alternate service).
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 This certificate is not filing-ready until each listed service event has actually occurred and supporting proof references are completed.

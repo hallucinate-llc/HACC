@@ -34,7 +34,9 @@ III. BASIS
 11. Those tracks involve alleged Section 18 relocation duties (42 U.S.C. section 1437p(d); 24 C.F.R. section 970.21) and related housing administration conduct by HACC and Quantum. See Declaration of Benjamin Barber (Court-Safe Trimmed), paragraphs 21-22, Motion to Limit Probate Issues and Require Section 18 / Eviction Merits to Be Litigated in the Proper Forum, and Supplemental Declaration Re ORCP 29A Complete-Relief and Inconsistent-Obligation Factors.
 12. Probate is not the proper forum for full merits determination of those non-probate housing-liability disputes, especially with absent entities and ongoing parallel litigation.
 13. On the current record, cross-forum finality assertions remain provisional unless confirmed by certified or filed-stamped records. Any supporting summary charts are offered only as organizational support; admissible exhibits and certified records control.
-13A. For consistency with the shared deontic mapping attachments, this fallback scope-control branch is tracked as Rule ID `R-JN-01`; any dispositive preclusion branch remains Rule ID `R-PI-01` in the separate threshold preclusion motion.
+13A. For consistency with the shared deontic mapping attachments, this fallback scope-control branch is tracked as Rule ID R-JN-01; any dispositive preclusion branch remains Rule ID R-PI-01 in the separate threshold preclusion motion.
+13B. For court readability, Movant incorporates by reference the Memorandum Translating Rule-ID Reasoning Trace in Plain Legal Language, and requests that Rule-ID shorthand in this motion be read using that same trigger, proof-gate, and remedy sequence.
+13C. The supplemental Parkside screening-approval record (Exhibit PS-1, filed by separate notice/declaration) further supports threshold limitation of housing-merits allegations in probate because it shows a contested, evolving housing status record rather than a cleanly established emergency-merits predicate.
 
 IV. ARGUMENT
 
@@ -44,7 +46,7 @@ IV. ARGUMENT
 17. The narrower and safer remedy is to confine this case to guardianship issues while preserving parties' ability to pursue housing merits in the proper actions.
 18. If any overlap issue is necessary for a discrete probate determination, the Court should decide only the minimum required question and reserve broader merits for the separate tracks.
 18A. This fallback motion does not request any dispositive issue-preclusion dismissal ruling; any dispositive preclusion request remains in the separate threshold preclusion motion and only to the extent supported by admissible certified records.
-18B. Relief requested in this motion is limited to Rule ID `R-JN-01` shaped-relief handling and does not request completion of Rule ID `R-PI-01`.
+18B. Relief requested in this motion is limited to Rule ID R-JN-01 shaped-relief handling and does not request completion of Rule ID R-PI-01.
 
 V. RESERVATION
 

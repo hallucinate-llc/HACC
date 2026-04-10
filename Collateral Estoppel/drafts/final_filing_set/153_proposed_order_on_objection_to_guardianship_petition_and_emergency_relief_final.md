@@ -29,9 +29,11 @@ The Court, having reviewed the objection, declarations, and the file and record 
 7A. No continued writ-based forced entry, forced transport, or comparable coercive removal relief shall be granted unless and until filed proof of service and predicate notice materials for that specific relief request are identified in the record.
 7B. If the service/predicate materials required by paragraphs 7 and 7A are not available by the hearing date, coercive-relief determinations are deferred and any interim hearing is limited to noncoercive threshold scope and scheduling issues.
 8. No attorney-fee request under ORS 125.095 shall be approved unless and until the Court has considered the applicable ORS 125.098 factors on an adequate record.
-8A. For consistency with the shared deontic mapping attachments, any threshold preclusion limitation in this order corresponds to Rule ID `R-PI-01`, and any collateral-housing scope-control handling corresponds to Rule ID `R-JN-01`.
-8B. For consistency with the shared deontic mapping attachments, any service-dependent coercive-relief determination in this order corresponds to Rule ID `R-SVC-01`.
+8A. For consistency with the shared deontic mapping attachments, any threshold preclusion limitation in this order corresponds to Rule ID R-PI-01, and any collateral-housing scope-control handling corresponds to Rule ID R-JN-01.
+8B. For consistency with the shared deontic mapping attachments, any service-dependent coercive-relief determination in this order corresponds to Rule ID R-SVC-01.
+8C. Any uncertified status note, oral relay, or summary chart is treated as context only and not as completed proof for a dispositive preclusion or service-dependent coercive-relief finding.
 9. No dispositive preclusion-based claim limitation may be entered unless the affected party had notice and an opportunity to address the specific issue row(s) and cited record support relied on.
+9A. No dispositive preclusion-based claim limitation under Rule ID R-PI-01 may be entered unless the specific issue row(s) are identified and supported by admissible certified records for each required preclusion element.
 10. Nothing in this order adjudicates collateral housing, eviction, or federal civil-rights merits except as strictly necessary for guardianship-specific determinations.
 11. Further hearing, if required, is set for: ______________________.
 12. Any duty in this order keyed to a blank date or blank deadline field is triggered only after that field is completed in the signed order.

@@ -26,10 +26,10 @@ Service was completed by the following method(s) (check all that apply):
 
 Recipient(s):
 
-1. Solomon Samuel Barber (or counsel of record for same matter)
+a. Solomon Samuel Barber (or counsel of record for same matter)
    Address/Email used: ______________________________________
 
-2. Additional party/counsel (if any): ___________________________
+b. Additional party/counsel (if any): ___________________________
    Address/Email used: ______________________________________
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.

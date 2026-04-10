@@ -14,34 +14,36 @@ RE: SUBPOENA NONCOMPLIANCE AND CURE EFFORTS
 I, Benjamin Barber, declare as follows:
 
 1. I am the requesting party and have personal knowledge of the facts stated here.
-2. I caused subpoena materials to be served on the responding custodian/person identified as:
+2. This declaration is offered to establish factual predicates for relief under ORCP 55 G based on subpoena noncompliance and failed cure.
+3. I caused subpoena materials to be served on the responding custodian/person identified as:
    ______________________________________________.
-3. The subpoena package included recipient subpoena, recipient attachment, Attachment A-2/B-2 definitions and search protocol, cover instruction sheet, and custodian compliance checklist.
-4. Service details:
+4. The subpoena package included recipient subpoena, recipient attachment, Attachment A-2/B-2 definitions and search protocol, cover instruction sheet, and custodian compliance checklist.
+5. Service details:
    a. Date served: ______________________
    b. Method served: ______________________
    c. Person/entity served: ______________________
-5. Response received (if any):
+6. Subpoena response due date (including any allowed mailing/service extensions): ______________________
+7. Response received (if any):
    a. Date received: ______________________
    b. Materials received: ______________________
-6. Deficiencies identified in response:
+8. Deficiencies identified in response:
    ______________________________________________
    ______________________________________________
-7. I issued a written deficiency notice and demand to cure on:
+9. I issued a written deficiency notice and demand to cure on:
    ______________________________________________
-8. Cure deadline provided:
+10. Cure deadline provided:
    ______________________________________________
-9. Cure response received (if any):
+11. Cure response received (if any):
    ______________________________________________
-10. As of the date of this declaration, deficiencies remain unresolved as follows:
+12. As of the date of this declaration, deficiencies remain unresolved as follows:
     ______________________________________________
     ______________________________________________
-11. The missing materials are material to guardianship, collateral-estoppel, show-cause, and/or sanctions issues pending before the Court.
-12. If the responding person is Solomon Barber, the unresolved production also includes (or should include) communications, notes, and records material to writ-of-assistance predicate facts, notice/service chronology, and handling of raised service/preclusion objections in this same matter.
-13. If applicable to Solomon Barber, I further state that notice of deficiencies and cure demand was also directed to those writ-predicate and service/preclusion-objection record categories.
-14. Where any Solomon-specific writ/filer-conduct sanctions branch is pursued, I offer this declaration to support record-completion and factual predicate development; I understand any non-subpoena sanctions theory should be addressed through separately noticed briefing identifying legal vehicle and evidentiary predicates.
-15. This declaration is a template form and is not filing-ready until all blanks are completed with recipient-specific facts and supporting records.
-16. I do not ask the Court to treat any unfilled template field as evidence.
+13. The missing materials are material to guardianship, collateral-estoppel, show-cause, and/or sanctions issues pending before the Court.
+14. If the responding person is Solomon Barber, the unresolved production also includes (or should include) communications, notes, and records material to writ-of-assistance predicate facts, notice/service chronology, and handling of raised service/preclusion objections in this same matter.
+15. If applicable to Solomon Barber, I further state that notice of deficiencies and cure demand was also directed to those writ-predicate and service/preclusion-objection record categories.
+16. Where any Solomon-specific writ/filer-conduct sanctions branch is pursued, I offer this declaration to support record-completion and factual predicate development; I understand any non-subpoena sanctions theory should be addressed through separately noticed briefing identifying legal vehicle and evidentiary predicates.
+17. This declaration is a template form and is not filing-ready until all blanks are completed with recipient-specific facts and supporting records.
+18. I do not ask the Court to treat any unfilled template field as evidence.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

@@ -6,11 +6,11 @@
 
 `SHORT TITLE`
 
-`Reserved Google Search skill-assessment summary`
+`Google Search AI overview assessing endomorphosis`
 
 `SOURCE FILE`
 
-`Reserved: Google Search skill-assessment summary`
+`/home/barberb/HACC/evidence/paper documents/what do you think about the skill of the github user _endomorphosis_ - Google Search.pdf`
 
 `RELIED ON BY`
 
@@ -19,12 +19,12 @@
 
 `PROPOSITION(S) THIS EXHIBIT IS OFFERED TO SUPPORT`
 
-1. Reserved for a supplemental public-summary demonstrative, if actually added later.
+1. A native Google Search export summarizes public-facing information about the GitHub user `endomorphosis` and describes the public repository record as reflecting strong decentralized-systems and AI-related technical skill.
 
 `AUTHENTICITY / FOUNDATION NOTE`
 
-`Use only if the reserved demonstrative file is actually created and inserted into the appendix.`
+`Use as a native exported PDF preserved in the evidence repository. Foundation is by repository custody and comparison to the public repositories and background materials referenced in the export.`
 
 `LIMITATION NOTE`
 
-`Reserved demonstrative only; not current primary proof and not yet an underlying repository exhibit file.`
+`This is a third-party generated search summary based on public-facing materials. It is background and corroborative support, not binding proof of compensation, credentialing, or formal certification.`

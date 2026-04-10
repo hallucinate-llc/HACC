@@ -1,0 +1,26 @@
+= @) endomorphosis / Receptor2Circuit Q Type [to search Ba +~-|/O]|1]/G|\e)] S -
+<> Code © Issues {1 Pullrequests G2 Agents © Actions [H Projects O Wiki © Securityandquality [~ Insights Settings
+GS # main ~ Receptor2Circuit / README.md (0 Q Goto file t) | [ere
+@ endomorphosis Change license from MIT to AGPL 3.0 d6803a5-4 months ago ©) History
+Preview | Code | Blame | 154 Lines (99 loc) - 5.23 KB GB @Qia Oe. Z- =
+BrainWideMap
+This repository contains two related Python toolkits.
+If you're new here: the goal is to make it easy to go from brain-wide activity data (what changed in which regions) to mechanistic
+hypotheses (which receptors/targets and circuits could explain it), with a workflow that stays testable and reproducible.
+Why this exists
+In practice, mechanistic “brain — receptor — circuit” work often gets stuck because:
+* Your data sources live in different ecosystems (IBL sessions, Allen connectivity, receptor maps, human PET), each with their own
+formats.
+* You can compute results, but it’s hard to keep the data model consistent and validate that components still work together over
+time.
+* Live dependencies (network downloads, optional SDKs) make tests flaky and discourage end-to-end coverage.
+This repo addresses that by:
+* Providing small, explicit core types (region-indexed maps and connectivity graphs) that you can pass between steps.
+* Keeping the default test suite deterministic and offline, while also providing opt-in live/E2E tests that validate real external
+integrations.
+What you can do with it
+Common use cases:
+* Explore IBL Brain Wide Map sessions and compute region-level summaries.
+* Build a lightweight drug/target profile and generate a toy prediction pipeline.
+* Load a mouse connectivity graph (offline stub or real Allen SDK) and propagate effects through circuits.
+« Translate a region-indexed prediction into a human space and run simple validation utilities. v

@@ -19,7 +19,7 @@ Use this sheet only as a hearing aid. It is not a substitute for the filed objec
 2. Deny any further writ-based forced entry or forced transport without a clean predicate order and notice record.
 3. Deny plenary authority, placement authority, and fee shifting from Jane Kay Cortez's funds on the present record.
 4. Keep Section 18 / HACC / Quantum / eviction merits out of probate except as narrowly necessary.
-5. Deny fee shifting from Jane's funds because the present record does not establish a benefit to Jane sufficient to satisfy the `ORS 125.098` factors.
+5. Deny fee shifting from Jane's funds because the present record does not establish a benefit to Jane sufficient to satisfy the ORS 125.098 factors.
 6. If the Court concludes the petition was materially barred or seriously defective, reserve or consider sanctions-related or claim-limiting relief.
 
 ## Best 30-Second Theme
@@ -29,9 +29,16 @@ This petition seeks sweeping control on a disputed and materially incomplete rec
 ## Four Best Documents
 
 1. [152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md)
-2. [04_declaration_of_benjamin_barber_in_support_of_motions_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md)
+2. [219_declaration_of_benjamin_barber_short_form_threshold_relief_final_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/219_declaration_of_benjamin_barber_short_form_threshold_relief_final_2026-04-09.md)
 3. [jane_cortez_declaration_april_8_2026_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/jane_cortez_declaration_april_8_2026_ocr.txt)
 4. [writ_of_assistance_solomon_barber_ocr.txt](/home/barberb/HACC/workspace/writ_of_assistance_solomon_barber_ocr.txt)
+
+## Service Status (R-SVC-01)
+
+1. Service occurrence: personally observed and photo-supported (April 9, 2026).
+2. Final legal service sufficiency: still tied to filing of official sheriff return/proof-of-service.
+3. Hearing ask before return is filed: sequence/notice handling and noncoercive threshold relief only.
+4. Any uncertified status note, oral relay, or summary chart is context only and not completed proof for dispositive or enforcement findings.
 
 ## Best Fact Points
 

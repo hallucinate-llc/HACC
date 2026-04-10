@@ -1,8 +1,15 @@
 # Exhibit Tab Cover Page Template
 
-Use one page like this immediately before each exhibit tab.
+Use one page immediately before each exhibit.
 
----
+Preferred appearance in the printed binder:
+
+1. centered title line: `EXHIBIT TAB`
+2. centered exhibit label line: `EXHIBIT ___`
+3. short formal fields for section, short title, status, source record, and tab note
+4. footer at lower right with the exhibit label and page count
+
+Field structure:
 
 `EXHIBIT LABEL`
 
@@ -28,10 +35,8 @@ Use one page like this immediately before each exhibit tab.
 
 `____________________________________________`
 
----
-
 Suggested use:
 
 - one exhibit label only per tab page;
-- keep it visually simple and easy to flip to;
+- keep it simple and easy to flip to;
 - if the exhibit is a placeholder or breadcrumb, say so here rather than hiding it.

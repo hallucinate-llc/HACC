@@ -14,11 +14,11 @@ RE: ORCP 27 NOTICE-COMPLIANCE STATUS
 DRAFT TEMPLATE - COMPLETE ALL BLANKS BEFORE FILING
 
 PRE-FILING COMPLETION CHECKLIST
-1. Confirm all service-method/date/address blanks are completed for each recipient actually served.
-2. Attach at least one proof record for each listed recipient (`N-1`, `N-2`, or additional labeled attachments).
-3. If any ORCP 27 notice category is incomplete, state the reason and requested cure schedule in paragraph 4-5.
-4. Confirm this declaration is signed and dated before filing.
-5. Remove this checklist block or mark it as completed before filing the final executed declaration copy.
+C1. Confirm all service-method/date/address blanks are completed for each recipient actually served.
+C2. Attach at least one proof record for each listed recipient (`N-1`, `N-2`, or additional labeled attachments).
+C3. If any ORCP 27 notice category is incomplete, state the reason and requested cure schedule in paragraph 4-5.
+C4. Confirm this declaration is signed and dated before filing.
+C5. Remove this checklist block or mark it as completed before filing the final executed declaration copy.
 
 I, Benjamin Barber, declare as follows:
 
@@ -47,10 +47,11 @@ I, Benjamin Barber, declare as follows:
 6. Supporting proof of service records for the entries above are attached as:
    a. ORCP27 Notice Proof Exhibit N-1 (if attached);
    b. ORCP27 Notice Proof Exhibit N-2 (if attached).
+6A. Exhibits N-1 and N-2 are treated in this declaration as supplemental external attachments and not master lettered evidence-binder exhibits unless later re-indexed.
 
 Filing note:
-1. Complete all blanks before filing.
-2. Do not file this declaration with unfilled placeholders.
+N1. Complete all blanks before filing.
+N2. Do not file this declaration with unfilled placeholders.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct to the best of my knowledge.
 

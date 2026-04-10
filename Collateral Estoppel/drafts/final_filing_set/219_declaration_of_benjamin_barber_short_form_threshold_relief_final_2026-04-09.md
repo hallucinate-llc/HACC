@@ -30,13 +30,17 @@ B. SHOW-CAUSE SUPPORT (RECORD-FIRST)
 9. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to counsel Alex Bluestone and counsel's response that he did not accept service on behalf of Solomon while confirming representation in the Jane Cortez guardianship matter.
 10. I request clause-specific show-cause analysis comparing each alleged conflicting statement or act to the exact quoted order term offered as violated.
 11. I also state from personal knowledge that on April 9, 2026, a Clackamas County sheriff deputy served restraining-order papers on Solomon Samuel Barber in person, and I captured a smartphone photo of that event (file: "Solomon Service.HEIC"). Until the sheriff return/proof-of-service is lodged, I offer this personal-observation/photo evidence as supplemental service proof context and not as a substitute for the agency's formal return.
+11A. I do not request a final service-sufficiency finding based only on paragraph 11 without the official sheriff return/proof-of-service record.
 
 C. THRESHOLD PRECLUSION / SCOPE SUPPORT
 
 12. The March 31, 2026 petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport.
 13. Based on my review of current filed and lodged materials, overlapping housing/control issues also appear in a Justice Court eviction-response track (26FE0586) and a District of Oregon complaint track involving HACC and Quantum.
+13A. I also submit a supplemental Parkside screening-approval record (Exhibit PS-1, by separate notice/declaration) as additional status evidence that housing assertions in the petition remain contested and should be handled through threshold scope sequencing rather than broad coercive merits assumptions.
 14. I offer cross-forum points as threshold scope context unless and until certified or filed-stamped records establish finality/identity elements for any dispositive preclusion branch.
 15. I request non-dispositive narrowing and sequencing if full preclusion elements are not yet proven by admissible certified records.
+15A. For consistency with the shared deontic mapping attachments, any dispositive preclusion branch corresponds to Rule ID R-PI-01 and remains certified-record gated.
+15B. Any uncertified status note, oral relay, or summary chart regarding cross-forum status is offered as context only and not as completed proof of a dispositive preclusion element.
 
 D. GAL SUPPORT
 
@@ -48,6 +52,7 @@ E. LIMITATIONS
 18. This declaration is offered as an element-focused threshold declaration and is not intended to replace admissible exhibits, certified records, or testimony.
 19. Any broader narrative chronology is maintained in the separate long-form background declaration and is offered there as context only.
 20. I reserve the right to supplement with certified dockets, orders, transcripts, and filed-stamped records as they are obtained.
+20A. For consistency with the shared deontic mapping attachments, show-cause compliance branches correspond to Rule IDs R-SC-01 and R-SC-02, and the service-return gate branch corresponds to Rule ID R-SVC-01.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

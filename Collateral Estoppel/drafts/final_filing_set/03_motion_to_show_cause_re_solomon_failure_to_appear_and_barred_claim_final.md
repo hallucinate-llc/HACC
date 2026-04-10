@@ -50,7 +50,9 @@ II. GROUNDS
 17. This motion therefore seeks an order-to-appear and explanation pathway first, with any sanction remedy limited to what is later proven by admissible order-text, notice, and compliance evidence.
 18. The requested show-cause sequencing does not depend on the April 9, 2026 sheriff-service event; that personal-observation/photo evidence is offered as supplemental context only unless and until the official return is lodged.
 19. The Short-Form Declaration of Benjamin Barber (Threshold Relief), together with supporting supplemental declarations and attached records, identifies the operative order text, case linkage, and service/effect-position events asserted as the predicate for show-cause relief.
-19A. For consistency with shared deontic attachments, this motion's primary compliance branch is Rule ID `R-SC-01`; the no-further-service/appearance anchor branch is Rule ID `R-SC-02`; and the sheriff-service formal-return gate branch is Rule ID `R-SVC-01`.
+19A. For consistency with shared deontic attachments, this motion's primary compliance branch is Rule ID R-SC-01; the no-further-service/appearance anchor branch is Rule ID R-SC-02; and the sheriff-service formal-return gate branch is Rule ID R-SVC-01.
+19B. Any uncertified status note, oral relay, or summary chart is offered as context only and not as completed proof for a contempt finding or final service-sufficiency determination.
+19C. For court readability, Movant incorporates by reference the Memorandum Translating Rule-ID Reasoning Trace in Plain Legal Language, and requests that Rule-ID shorthand in this motion be read using that same trigger, proof-gate, and remedy sequence.
 
 III. LEGAL AUTHORITY
 
@@ -62,7 +64,7 @@ III. LEGAL AUTHORITY
 25. This motion also does not request a dispositive collateral-estoppel dismissal ruling; any preclusion-dispositive branch remains in the separately filed threshold preclusion motion and only to the extent supported by admissible records.
 25A. If the Court finds legally deficient writ-related filing conduct after notice/opportunity to be heard, Movant requests that any filing-misconduct sanction path be set by separate briefing order identifying the specific legal vehicle and evidentiary predicates.
 
-IV. DUTY / TRIGGER / BREACH / REMEDY MAP (RULE IDS `R-SC-01`, `R-SC-02`, `R-SVC-01`)
+IV. DUTY / TRIGGER / BREACH / REMEDY MAP (RULE IDS R-SC-01, R-SC-02, R-SVC-01)
 
 26. Source duty/prohibition:
    a. Exhibit 1/1A reflects in-effect language, including: "The order is now in effect." and "The Restraining Order you have received is in effect and remains in effect until the court changes or terminates it."
@@ -83,9 +85,9 @@ IV. DUTY / TRIGGER / BREACH / REMEDY MAP (RULE IDS `R-SC-01`, `R-SC-02`, `R-SVC-
    c. If and only if a served order to appear is later not obeyed, Movant may seek ORS 33.075 compelled-appearance mechanisms by separate request or hearing branch.
    d. No ORCP 17 sanctions are requested in this filing branch.
 30A. Rule-ID gate summary:
-   a. `R-SC-01`: clause-specific proof map + notice/opportunity to respond before any contempt finding;
-   b. `R-SC-02`: if notice/appearance anchor is contested, resolve on certified service/appearance record;
-   c. `R-SVC-01`: no final service-sufficiency finding requested on photo-only support without official sheriff return.
+   a. R-SC-01: clause-specific proof map + notice/opportunity to respond before any contempt finding;
+   b. R-SC-02: if notice/appearance anchor is contested, resolve on certified service/appearance record;
+   c. R-SVC-01: no final service-sufficiency finding requested on photo-only support without official sheriff return.
 
 V. REQUESTED HEARING STRUCTURE
 
@@ -93,6 +95,7 @@ V. REQUESTED HEARING STRUCTURE
 32. Require pre-hearing filing of clerk-certified docket and operative orders.
     Require filing of proof of service for any issued order to appear before any ORS 33.075 compelled-appearance branch is requested.
     If any such proof document is not yet available by hearing set date, set a short supplemental filing deadline and limit hearing relief to non-enforcement threshold sequencing until the document is filed.
+32A. No service-dependent enforcement finding under Rule ID R-SVC-01 is requested unless and until the official sheriff return/proof-of-service record is filed.
 33. Permit targeted testimony on notice, appearance history, original-matter opposition path, and any proven collateral interference sequence.
 33A. Include targeted testimony and record submissions on writ-of-assistance predicate sequence, including who requested the writ, what underlying order and notice predicates were presented, and what notice/service steps were taken on Benjamin Barber before attempted execution.
 34. Require parties to identify, before hearing, the exact order/date/event each side contends controls the original-matter opposition / noncompliance issue.

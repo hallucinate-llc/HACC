@@ -31,7 +31,9 @@ II. GROUNDS
 12. The requested GAL scope is narrowly tailored to unresolved protective-proceeding questions: (a) current wishes and welfare concerns of Jane Kay Cortez, (b) whether requested emergency/plenary relief is broader than necessary on the present record, and (c) what least-restrictive protective structure can be supported by admissible evidence.
 13. Movant requests appointment only for neutral investigation/reporting support and not as a merits shortcut on disputed collateral housing, eviction, or federal-claim questions.
 13A. If any party contests Movant's suitability to serve as GAL, Movant requests that the Court first resolve suitability on a limited record and, if suitability is not established, appoint a neutral GAL without delaying threshold protective scheduling.
-13B. For consistency with the shared deontic mapping attachments, the prior-GAL continuity branch referenced in this motion is Rule ID `R-GAL-01` and remains proof-gated unless certified prior records are lodged.
+13B. For consistency with the shared deontic mapping attachments, the prior-GAL continuity branch referenced in this motion is Rule ID R-GAL-01 and remains proof-gated unless certified prior records are lodged.
+13C. Any uncertified status note, oral relay, or summary chart regarding prior-proceeding continuity is offered as context only and not as completed proof of prior-GAL continuity.
+13D. For court readability, Movant incorporates by reference the Memorandum Translating Rule-ID Reasoning Trace in Plain Legal Language, and requests that any Rule-ID shorthand in this motion be read using that same trigger, proof-gate, and remedy sequence.
 
 III. LEGAL AUTHORITY
 
@@ -72,7 +74,7 @@ VII. LIMITATIONS AND REQUESTED HANDLING
 34. The Court may grant tailored GAL appointment/appearance relief on current Chapter 125 conflict-management needs shown in this record.
 34A. If the Court enters only interim GAL relief at this stage, Movant requests that the order set a short deadline for any supplemental suitability submissions and preserve a neutral-GAL fallback.
 35. This motion does not request treatment of uncertified overlap context as a final preclusion finding or final authority adjudication.
-36. Any request in this motion to align with prior GAL history is presented under Rule ID `R-GAL-01` and is conditioned on certified prior order/minute support.
+36. Any request in this motion to align with prior GAL history is presented under Rule ID R-GAL-01 and is conditioned on certified prior order/minute support.
 
 DATED: ____________, 2026
 

@@ -11,7 +11,7 @@ from textwrap import wrap
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
-from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+from reportlab.platypus import HRFlowable, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 
 def usage() -> None:
@@ -78,23 +78,30 @@ def _parse_legal_header(lines: list[str]) -> tuple[dict[str, object] | None, int
 
 def footer(canvas, doc):
     canvas.saveState()
-    canvas.setFont("Times-Roman", 10)
+    page_x_left = doc.leftMargin
+    page_x_right = letter[0] - doc.rightMargin
+    rule_y = 0.74 * inch
+    text_y = 0.48 * inch
+
+    # Footer divider line for cleaner page framing.
+    canvas.setLineWidth(0.8)
+    canvas.line(page_x_left, rule_y, page_x_right, rule_y)
+
     page_label = f"Page {canvas.getPageNumber()} of {doc.page_count}"
-    page_x = letter[0] - doc.rightMargin
-    page_y = 0.55 * inch
-    canvas.drawRightString(page_x, page_y, page_label)
+    canvas.setFont("Times-Roman", 9)
+    canvas.drawRightString(page_x_right, text_y, page_label)
 
-    available_width = page_x - doc.leftMargin - 0.7 * inch
-    avg_char_width = 5.1
-    max_chars = max(20, int(available_width / avg_char_width))
-    wrapped_title = wrap(doc.title, width=max_chars)[:2]
+    left_label = getattr(doc, "footer_left_label", "") or ""
+    center_label = getattr(doc, "footer_center_label", "") or doc.title
 
-    text = canvas.beginText()
-    text.setTextOrigin(doc.leftMargin, 0.68 * inch if len(wrapped_title) > 1 else page_y)
-    text.setFont("Times-Roman", 10)
-    for line in wrapped_title:
-        text.textLine(line)
-    canvas.drawText(text)
+    if left_label:
+        canvas.setFont("Times-Roman", 9)
+        canvas.drawString(page_x_left, text_y, left_label[:52])
+
+    if center_label:
+        center_x = (page_x_left + page_x_right) / 2
+        canvas.setFont("Times-Italic", 8.3)
+        canvas.drawCentredString(center_x, text_y, center_label[:68])
     canvas.restoreState()
 
 
@@ -114,11 +121,14 @@ def render_text(input_path: Path, output_path: Path, title: str) -> None:
         leading=15,
         spaceAfter=3,
     )
-    h1 = ParagraphStyle("h1", parent=base, fontName="Times-Bold", fontSize=12.5, leading=15.5, spaceBefore=2, spaceAfter=8, alignment=1)
-    h2 = ParagraphStyle("h2", parent=base, fontName="Times-Bold", fontSize=12, leading=15, spaceBefore=8, spaceAfter=5)
-    h3 = ParagraphStyle("h3", parent=base, fontName="Times-BoldItalic", fontSize=11.5, leading=14, spaceBefore=6, spaceAfter=3)
+    h1 = ParagraphStyle("h1", parent=base, fontName="Times-Bold", fontSize=12.3, leading=15.2, spaceBefore=2, spaceAfter=7, alignment=1)
+    h2 = ParagraphStyle("h2", parent=base, fontName="Times-Bold", fontSize=12.4, leading=15.8, spaceBefore=9, spaceAfter=5)
+    h3 = ParagraphStyle("h3", parent=base, fontName="Times-BoldItalic", fontSize=11.4, leading=13.8, spaceBefore=5, spaceAfter=3)
+    h4 = ParagraphStyle("h4", parent=base, fontName="Times-Bold", fontSize=11.2, leading=13.8, spaceBefore=5, spaceAfter=3)
+    h5 = ParagraphStyle("h5", parent=base, fontName="Times-Italic", fontSize=11, leading=13.5, spaceBefore=4, spaceAfter=2)
     quote = ParagraphStyle("quote", parent=base, leftIndent=18, fontName="Courier", fontSize=9.8, leading=12)
     bodynum = ParagraphStyle("bodynum", parent=base, leftIndent=12, firstLineIndent=-12)
+    bodynum_sub = ParagraphStyle("bodynum_sub", parent=base, leftIndent=22, firstLineIndent=-12)
     centered = ParagraphStyle("centered", parent=base, alignment=1, fontName="Times-Roman", fontSize=12, leading=14)
     cap = ParagraphStyle("cap", parent=base, fontSize=11, leading=13)
 
@@ -128,15 +138,17 @@ def render_text(input_path: Path, output_path: Path, title: str) -> None:
     story = []
     header, body_start = _parse_legal_header(lines)
 
+    parsed_case_no = ""
     if header:
         court_lines = header["court_lines"]
         case_no = str(header["case_no"])
+        parsed_case_no = case_no
         party_lines = header["party_lines"]
         title_lines = header["title_lines"]
 
         for c in court_lines:
             story.append(Paragraph(clean_inline(c), centered))
-        story.append(Spacer(1, 0.12 * inch))
+        story.append(Spacer(1, 0.08 * inch))
 
         if party_lines or case_no:
             left_text = "<br/>".join(clean_inline(x) for x in party_lines) if party_lines else ""
@@ -159,12 +171,12 @@ def render_text(input_path: Path, output_path: Path, title: str) -> None:
                 )
             )
             story.append(caption_table)
-            story.append(Spacer(1, 0.16 * inch))
+            story.append(Spacer(1, 0.10 * inch))
 
         if title_lines:
             title_html = "<br/>".join(clean_inline(t) for t in title_lines)
             story.append(Paragraph(title_html, h1))
-            story.append(Spacer(1, 0.06 * inch))
+            story.append(Spacer(1, 0.04 * inch))
     in_code = False
     code_lines: list[str] = []
 
@@ -199,11 +211,35 @@ def render_text(input_path: Path, output_path: Path, title: str) -> None:
             continue
 
         if stripped.startswith("## "):
+            story.append(HRFlowable(width="100%", thickness=0.9, color="black"))
+            story.append(Spacer(1, 0.03 * inch))
             story.append(Paragraph(clean_inline(stripped[3:]), h2))
             continue
 
         if stripped.startswith("### "):
             story.append(Paragraph(clean_inline(stripped[4:]), h3))
+            continue
+
+        if stripped.startswith("#### "):
+            story.append(Paragraph(clean_inline(stripped[5:]), h4))
+            continue
+
+        # Roman numeral section headers common in motions.
+        if re.match(r"^[IVXLC]+\.\s+[A-Z].*$", stripped):
+            story.append(Spacer(1, 0.03 * inch))
+            story.append(HRFlowable(width="100%", thickness=0.9, color="black"))
+            story.append(Spacer(1, 0.03 * inch))
+            story.append(Paragraph(clean_inline(stripped), h2))
+            continue
+
+        # Lettered legal subheadings like "A. STANDARD" or "B. FACTS".
+        if re.match(r"^[A-Z]\.\s+[A-Z].*$", stripped):
+            story.append(Paragraph(clean_inline(stripped), h4))
+            continue
+
+        # Compact sub-subheadings like "(1) ...", "(a) ...".
+        if re.match(r"^\([0-9a-zA-Z]+\)\s+.*$", stripped):
+            story.append(Paragraph(clean_inline(stripped), h5))
             continue
 
         numbered = re.match(r"^(\d+)\.\s+(.*)$", stripped)
@@ -215,7 +251,7 @@ def render_text(input_path: Path, output_path: Path, title: str) -> None:
         lettered = re.match(r"^([a-z])\.\s+(.*)$", stripped)
         if lettered:
             a, text = lettered.groups()
-            story.append(Paragraph(f"<b>{a}.</b> {clean_inline(text)}", bodynum))
+            story.append(Paragraph(f"<b>{a}.</b> {clean_inline(text)}", bodynum_sub))
             continue
 
         dashed = re.match(r"^-\s+(.*)$", stripped)
@@ -250,6 +286,8 @@ def render_text(input_path: Path, output_path: Path, title: str) -> None:
 
     doc = SimpleDocTemplate(str(output_path), **doc_kwargs)
     doc.page_count = len(page_counter)
+    doc.footer_left_label = parsed_case_no
+    doc.footer_center_label = title
     doc.build(story, onFirstPage=pleading_paper, onLaterPages=pleading_paper)
 
 

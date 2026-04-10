@@ -6,11 +6,11 @@
 
 `SHORT TITLE`
 
-`Gmail preserved sent-mail headers and body snippets`
+`Gmail preserved sent-mail complaint compilation`
 
 `SOURCE FILE`
 
-`/home/barberb/HACC/workspace/manual-imap-download-focused-2026-03-31-snippets`
+`/home/barberb/HACC/workspace/exhibit-binder-court-ready/exhibits/Exhibit_R_Gmail_preserved_sent_mail_compilation.txt`
 
 `RELIED ON BY`
 
@@ -26,8 +26,8 @@
 
 `AUTHENTICITY / FOUNDATION NOTE`
 
-`Use as the preserved Gmail-snippet compilation from the focused manual IMAP mailbox export already staged in the repository.`
+`Use as the compiled printable body assembled from the preserved Gmail headers.txt and body-snippet.txt files in the focused manual IMAP mailbox export already staged in the repository.`
 
 `LIMITATION NOTE`
 
-`This exhibit is partial mailbox-preserved compilation evidence rather than a full raw mailbox export for each message, and it is best used as later complaint-chain notice support rather than as a standalone comprehensive case log.`
+`This exhibit is still partial mailbox-preserved compilation evidence rather than a full raw mailbox export for each message, and it is best used as later complaint-chain notice support rather than as a standalone comprehensive case log.`

@@ -18,6 +18,7 @@ I. RECORDS FILED WITH THIS NOTICE
 2. Supplemental Exhibit CF-2: Filed-stamped and/or certified entered-order set for case `26FE0586` (if provided by records custodian).
 3. Supplemental Exhibit CF-3: U.S. District Court for the District of Oregon docket sheet for the HACC/Quantum complaint track (with case number).
 4. Supplemental Exhibit CF-4: Federal filed complaint and any dispositive/final orders or judgment entries from that track (if any).
+4A. Exhibits CF-1 through CF-4 are supplemental external attachments for this notice and are not master lettered evidence-binder exhibits unless later re-indexed.
 
 II. PURPOSE OF SUPPLEMENT
 

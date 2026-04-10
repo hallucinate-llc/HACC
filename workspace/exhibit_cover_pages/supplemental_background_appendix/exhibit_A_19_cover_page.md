@@ -6,11 +6,11 @@
 
 `SHORT TITLE`
 
-`Reserved ChatGPT skill-assessment summary`
+`ChatGPT export assessing endomorphosis`
 
 `SOURCE FILE`
 
-`Reserved: ChatGPT skill-assessment summary`
+`/home/barberb/HACC/evidence/paper documents/what do you think about the skill of the github user _endomorphosis_ - ChatGPT.pdf`
 
 `RELIED ON BY`
 
@@ -19,12 +19,12 @@
 
 `PROPOSITION(S) THIS EXHIBIT IS OFFERED TO SUPPORT`
 
-1. Reserved for a supplemental machine-generated demonstrative, if actually added later.
+1. A native ChatGPT export describes the public GitHub user `endomorphosis` as a highly active engineer in AI and decentralized systems and discusses the public repository record as evidence of technical skill.
 
 `AUTHENTICITY / FOUNDATION NOTE`
 
-`Use only if the reserved demonstrative file is actually created and inserted into the appendix.`
+`Use as a native exported PDF preserved in the evidence repository. Foundation is by repository custody and comparison to the public repositories and technology-background materials referenced in the export.`
 
 `LIMITATION NOTE`
 
-`Reserved demonstrative only; not current primary proof and not yet an underlying repository exhibit file.`
+`This is a third-party generated assessment based on public-facing materials. It is background and corroborative support, not binding proof of compensation, credentialing, or formal certification.`

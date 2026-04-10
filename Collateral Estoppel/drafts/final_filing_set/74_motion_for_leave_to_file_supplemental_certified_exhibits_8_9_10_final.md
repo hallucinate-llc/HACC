@@ -8,28 +8,28 @@ In the Matter of:
 Jane Kay Cortez,
 Protected Person.
 
-MOTION FOR LEAVE TO FILE SUPPLEMENTAL CERTIFIED EXHIBITS
+MOTION FOR LEAVE TO FILE SUPPLEMENTAL EXHIBITS
 (EXHIBITS 8, 9, AND 10)
 
-Movant, Benjamin Barber, respectfully moves for leave to file supplemental certified exhibits associated with previously filed motions in this matter.
+Movant, Benjamin Barber, respectfully moves for leave to file supplemental exhibits associated with previously filed motions in this matter.
 
 I. REQUESTED RELIEF
 
-1. Grant leave to file supplemental certified exhibits numbered 8, 9, and 10 in the existing global exhibit legend.
+1. Grant leave to file supplemental exhibits numbered 8, 9, and 10 in the existing global exhibit legend.
 2. Direct that Exhibits 8, 9, and 10 be treated as supplements to the pending motion set without requiring refiling of previously filed motions.
 3. Set any limited schedule the Court deems appropriate for response directed to the supplemented certified record.
 
 II. GROUNDS
 
-4. The current motion set expressly reserved supplementation upon receipt of certified docket/order/appearance materials.
-5. Certified records are being obtained through clerk records requests and, once filed, will establish or clarify threshold issue-preclusion elements.
-6. Supplementation will assist the Court by providing authenticated/certified source records for finality, issue identity, notice, and full-and-fair-opportunity analysis.
+4. The current motion set expressly reserved supplementation of the evidence record for threshold issue-preclusion analysis.
+5. Exhibits 8, 9, and 10 are page-group subsets from the same scanned source file: `sam barber restraining order.pdf`.
+6. Supplementation will assist the Court by providing a structured, labeled mapping of that source record to finality, issue identity, notice, and full-and-fair-opportunity analysis points.
 
 III. SCOPE OF SUPPLEMENTAL EXHIBITS
 
-7. Exhibit 8: Certified docket/register of actions for case `26PR00641`, including confirmation from the certified register that no signed order was entered (if so reflected).
-8. Exhibit 9: Certified signed restraining-order/final-order record for case `25PO11530` (Sam Barber restraining-order matter) supporting issue-preclusion elements.
-9. Exhibit 10: Certified hearing/appearance record showing notice and full and fair opportunity.
+7. Exhibit 8: `sam barber restraining order.pdf`, pages `1-4` (order-entry and GAL procedural context).
+8. Exhibit 9: `sam barber restraining order.pdf`, pages `5-8` (signed restraining-order/final-order terms for the Sam Barber matter `25PO11530`).
+9. Exhibit 10: `sam barber restraining order.pdf`, pages `9-13` (service/notice/opportunity context).
 
 IV. REQUESTED FILING TREATMENT
 

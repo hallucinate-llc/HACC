@@ -1,0 +1,630 @@
+{
+  "known_numeric": [
+    "1",
+    "10",
+    "1A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "known_binder_count": 72,
+  "rows": [
+    {
+      "file": "01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md",
+      "label": "Exhibit 1",
+      "key": "1",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md",
+      "label": "Exhibit 2",
+      "key": "2",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md",
+      "label": "Exhibit 8",
+      "key": "8",
+      "kind": "range",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md",
+      "label": "Exhibit 9",
+      "key": "9",
+      "kind": "range",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md",
+      "label": "Exhibit 10",
+      "key": "10",
+      "kind": "range",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "02_motion_to_dismiss_for_collateral_estoppel_final.md",
+      "label": "Exhibit 2",
+      "key": "2",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "02_motion_to_dismiss_for_collateral_estoppel_final.md",
+      "label": "Exhibit 8",
+      "key": "8",
+      "kind": "range",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "02_motion_to_dismiss_for_collateral_estoppel_final.md",
+      "label": "Exhibit 9",
+      "key": "9",
+      "kind": "range",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "02_motion_to_dismiss_for_collateral_estoppel_final.md",
+      "label": "Exhibit 10",
+      "key": "10",
+      "kind": "range",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "03A_motion_to_show_cause_re_solomon_housing_interference_final.md",
+      "label": "Exhibit 1",
+      "key": "1",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md",
+      "label": "Exhibit 1",
+      "key": "1",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "04_declaration_of_benjamin_barber_in_support_of_motions_final.md",
+      "label": "Exhibit A",
+      "key": "A",
+      "kind": "single",
+      "status": "MATCH_BINDER_LABEL",
+      "bucket": [
+        "evidence_binder"
+      ]
+    },
+    {
+      "file": "04_declaration_of_benjamin_barber_in_support_of_motions_final.md",
+      "label": "Exhibit B",
+      "key": "B",
+      "kind": "single",
+      "status": "MATCH_BINDER_LABEL",
+      "bucket": [
+        "evidence_binder"
+      ]
+    },
+    {
+      "file": "04_declaration_of_benjamin_barber_in_support_of_motions_final.md",
+      "label": "Exhibit 1",
+      "key": "1",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "04_declaration_of_benjamin_barber_in_support_of_motions_final.md",
+      "label": "Exhibit 2",
+      "key": "2",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "04_declaration_of_benjamin_barber_in_support_of_motions_final.md",
+      "label": "Exhibit 3",
+      "key": "3",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "04_declaration_of_benjamin_barber_in_support_of_motions_final.md",
+      "label": "Exhibit B-14",
+      "key": "B-14",
+      "kind": "single",
+      "status": "MATCH_BINDER_LABEL",
+      "bucket": [
+        "evidence_binder"
+      ]
+    },
+    {
+      "file": "04_declaration_of_benjamin_barber_in_support_of_motions_final.md",
+      "label": "Exhibit A-6",
+      "key": "A-6",
+      "kind": "single",
+      "status": "MATCH_BINDER_LABEL",
+      "bucket": [
+        "evidence_binder"
+      ]
+    },
+    {
+      "file": "138_notice_of_filing_supplemental_cross_forum_docket_records_final.md",
+      "label": "Exhibit CF-1",
+      "key": "CF-1",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "138_notice_of_filing_supplemental_cross_forum_docket_records_final.md",
+      "label": "Exhibit CF-2",
+      "key": "CF-2",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "138_notice_of_filing_supplemental_cross_forum_docket_records_final.md",
+      "label": "Exhibit CF-3",
+      "key": "CF-3",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "138_notice_of_filing_supplemental_cross_forum_docket_records_final.md",
+      "label": "Exhibit CF-4",
+      "key": "CF-4",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "139_supplemental_declaration_authenticating_cross_forum_docket_records_final.md",
+      "label": "Exhibit CF-1",
+      "key": "CF-1",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "139_supplemental_declaration_authenticating_cross_forum_docket_records_final.md",
+      "label": "Exhibit CF-2",
+      "key": "CF-2",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "139_supplemental_declaration_authenticating_cross_forum_docket_records_final.md",
+      "label": "Exhibit CF-3",
+      "key": "CF-3",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "139_supplemental_declaration_authenticating_cross_forum_docket_records_final.md",
+      "label": "Exhibit CF-4",
+      "key": "CF-4",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md",
+      "label": "Exhibit 2",
+      "key": "2",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md",
+      "label": "Exhibit 1",
+      "key": "1",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md",
+      "label": "Exhibit 1",
+      "key": "1",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md",
+      "label": "Exhibit 2",
+      "key": "2",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md",
+      "label": "Exhibit 3",
+      "key": "3",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "185_notice_of_filing_sheriff_return_and_service_proof_2026-04-09.md",
+      "label": "Exhibit SR-1",
+      "key": "SR-1",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "185_notice_of_filing_sheriff_return_and_service_proof_2026-04-09.md",
+      "label": "Exhibit SR-2",
+      "key": "SR-2",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "185_notice_of_filing_sheriff_return_and_service_proof_2026-04-09.md",
+      "label": "Exhibit SR-3",
+      "key": "SR-3",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "196_supplemental_declaration_authenticating_april_9_2026_transmission_records.md",
+      "label": "Exhibit AT-1",
+      "key": "AT-1",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "196_supplemental_declaration_authenticating_april_9_2026_transmission_records.md",
+      "label": "Exhibit AT-2",
+      "key": "AT-2",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "196_supplemental_declaration_authenticating_april_9_2026_transmission_records.md",
+      "label": "Exhibit AT-3",
+      "key": "AT-3",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "209_supplemental_declaration_authenticating_outbound_records_request_transmissions_2026-04-09.md",
+      "label": "Exhibit OR-1",
+      "key": "OR-1",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "209_supplemental_declaration_authenticating_outbound_records_request_transmissions_2026-04-09.md",
+      "label": "Exhibit OR-2",
+      "key": "OR-2",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "209_supplemental_declaration_authenticating_outbound_records_request_transmissions_2026-04-09.md",
+      "label": "Exhibit OR-3",
+      "key": "OR-3",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "209_supplemental_declaration_authenticating_outbound_records_request_transmissions_2026-04-09.md",
+      "label": "Exhibit OR-4",
+      "key": "OR-4",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "213_supplemental_declaration_re_orcp27_notice_compliance_2026-04-09.md",
+      "label": "Exhibit N-1",
+      "key": "N-1",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "213_supplemental_declaration_re_orcp27_notice_compliance_2026-04-09.md",
+      "label": "Exhibit N-2",
+      "key": "N-2",
+      "kind": "single",
+      "status": "UNRESOLVED",
+      "bucket": []
+    },
+    {
+      "file": "219_declaration_of_benjamin_barber_short_form_threshold_relief_final_2026-04-09.md",
+      "label": "Exhibit 1",
+      "key": "1",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "219_declaration_of_benjamin_barber_short_form_threshold_relief_final_2026-04-09.md",
+      "label": "Exhibit 2",
+      "key": "2",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "74_motion_for_leave_to_file_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 8",
+      "key": "8",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "74_motion_for_leave_to_file_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 9",
+      "key": "9",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "74_motion_for_leave_to_file_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 10",
+      "key": "10",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "75_certificate_of_service_for_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 8",
+      "key": "8",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "75_certificate_of_service_for_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 9",
+      "key": "9",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "75_certificate_of_service_for_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 10",
+      "key": "10",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "76_proposed_order_granting_leave_to_file_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 8",
+      "key": "8",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "76_proposed_order_granting_leave_to_file_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 9",
+      "key": "9",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "76_proposed_order_granting_leave_to_file_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 10",
+      "key": "10",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "78_notice_of_filing_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 8",
+      "key": "8",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "78_notice_of_filing_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 9",
+      "key": "9",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "78_notice_of_filing_supplemental_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 10",
+      "key": "10",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "82_supplemental_declaration_authenticating_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 8",
+      "key": "8",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "82_supplemental_declaration_authenticating_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 9",
+      "key": "9",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    },
+    {
+      "file": "82_supplemental_declaration_authenticating_certified_exhibits_8_9_10_final.md",
+      "label": "Exhibit 10",
+      "key": "10",
+      "kind": "single",
+      "status": "MATCH_GLOBAL_NUMERIC",
+      "bucket": [
+        "global_legend"
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "file": "138_notice_of_filing_supplemental_cross_forum_docket_records_final.md",
+      "unresolved": [
+        "Exhibit CF-1",
+        "Exhibit CF-2",
+        "Exhibit CF-3",
+        "Exhibit CF-4"
+      ]
+    },
+    {
+      "file": "139_supplemental_declaration_authenticating_cross_forum_docket_records_final.md",
+      "unresolved": [
+        "Exhibit CF-1",
+        "Exhibit CF-2",
+        "Exhibit CF-3",
+        "Exhibit CF-4"
+      ]
+    },
+    {
+      "file": "185_notice_of_filing_sheriff_return_and_service_proof_2026-04-09.md",
+      "unresolved": [
+        "Exhibit SR-1",
+        "Exhibit SR-2",
+        "Exhibit SR-3"
+      ]
+    },
+    {
+      "file": "196_supplemental_declaration_authenticating_april_9_2026_transmission_records.md",
+      "unresolved": [
+        "Exhibit AT-1",
+        "Exhibit AT-2",
+        "Exhibit AT-3"
+      ]
+    },
+    {
+      "file": "209_supplemental_declaration_authenticating_outbound_records_request_transmissions_2026-04-09.md",
+      "unresolved": [
+        "Exhibit OR-1",
+        "Exhibit OR-2",
+        "Exhibit OR-3",
+        "Exhibit OR-4"
+      ]
+    },
+    {
+      "file": "213_supplemental_declaration_re_orcp27_notice_compliance_2026-04-09.md",
+      "unresolved": [
+        "Exhibit N-1",
+        "Exhibit N-2"
+      ]
+    }
+  ]
+}

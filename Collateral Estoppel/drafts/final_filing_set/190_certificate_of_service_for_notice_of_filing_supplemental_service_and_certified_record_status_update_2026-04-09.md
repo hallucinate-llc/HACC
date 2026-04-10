@@ -18,25 +18,25 @@ I certify that on April 9, 2026, I served true copies of the following document(
 
 Service was completed by the following method(s) actually used for each recipient entry below:
 
-1. Email/eService (same-matter notice copy to counsel; acceptance disputed unless stated otherwise).
-2. Text message/MMS transmission (to respondent, if used for this filing and as permitted by rule/order/authorized alternate service posture).
-3. First-class U.S. Mail and/or other delivery method (if used), with proof reference listed below.
+a. Email/eService (same-matter notice copy to counsel; acceptance disputed unless stated otherwise).
+b. Text message/MMS transmission (to respondent, if used for this filing and as permitted by rule/order/authorized alternate service posture).
+c. First-class U.S. Mail and/or other delivery method (if used), with proof reference listed below.
 
 Recipient(s):
 
-1. Solomon Samuel Barber (or counsel of record for same matter)
+a. Solomon Samuel Barber (or counsel of record for same matter)
    Address/Email used: 4305 NE 125th Ave, Vancouver, WA 98682; text/MMS to (503) 381-6911
    Date served: April 9, 2026
    Service method actually used: Text message / MMS transmission to (503) 381-6911
    Proof reference (receipt/tracking/affidavit/email log): Google Voice transcript/service-chain records and related preserved message exports used in this packet's service chronology (including March 10, 2026 order-image MMS sequence and same-thread response records)
 
-2. Additional party/counsel (if any): ___________________________
+b. Additional party/counsel (if any): ___________________________
    Address/Email used: ______________________________________
    Date served: N/A
    Service method actually used: N/A
    Proof reference (receipt/tracking/affidavit/email log): ____________________________________________
 
-3. Counsel for Solomon Samuel Barber (same-matter notice copy; acceptance disputed unless stated otherwise)
+c. Counsel for Solomon Samuel Barber (same-matter notice copy; acceptance disputed unless stated otherwise)
    Name: Alex Bluestone
    Address/Email used: alex@salemprobate.com
    Date served: April 9, 2026

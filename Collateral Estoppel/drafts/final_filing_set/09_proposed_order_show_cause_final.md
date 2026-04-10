@@ -20,16 +20,17 @@ The Court, having reviewed the Motion for Order to Show Cause and the file and r
    c. any asserted legal basis for noncompliance.
 2A. The written response in paragraph 2 shall also address writ-of-assistance predicate sequence, including: (a) the legal and factual basis relied on to seek or use writ process concerning Jane Kay Cortez; (b) what notice/service steps were taken on Benjamin Barber before attempted coercive execution; and (c) why writ-seeking conduct proceeded despite raised threshold objections concerning service and preclusion posture.
 2B. The written response in paragraphs 2 and 2A shall identify the specific order, filing, and service facts the responding party contends authorized any coercive writ process at the time that process was pursued.
-2C. For consistency with the shared deontic mapping attachments, the compliance/show-cause branches in this order correspond to Rule IDs `R-SC-01` and `R-SC-02`, and the service-return sufficiency gate corresponds to Rule ID `R-SVC-01`.
+2C. For consistency with the shared deontic mapping attachments, the compliance/show-cause branches in this order correspond to Rule IDs R-SC-01 and R-SC-02, and the service-return sufficiency gate corresponds to Rule ID R-SVC-01.
+2D. Any uncertified status note, oral relay, or summary chart is treated as context only and not as completed proof for a contempt or service-sufficiency finding.
 3. The parties shall file certified docket/order materials relevant to notice, appearance, and order-effect issues by: ______________________.
 3A. If proof of service materials required for any requested enforcement relief are not available by the hearing date, those materials shall be filed within: ______________________ days after receipt, and enforcement-specific determinations are deferred until filing.
-3B. No final service-sufficiency determination under Rule ID `R-SVC-01` shall be entered on photo-only support without the official sheriff return/proof-of-service record.
+3B. No final service-sufficiency determination under Rule ID R-SVC-01 shall be entered on photo-only support without the official sheriff return/proof-of-service record.
 4. This order requires appearance and explanation first; any remedial sanction determination is reserved unless and until contempt predicates are proven on admissible evidence.
 5. Failure to comply with this Order may result in further orders authorized by law, including ORS 33.075 appearance-enforcement steps if a served order to appear is not obeyed, and only after proof of service of this Order is filed.
 6. Formal service-validity issues remain reserved for determination on the service record.
 7. Nothing in this order adjudicates collateral housing, eviction, or federal civil-rights merits.
 8. Before any contempt finding or remedial sanction order, Movant shall file and serve a clause-specific proof map identifying each alleged conflicting act and the exact quoted order term offered as violated, with exhibit and date/time citations, no later than: ______________________.
-8A. Any clause-specific proof map filed under paragraph 8 shall identify whether each asserted point is presented under Rule ID `R-SC-01` or `R-SC-02`.
+8A. Any clause-specific proof map filed under paragraph 8 shall identify whether each asserted point is presented under Rule ID R-SC-01 or R-SC-02.
 9. Responding party may file a response limited to the clause-specific proof map and cited records by: ______________________.
 10. No contempt finding or remedial sanction order may be entered unless the responding party had notice and an opportunity to address the specific clause-level proof map and cited records.
 10A. If the Court determines additional briefing is required on any alleged legally deficient writ-related filing conduct, the Court may set a separate sanctions-briefing schedule identifying the legal vehicle and evidentiary predicates to be addressed.

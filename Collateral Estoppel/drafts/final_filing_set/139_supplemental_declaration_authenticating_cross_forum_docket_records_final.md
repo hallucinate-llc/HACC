@@ -27,6 +27,7 @@ B. FEDERAL RECORDS (DISTRICT OF OREGON TRACK)
 
 7. If and when Supplemental Exhibit CF-3 is lodged, it will be offered as a true and correct copy of a docket sheet produced from District of Oregon public docket channels for the HACC/Quantum complaint track identified by party names.
 8. If and when Supplemental Exhibit CF-4 is lodged, it will be offered as a true and correct copy of filed complaint and order/judgment records from that track, to the extent available in the retrieved docket set.
+8A. Exhibits CF-1 through CF-4 are treated in this declaration as supplemental external attachments and not master lettered evidence-binder exhibits unless later re-indexed.
 
 C. LIMITED PURPOSE OF THIS SUPPLEMENT
 

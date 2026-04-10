@@ -16,7 +16,7 @@ This matter came before the Court on Movant's Motion for Limited ORCP 29 Joinder
 THE COURT FINDS AND ORDERS:
 
 1. The motion is: ______________________.
-1A. For consistency with the shared deontic mapping attachments, the ORCP 29B fallback branch addressed in this order corresponds to Rule ID `R-JN-01`, and the ORCP 22C derivative-liability limit branch corresponds to Rule ID `R-JN-02`.
+1A. For consistency with the shared deontic mapping attachments, the ORCP 29B fallback branch addressed in this order corresponds to Rule ID R-JN-01, and the ORCP 22C derivative-liability limit branch corresponds to Rule ID R-JN-02.
 2. Joinder-feasible branch (complete only if applicable): If the Court finds limited ORCP 29A joinder is feasible and necessary after service and an opportunity to be heard, Housing Authority of Clackamas County and Quantum Residential Property Management, L.P. are joined on a limited basis for threshold party-structure and overlap-control determinations only.
 3. Joinder-feasible branch (complete only if applicable): Any merits adjudication beyond that limited purpose is reserved to the proper forum.
 4. Joinder-not-feasible branch (complete only if applicable): If the Court determines joinder is not feasible, the Court finds that ORCP 29B factors support shaped relief excluding collateral Section 18/eviction/federal housing merits from this probate case.
@@ -29,10 +29,11 @@ THE COURT FINDS AND ORDERS:
 11. If limited joinder is denied or deferred, paragraphs 8 through 10 do not apply.
 11A. If limited joinder is granted, paragraphs 4 through 5 do not operate as a merits adjudication and are read only as scope-management findings.
 12. Before any hearing or ruling that includes an ORCP 29B infeasibility finding, the moving party must file (or identify in the current record) a one-page ORCP 29B factor chart mapping each factor to at least one legal authority cite and one admissible record cite.
-12A. No final feasibility finding under Rule ID `R-JN-01` may be entered on address/service-channel references alone without filed service-attempt proof identifying date, method, recipient identity/title, and result.
+12A. No final feasibility finding under Rule ID R-JN-01 may be entered on address/service-channel references alone without filed service-attempt proof identifying date, method, recipient identity/title, and result.
+12B. Any uncertified status note, oral relay, or summary chart is treated as context only and not as completed proof for a final infeasibility or scope-limitation finding.
 13. The Court reserves all merits determinations not expressly ordered above.
-14. Any preclusion or finality determination remains limited to the extent supported by admissible certified records and, where applicable, to specifically identified fully-supported issue rows under Rule ID `R-PI-01`.
-15. Unless a derivative liability-over theory is specifically pleaded and supported, ORCP 22C third-party practice remains unavailable in this probate posture under Rule ID `R-JN-02`.
+14. Any preclusion or finality determination remains limited to the extent supported by admissible certified records and, where applicable, to specifically identified fully-supported issue rows under Rule ID R-PI-01.
+15. Unless a derivative liability-over theory is specifically pleaded and supported, ORCP 22C third-party practice remains unavailable in this probate posture under Rule ID R-JN-02.
 16. Address references or service-channel references, standing alone, are not treated as conclusive proof of completed ORCP service; service findings will be made on filed proof records.
 17. If limited joinder is denied or deferred, this order does not adjudicate collateral housing-merits liability and is entered without prejudice to properly postured claims in separate forums.
 17A. If limited joinder is granted, this order still does not adjudicate collateral housing-merits liability beyond the threshold party-structure and overlap-control scope stated in paragraphs 2 through 3.

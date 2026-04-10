@@ -10,16 +10,16 @@
 
 `SHORT TITLE`
 
-`Certified guardian / prior-authority placeholder`
+`Sam Barber restraining-order packet (cross-use copy)`
 
 `SOURCE FILE`
 
-`Not yet obtained. Placeholder target described in /home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md`
+`/home/barberb/HACC/evidence/history/sam barber restraining order.pdf`
 
 `STATUS`
 
-`Placeholder / future supplementation`
+`Scanned source packet / cross-use`
 
 `NOTES`
 
-`Reserved for certified docket or order material for any earlier guardian, guardian ad litem, or prior-authority matter if obtained.`
+`Same restraining-order packet used here for overlap, scope, and notice support in the motion/probate binder.`

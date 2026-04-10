@@ -16,6 +16,9 @@ using:
 - [exhibit_cover_page_completion_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_completion_tracker_2026-04-09.md)
 - [evidence_binder_merged_print_order_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_merged_print_order_2026-04-09.md)
 - [evidence_binder_exhibit_and_cover_sheet_index_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_exhibit_and_cover_sheet_index_2026-04-09.md)
+- [state_housing_state_court_binder_incorporation_note_2026-04-09.md](/home/barberb/HACC/workspace/state_housing_state_court_binder_incorporation_note_2026-04-09.md)
+
+Build the `Shared Housing / State-Court Binder` first and treat it as the master incorporated volume for duplicated housing/state-court source material. If a later binder family reuses the same underlying source, keep the cover pages but prefer a cross-reference sheet instead of reprinting the body.
 
 ## 1. Housing Core Stack
 

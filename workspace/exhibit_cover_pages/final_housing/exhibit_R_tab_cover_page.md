@@ -10,15 +10,15 @@
 
 `SHORT TITLE`
 
-`Gmail preserved sent-mail headers and body snippets`
+`Gmail preserved sent-mail complaint compilation`
 
 `SOURCE FILE`
 
-`/home/barberb/HACC/workspace/manual-imap-download-focused-2026-03-31-snippets`
+`/home/barberb/HACC/workspace/exhibit-binder-court-ready/exhibits/Exhibit_R_Gmail_preserved_sent_mail_compilation.txt`
 
 `STATUS`
 
-`Partial / mailbox-preserved compilation`
+`Compiled printable body from mailbox-preserved snippets`
 
 `NOTES`
 

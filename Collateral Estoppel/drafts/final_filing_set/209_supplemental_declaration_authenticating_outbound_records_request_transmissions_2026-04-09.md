@@ -29,6 +29,7 @@ B. RECORDS IDENTIFIED
 5. Supplemental Exhibit OR-2 is a true and correct copy of the outbound transmission record for `REQ-FED-HAQC-001`, including recipient channel, send timestamp, and sent message content.
 6. Supplemental Exhibit OR-3 is a true and correct copy of the outbound transmission record for `REQ-SHERIFF-RETURN-001`, including recipient channel, send timestamp, and sent message content.
 7. Supplemental Exhibit OR-4, if available, contains transmission metadata (message IDs, headers, or delivery receipts) associated with OR-1 through OR-3.
+7A. Exhibits OR-1 through OR-4 are treated in this declaration as supplemental external attachments and not master lettered evidence-binder exhibits unless later re-indexed.
 
 C. FOUNDATION FACTS
 

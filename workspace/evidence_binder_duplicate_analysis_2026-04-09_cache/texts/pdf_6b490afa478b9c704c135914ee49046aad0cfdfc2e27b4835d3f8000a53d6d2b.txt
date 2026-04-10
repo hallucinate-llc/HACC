@@ -1,0 +1,176 @@
+4/8/26, 3:53 PM                        ipfs_datasets_py/ipfs_datasets_py/processors/legal_scrapers at main · endomorphosis/ipfs_datasets_py
+
+
+                endomorphosis        ipfs_datasets_py
+
+
+       Code         Issues     188       Pull requests    3        Agents          Discussions         Actions          Projects   Wiki       Security and quality     33
+
+
+
+           main          ipfs_datasets_py / ipfs_datasets_py / processors                                         Go to file              t    Add file
+                           / legal_scrapers /
+
+
+      endomorphosis feat: Improve error handling and logging for optional dependencies ac…                                                     3bd560f · last week
+
+
+
+   Name                                                                                                          Name                                Last commit da…
+
+
+      ..
+
+      bluebook_citation_validator                        Replace asyncio with anyio across ipfs_datasets_…                         2 months ago
+
+      caselaw_access_program                             feat: Implement search_state_law_corpus functi…                              last month
+
+      common                                             Add natural language legal search with multi-so…                          2 months ago
+
+      complaint_analysis                                 Add natural language legal search with multi-so…                          2 months ago
+
+      federal_scrapers                                   feat: Add federal law scraper and related tools                              last month
+
+      municipal_law_database_scrapers                    feat: Enhance OpenAI embeddings processing w…                             2 months ago
+
+      state_scrapers                                     fix: Correct indentation in content return statem…                         2 weeks ago
+
+      BRAVE_LEGAL_SEARCH.md                              Add natural language legal search with multi-so…                          2 months ago
+
+      BRAVE_LEGAL_SEARCH_IMPLEMENTATION…                 Refactor: Move web_archiving to processors/ na…                           2 months ago
+
+      COMPLAINT_ANALYSIS_REFACTORING.md                  Add natural language legal search with multi-so…                          2 months ago
+
+      FINAL_PROJECT_REPORT.md                            Add natural language legal search with multi-so…                          2 months ago
+
+      HUGGINGFACE_INDEX_INTEGRATION.md                   Add natural language legal search with multi-so…                          2 months ago
+
+      HUGGINGFACE_INTEGRATION_SUMMARY.…                  Add natural language legal search with multi-so…                          2 months ago
+
+      LEGAL_WEB_ARCHIVE_INTEGRATION.md                   Refactor: Move web_archiving to processors/ na…                           2 months ago
+
+      MULTI_ENGINE_SEARCH.md                             feat: Update DuckDuckGo adapter and depende…                                 last month
+
+      PROJECT_COMPLETE.md                                Add natural language legal search with multi-so…                          2 months ago
+
+      SHARED_COMPONENTS.md                               Add natural language legal search with multi-so…                          2 months ago
+
+      WEB_ARCHIVE_INTEGRATION_COMPLETE.…                 Refactor: Move web_archiving to processors/ na…                           2 months ago
+
+      __init__.py                                        feat: Add Tennessee rules scraping functionality …                         3 weeks ago
+
+      brave_legal_search.py                              Refactor: Move web_archiving to processors/ na…                           2 months ago
+
+      canonical_legal_corpora.py                         Update federal register handling and improve st…                             last month
+
+      citation_extraction.py                             Add stubs for GraphRAG dashboard and optimiz…                             2 months ago
+
+      common_crawl_index_loader.py                       Add tests for Louisiana, Wyoming, Massachusett…                            2 weeks ago
+
+      common_crawl_scraper.py                            Add tests for Louisiana, Wyoming, Massachusett…                            2 weeks ago
+
+      corpus_gap_analyzer.py                             Implement corpus gap analysis and enhanced st…                               last month
+
+      enhanced_query_expander.py                         Enhancement 12: Complete legal scrapers impro…                            2 months ago
+
+      enhanced_state_admin_orchestrator.py               feat: Update StateDiscoveryResult to include stat…                         2 weeks ago
+
+                                                         Add stubs for GraphRAG dashboard and optimiz…                             2 months ago
+      export_utils.py
+
+https://github.com/endomorphosis/ipfs_datasets_py/tree/main/ipfs_datasets_py/processors/legal_scrapers                                                                 1/3
+4/8/26, 3:53 PM                        ipfs_datasets_py/ipfs_datasets_py/processors/legal_scrapers at main · endomorphosis/ipfs_datasets_py
+
+   Name                                                                                                   Name                       Last commit da…
+
+
+      huggingface_api_search.py                     feat: Improve error handling and logging for opt…                    last week
+
+      huggingface_pipeline_engine.py                Refactor asyncio imports to use anyio_compat                        last month
+
+      incremental_updates_engine.py                 feat: Phase B2 test coverage blitz — 53 tool cate…               2 months ago
+
+      integrated_pdf_processor.py                   Implement corpus gap analysis and enhanced st…                      last month
+
+      ipfs_storage_integration.py                   Add Cloudflare Browser Rendering support and …                      last month
+
+      knowledge_base_loader.py                      Add natural language legal search with multi-so…                 2 months ago
+
+      legal_dataset_api.py                          feat(scrapers): Increase timeout and capacity lim…                 3 weeks ago
+
+      legal_graphrag.py                             Enhancement 12: Complete legal scrapers impro…                   2 months ago
+
+      legal_graphrag_engine.py                      feat: Phase B2 test coverage blitz — 53 tool cate…               2 months ago
+
+      legal_relationships.json                      Enhancement 12: Complete legal scrapers impro…                   2 months ago
+
+      legal_report_generator.py                     Enhancement 12: Complete legal scrapers impro…                   2 months ago
+
+      legal_synonyms.json                           Enhancement 12: Complete legal scrapers impro…                   2 months ago
+
+      legal_web_archive_search.py                   Add tests for Louisiana, Wyoming, Massachusett…                    2 weeks ago
+
+      multi_engine_legal_search.py                  feat: Phase B2 test coverage blitz — 53 tool cate…               2 months ago
+
+      multilanguage_engine.py                       feat: Phase B2 test coverage blitz — 53 tool cate…               2 months ago
+
+      multilanguage_support.py                      Update subproject commit reference in ipfs_acc…                  2 months ago
+
+      municipal_codes_api.py                        Add stubs for GraphRAG dashboard and optimiz…                    2 months ago
+
+      municipal_laws_scraper.py                     Add stubs for GraphRAG dashboard and optimiz…                    2 months ago
+
+      municipal_scraper_engine.py                   feat: Phase B2 test coverage blitz — 53 tool cate…               2 months ago
+
+      parallel_web_archiver.py                      feat: Add Tennessee rules scraping functionality …                 3 weeks ago
+
+      query_expander.py                             fix: mark subproject commits as dirty in worktre…                2 months ago
+
+      query_processor.py                            feat: Improve error handling and logging for opt…                    last week
+
+      recap_archive_scraper.py                      Add stubs for GraphRAG dashboard and optimiz…                    2 months ago
+
+      registry.py                                   feat: add state administrative rules scraper and r…                 last month
+
+      regulation_version_tracker.py                 Enhancement 12: Complete legal scrapers impro…                   2 months ago
+
+      result_filter.py                              Enhancement 12: Complete legal scrapers impro…                   2 months ago
+
+      scraping_state.py                             Add stubs for GraphRAG dashboard and optimiz…                    2 months ago
+
+      search_result_citation_extractor.py           Enhancement 12: Complete legal scrapers impro…                   2 months ago
+
+      search_term_generator.py                      Add natural language legal search with multi-so…                 2 months ago
+
+      shared_fetch_cache.py                         Add tests for Louisiana, Wyoming, Massachusett…                    2 weeks ago
+
+      state_admin_rules_scraper.py                  feat: Add output directory and checkpointing fu…                   2 weeks ago
+
+      state_agencies_all.jsonl                      update                                                           2 months ago
+
+      state_laws_agentic_daemon.py                  Enhance Cloudflare Credential Resolution and A…                    2 weeks ago
+
+      state_laws_scheduler_engine.py                feat: Phase B2 test coverage blitz — 53 tool cate…               2 months ago
+
+                                                    feat: Enhance Kansas rules scraping functionalit…                  3 weeks ago
+      state_laws_scraper.py
+https://github.com/endomorphosis/ipfs_datasets_py/tree/main/ipfs_datasets_py/processors/legal_scrapers                                                 2/3
+4/8/26, 3:53 PM                      ipfs_datasets_py/ipfs_datasets_py/processors/legal_scrapers at main · endomorphosis/ipfs_datasets_py
+
+   Name                                                                                              Name                          Last commit da…
+
+
+
+      state_laws_verifier.py                      Refactor asyncio imports to use anyio_compat                        last month
+
+      state_procedure_rules_scraper.py            Add tests for Louisiana, Wyoming, Massachusett…                    2 weeks ago
+
+      url_archive_cache.py                        feat: Implement shared fetch cache for legal we…                   3 weeks ago
+
+      us_towns_and_counties_urls.jsonl            update                                                           2 months ago
+
+
+
+
+https://github.com/endomorphosis/ipfs_datasets_py/tree/main/ipfs_datasets_py/processors/legal_scrapers                                               3/3
+

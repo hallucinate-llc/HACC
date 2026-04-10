@@ -58,6 +58,7 @@ D. GAL SUPPORT
 E. FILING DISCIPLINE
 
 26. My filing posture is to keep dispositive requests tied to admissible certified proof, request threshold scope-control relief while rows remain incomplete, and avoid presenting uncertified overlap context as final adjudicated fact.
+26A. Any uncertified status note, oral relay, or summary chart is offered as context only and not as completed proof for dispositive preclusion, service sufficiency, or contempt findings.
 
 F. LIMITATION
 

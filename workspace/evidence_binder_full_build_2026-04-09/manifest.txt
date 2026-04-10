@@ -1,6 +1,10 @@
 lean_mode=True
 
+## Binder Front Matter
+- title: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/binder_title_page.pdf
+- index: /home/barberb/HACC/workspace/evidence_binder_exhibit_and_cover_sheet_index_court_ready_2026-04-09.pdf
 ## Shared Housing / State-Court Binder
+- divider: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_divider_page.pdf
 - Exhibit B
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_B_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_B_cover_page.pdf
@@ -40,7 +44,7 @@ lean_mode=True
 - Exhibit R
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_R_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_R_cover_page.pdf
-  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_R_source_note.pdf
+  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_R_source.pdf
 - Exhibit T
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_T_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_T_cover_page.pdf
@@ -70,6 +74,7 @@ lean_mode=True
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_AA_cover_page.pdf
   source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_housing_state_court_binder_exhibit_AA_source.pdf
 ## Shared Motion / Probate / Sanctions Binder
+- divider: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_divider_page.pdf
 - Exhibit A
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_A_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_A_cover_page.pdf
@@ -133,11 +138,11 @@ lean_mode=True
 - Exhibit P
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_P_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_P_cover_page.pdf
-  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_P_source_note.pdf
+  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_P_source.pdf
 - Exhibit Q
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_Q_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_Q_cover_page.pdf
-  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_Q_source_note.pdf
+  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_Q_source.pdf
 - Exhibit R
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_R_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_exhibit_R_cover_page.pdf
@@ -195,6 +200,7 @@ lean_mode=True
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_authority_exhibit_2_cover_page.pdf
   source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/shared_motion_probate_sanctions_binder_authority_exhibit_2_source.pdf
 ## Supplemental Background Appendix
+- divider: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_divider_page.pdf
 - Exhibit A-1
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_1_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_1_cover_page.pdf
@@ -266,15 +272,15 @@ lean_mode=True
 - Exhibit A-18
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_18_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_18_cover_page.pdf
-  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_18_source_note.pdf
+  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_18_source.pdf
 - Exhibit A-19
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_19_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_19_cover_page.pdf
-  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_19_source_note.pdf
+  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_19_source.pdf
 - Exhibit A-20
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_20_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_20_cover_page.pdf
-  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_20_source_note.pdf
+  source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_A_20_source.pdf
 - Exhibit B-1
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_B_1_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_B_1_cover_page.pdf
@@ -332,6 +338,7 @@ lean_mode=True
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_B_14_cover_page.pdf
   source: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/supplemental_background_appendix_exhibit_B_14_source.pdf
 ## Housing Duty Appendix
+- divider: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/housing_duty_appendix_divider_page.pdf
 - Exhibit C-1
   tab: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/housing_duty_appendix_exhibit_C_1_tab_cover_page.pdf
   cover: /home/barberb/HACC/workspace/evidence_binder_full_build_2026-04-09/generated_pdfs/housing_duty_appendix_exhibit_C_1_cover_page.pdf

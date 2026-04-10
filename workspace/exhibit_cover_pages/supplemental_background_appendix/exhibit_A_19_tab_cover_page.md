@@ -10,16 +10,16 @@
 
 `SHORT TITLE`
 
-`Reserved ChatGPT skill-assessment summary`
+`ChatGPT export assessing endomorphosis`
 
 `SOURCE FILE`
 
-`Reserved: ChatGPT skill-assessment summary`
+`/home/barberb/HACC/evidence/paper documents/what do you think about the skill of the github user _endomorphosis_ - ChatGPT.pdf`
 
 `STATUS`
 
-`Reserved demonstrative`
+`Native exported PDF`
 
 `NOTES`
 
-`Reserved supplemental demonstrative placeholder.`
+`Third-party ChatGPT export preserved in the evidence repository.`

@@ -10,16 +10,16 @@
 
 `SHORT TITLE`
 
-`Reserved Google Search skill-assessment summary`
+`Google Search AI overview assessing endomorphosis`
 
 `SOURCE FILE`
 
-`Reserved: Google Search skill-assessment summary`
+`/home/barberb/HACC/evidence/paper documents/what do you think about the skill of the github user _endomorphosis_ - Google Search.pdf`
 
 `STATUS`
 
-`Reserved demonstrative`
+`Native exported PDF`
 
 `NOTES`
 
-`Reserved supplemental demonstrative placeholder.`
+`Third-party Google Search export preserved in the evidence repository.`
