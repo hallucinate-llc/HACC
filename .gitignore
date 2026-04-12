@@ -32,7 +32,11 @@ research_results/*
 research_results/
 research_results
 *_build_*
+**_build_**
+**_build_**/**.pdf
 workspace/*_build_*
+workspace/**_build_**
+workspace/evidence_binder_full_build_2026-04-09
 workspace2/outputs
 workspace2/outputs/
 workspace2/outputs/*
