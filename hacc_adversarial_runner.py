@@ -1785,6 +1785,41 @@ def run_hacc_adversarial_batch(
     batch_progress_path = output_root / "batch_progress.json"
 
     resolved_provider, resolved_model = _resolve_hacc_runtime_provider_model(provider, model)
+    runtime_bundle = _load_runtime(demo, config_path, backend_id, provider, model)
+    AdversarialHarness = runtime_bundle["AdversarialHarness"]
+    Optimizer = runtime_bundle["Optimizer"]
+
+    harness = AdversarialHarness(
+        llm_backend_complainant=runtime_bundle["complainant_backend"],
+        llm_backend_critic=runtime_bundle["critic_backend"],
+        mediator_factory=runtime_bundle["mediator_factory"],
+        max_parallel=max_parallel,
+        session_state_dir=str(session_dir),
+    )
+
+    results = harness.run_batch(
+        num_sessions=num_sessions,
+        personalities=personalities,
+        max_turns_per_session=max_turns,
+        include_hacc_evidence=True,
+        hacc_count=hacc_count,
+        hacc_preset=hacc_preset,
+        use_hacc_vector_search=use_hacc_vector_search,
+        hacc_search_mode=hacc_search_mode,
+    )
+
+    optimizer = Optimizer()
+    report = optimizer.analyze(results)
+    stats = harness.get_statistics()
+    best_result = _select_best_result(results)
+    recommended_autopatch_targets = _resolve_optimizer_recommended_target_files(optimizer, report)
+    recommended_autopatch_profile = _recommended_autopatch_profile(recommended_autopatch_targets)
+    selected_autopatch_profile = autopatch_profile
+    autopatch_target_paths = _resolve_autopatch_target_files(autopatch_target_files, autopatch_profile)
+    if use_recommended_autopatch_targets and recommended_autopatch_targets:
+        autopatch_target_paths = list(recommended_autopatch_targets)
+        selected_autopatch_profile = recommended_autopatch_profile
+    autopatch_constraints = _autopatch_constraints_for_profile(selected_autopatch_profile, autopatch_target_paths)
 
     run_results_path = output_root / "adversarial_results.json"
     optimization_report_path = output_root / "optimization_report.json"

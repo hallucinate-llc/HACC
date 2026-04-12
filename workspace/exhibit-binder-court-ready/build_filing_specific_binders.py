@@ -1,41 +1,50 @@
+#!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
+import sys
 from pathlib import Path
-import subprocess
 
 
-ROOT = Path("/home/barberb/HACC/workspace/exhibit-binder-court-ready")
-COMPILED = ROOT / "compiled"
-FRONT = COMPILED / "0000_Exhibit_Binder_Front_Sheet.pdf"
-TABLE = COMPILED / "0001_Table_Of_Exhibits.pdf"
+ROOT = Path("/home/barberb/HACC")
+PACKAGE_ROOT = ROOT / "complaint-generator" / "ipfs_datasets_py"
+
+if str(PACKAGE_ROOT) not in sys.path:
+    sys.path.insert(0, str(PACKAGE_ROOT))
+
+from ipfs_datasets_py.processors.legal_data import (
+    build_default_filing_specific_binders,
+    build_filing_specific_binders_from_config,
+)
 
 
-SETS = {
-    "Eviction_Set": ["B", "G", "V", "Y", "Z", "AA", "M", "O", "P", "W", "X"],
-    "Joinder_Set": ["G", "V", "Y", "Z", "AA"],
-    "Show_Cause_Set": ["G", "T", "V", "Y", "Z", "AA"],
-    "Benjamin_Declaration_Set": ["C", "D", "E", "G", "H", "T", "R", "V", "W", "X", "M", "O", "P"],
-    "Jane_Declaration_Set": ["C", "D", "E", "H", "V", "W", "X", "M", "O", "P"],
-}
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Build default filing-specific exhibit binders from compiled exhibit packets."
+    )
+    parser.add_argument(
+        "--config-path",
+        default="",
+        help="Optional JSON config path for reusable filing-specific binder sets.",
+    )
+    return parser.parse_args(argv)
 
 
-def merge_pdfs(output: Path, inputs: list[Path]) -> None:
-    cmd = [
-        "pdfunite",
-        *[str(p) for p in inputs],
-        str(output),
-    ]
-    subprocess.run(cmd, check=True)
-
-
-def main() -> None:
-    for name, exhibits in SETS.items():
-        inputs = [FRONT, TABLE]
-        inputs.extend(COMPILED / f"Exhibit_{ex}_packet.pdf" for ex in exhibits)
-        output = COMPILED / f"{name}.pdf"
-        merge_pdfs(output, inputs)
-        print(output)
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    if args.config_path:
+        if build_filing_specific_binders_from_config is None:
+            raise RuntimeError("config-driven filing-specific binder builder is unavailable in this environment")
+        payload = build_filing_specific_binders_from_config(args.config_path)
+        for path in payload["output_paths"]:
+            print(path)
+        return 0
+    if build_default_filing_specific_binders is None:
+        raise RuntimeError("filing-specific binder builder is unavailable in this environment")
+    for path in build_default_filing_specific_binders():
+        print(path)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

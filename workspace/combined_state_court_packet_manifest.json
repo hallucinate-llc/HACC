@@ -1,0 +1,42 @@
+{
+  "$schema": "../complaint-generator/ipfs_datasets_py/docs/schemas/legal_pdf/state_court_filing_packet_manifest.schema.json",
+  "documents": [
+    "combined_state_court_packet_cover_sheet.md",
+    "court_ready_packet_index.md",
+    "filing_specific_exhibit_schedule.md",
+    "court_facing_exhibit_reference_sheet.md",
+    "response_to_eviction_motion_and_cross_motion_for_injunctive_relief.md",
+    "memorandum_in_support_of_response_to_eviction_and_cross_motion.md",
+    "polished_motion_for_joinder_quantum.md",
+    "polished_memorandum_in_support_of_joinder_quantum.md",
+    "motion_to_show_cause_quantum_application_nonprocessing.md",
+    "memorandum_in_support_of_motion_to_show_cause_quantum_application_nonprocessing.md",
+    "proposed_order_on_eviction_response_and_interim_relief.md",
+    "proposed_order_on_motion_for_joinder_quantum.md",
+    "proposed_order_to_show_cause_quantum_application_nonprocessing.md",
+    "declaration_of_benjamin_barber_in_support_of_preliminary_injunction.md",
+    "declaration_of_jane_cortez_in_support_of_preliminary_injunction.md",
+    "certificate_of_service_combined_state_court_packet.md",
+    "certificate_of_service_quantum_joinder_and_show_cause_packet.md"
+  ],
+  "output_dir": "pdf-filings-court-ready",
+  "packet_output_path": "pdf-filings-court-ready/combined_state_court_packet.pdf",
+  "config": {
+    "contact_block_html": "Benjamin Jay Barber, pro se<br/>Jane Kay Cortez, pro se<br/>10043 SE 32nd Ave<br/>Milwaukie, OR 97222<br/>971-270-0855<br/>starworks5@gmail.com<br/>Defendants",
+    "court_name": "IN THE CLACKAMAS COUNTY JUSTICE COURT",
+    "state_name": "STATE OF OREGON",
+    "caption_left_html": "HOUSING AUTHORITY OF CLACKAMAS COUNTY,<br/>Plaintiff,<br/><br/>v.<br/><br/>BENJAMIN JAY BARBER and JANE KAY CORTEZ,<br/>Defendants.",
+    "case_number_line": "Case No. __________________",
+    "filed_date": "April 6, 2026",
+    "signature_doc_keywords": [
+      "motion",
+      "memorandum",
+      "response_to_eviction",
+      "certificate_of_service"
+    ],
+    "declaration_doc_keywords": [
+      "declaration_of_benjamin_barber_in_support",
+      "declaration_of_jane_cortez_in_support"
+    ]
+  }
+}
