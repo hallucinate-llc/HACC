@@ -1,0 +1,127 @@
+{
+  "$schema": "../complaint-generator/ipfs_datasets_py/docs/schemas/legal_pdf/full_evidence_binder_manifest.schema.json",
+  "submitted_by": "Benjamin Barber, Pro Se",
+  "exhibit_covers_root": "exhibit_cover_pages",
+  "working_dir": "evidence_binder_full_build_2026-04-09",
+  "generated_dir": "evidence_binder_full_build_2026-04-09/generated_pdfs",
+  "build_manifest_output": "evidence_binder_full_build_2026-04-09/manifest.txt",
+  "output_pdf": "evidence_binder_full_2026-04-09.pdf",
+  "lean_output_pdf": "evidence_binder_full_lean_2026-04-09.pdf",
+  "index_pdf": "evidence_binder_exhibit_and_cover_sheet_index_court_ready_2026-04-09.pdf",
+  "index_command": [
+    "python3",
+    "build_court_ready_binder_index_2026-04-09.py"
+  ],
+  "families": [
+    {
+      "name": "Shared Housing / State-Court Binder",
+      "cover_dirs": ["core_housing", "secondary_housing", "final_housing"],
+      "labels": ["Exhibit B", "Exhibit C", "Exhibit D", "Exhibit E", "Exhibit G", "Exhibit H", "Exhibit M", "Exhibit O", "Exhibit P", "Exhibit R", "Exhibit T", "Exhibit V", "Exhibit W", "Exhibit X", "Exhibit Y", "Exhibit Z", "Exhibit AA"],
+      "output_pdf": "evidence_binder_shared_housing_state_court_2026-04-09.pdf",
+      "lean_output_pdf": "evidence_binder_shared_housing_state_court_lean_2026-04-09.pdf"
+    },
+    {
+      "name": "Shared Motion / Probate / Sanctions Binder",
+      "cover_dirs": ["shared_motion_probate_batch1", "shared_motion_probate_batch2", "shared_motion_probate_batch3", "shared_motion_probate_batch4", "shared_motion_probate_batch5"],
+      "labels": ["Exhibit A", "Exhibit B", "Exhibit C", "Exhibit D", "Exhibit E", "Exhibit F", "Exhibit G", "Exhibit H", "Exhibit I", "Exhibit J", "Exhibit K", "Exhibit L", "Exhibit M", "Exhibit N", "Exhibit O", "Exhibit P", "Exhibit Q", "Exhibit R", "Exhibit S", "Exhibit T", "Exhibit U", "Exhibit V", "Exhibit W", "Exhibit X", "Exhibit Y", "Exhibit Z", "Exhibit AA", "Exhibit AB", "Exhibit AC", "Authority Exhibit 1", "Authority Exhibit 2"],
+      "output_pdf": "evidence_binder_shared_motion_probate_sanctions_2026-04-09.pdf",
+      "lean_output_pdf": "evidence_binder_shared_motion_probate_sanctions_lean_2026-04-09.pdf"
+    },
+    {
+      "name": "Supplemental Background Appendix",
+      "cover_dirs": ["supplemental_background_appendix"],
+      "labels": ["Exhibit A-1", "Exhibit A-2", "Exhibit A-3", "Exhibit A-4", "Exhibit A-5", "Exhibit A-6", "Exhibit A-7", "Exhibit A-8", "Exhibit A-9", "Exhibit A-10", "Exhibit A-11", "Exhibit A-12", "Exhibit A-13", "Exhibit A-14", "Exhibit A-15", "Exhibit A-16", "Exhibit A-17", "Exhibit A-18", "Exhibit A-19", "Exhibit A-20", "Exhibit B-1", "Exhibit B-2", "Exhibit B-3", "Exhibit B-4", "Exhibit B-5", "Exhibit B-6", "Exhibit B-7", "Exhibit B-8", "Exhibit B-9", "Exhibit B-10", "Exhibit B-11", "Exhibit B-12", "Exhibit B-13", "Exhibit B-14"],
+      "output_pdf": "evidence_binder_supplemental_background_appendix_2026-04-09.pdf",
+      "lean_output_pdf": "evidence_binder_supplemental_background_appendix_lean_2026-04-09.pdf"
+    },
+    {
+      "name": "Housing Duty Appendix",
+      "cover_dirs": ["housing_duty_appendix"],
+      "labels": ["Exhibit C-1", "Exhibit C-2", "Exhibit C-3", "Exhibit C-4", "Exhibit C-5", "Exhibit C-6", "Exhibit C-7"],
+      "output_pdf": "evidence_binder_housing_duty_appendix_2026-04-09.pdf",
+      "lean_output_pdf": "evidence_binder_housing_duty_appendix_lean_2026-04-09.pdf"
+    }
+  ],
+  "lean_replacements": [
+    {
+      "family": "Shared Motion / Probate / Sanctions Binder",
+      "label": "Exhibit D",
+      "lines": [
+        "Lean binder replacement page.",
+        "",
+        "This exhibit uses the same underlying November 17 Solomon text source already incorporated in the Shared Motion / Probate / Sanctions Binder at Exhibit C.",
+        "",
+        "Use Exhibit D cover page for the distinct proposition:",
+        "The communication supports threshold notice and awareness arguments tied to Jane's asserted trust and authority situation.",
+        "",
+        "Incorporated by reference from:",
+        "Shared Motion / Probate / Sanctions Binder - Exhibit C",
+        "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660753_Mon--17-Nov-2025-22-59-36--0000_New-text-message-from-solomon--503--381-6911.eml"
+      ]
+    },
+    {
+      "family": "Shared Housing / State-Court Binder",
+      "label": "Exhibit X",
+      "lines": [
+        "Lean binder replacement page.",
+        "",
+        "This exhibit uses the same underlying JC Household chain already incorporated in the Shared Housing / State-Court Binder at Exhibit V.",
+        "",
+        "Use Exhibit X cover page for the distinct proposition:",
+        "The Waterleaf / port-out route was active and known to HACC across the January sequence.",
+        "",
+        "Incorporated by reference from:",
+        "Shared Housing / State-Court Binder - Exhibit V",
+        "/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml"
+      ]
+    },
+    {
+      "family": "Shared Housing / State-Court Binder",
+      "label": "Exhibit AA",
+      "lines": [
+        "Lean binder replacement page.",
+        "",
+        "This exhibit uses the same underlying JC Household chain already incorporated in the Shared Housing / State-Court Binder at Exhibit V.",
+        "",
+        "Use Exhibit AA cover page for the distinct proposition:",
+        "The March 26 three-option framework and April 30 completion demand remained active.",
+        "",
+        "Incorporated by reference from:",
+        "Shared Housing / State-Court Binder - Exhibit V",
+        "/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml"
+      ]
+    },
+    {
+      "family": "Shared Motion / Probate / Sanctions Binder",
+      "label": "Exhibit W",
+      "lines": [
+        "Lean binder replacement page.",
+        "",
+        "This exhibit uses the same underlying JC Household chain already incorporated in the Shared Housing / State-Court Binder at Exhibit V.",
+        "",
+        "Use Exhibit W cover page for the distinct proposition:",
+        "The earlier same-day household-member statement materially differed from the later January 12 removal-side position.",
+        "",
+        "Incorporated by reference from:",
+        "Shared Housing / State-Court Binder - Exhibit V",
+        "/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml"
+      ]
+    },
+    {
+      "family": "Supplemental Background Appendix",
+      "label": "Exhibit B-1",
+      "lines": [
+        "Lean binder replacement page.",
+        "",
+        "This exhibit uses the same Waterleaf application artifact already incorporated in the Shared Housing / State-Court Binder at Exhibit W.",
+        "",
+        "Use Exhibit B-1 cover page for the distinct proposition:",
+        "The Waterleaf relocation and backup-plan route existed.",
+        "",
+        "Incorporated by reference from:",
+        "Shared Housing / State-Court Binder - Exhibit W",
+        "/home/barberb/HACC/evidence/history/waterleaf_application.png"
+      ]
+    }
+  ]
+}
