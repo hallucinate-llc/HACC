@@ -31,3 +31,15 @@ research_results/grounded_runs/*
 research_results/*
 research_results/
 research_results
+workspace2/outputs
+workspace2/outputs/
+workspace2/outputs/*
+tmp_live_bundle_test/
+tmp_live_roundtrip_test/
+tmp_live_roundtrip_final/
+tmp_live_roundtrip_token_*
+workspace2/outputs/live_in_aide_case_memorandum/memorandum_of_law.pdf
+workspace2/outputs/live_in_aide_case_undue_burden_001_package/memorandum_of_law.pdf
+workspace2/outputs/live_in_aide_case_no_violation_001_package/memorandum_of_law.pdf
+workspace2/outputs/live_in_aide_case_001_package/memorandum_of_law.pdf
+workspace2/outputs/live_in_aide_case_effective_accommodation_001_package/memorandum_of_law.pdf
