@@ -28,7 +28,7 @@ import numpy as np
 
 _DEFAULT_INDEX = os.path.join(
     os.path.dirname(__file__),
-    "research_results", "history_index_v8",
+    "research_results", "history_index",
 )
 
 

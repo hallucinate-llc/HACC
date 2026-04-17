@@ -126,7 +126,7 @@ def _extract_image_text_ocr(path: Path) -> str:
         return ""
 
 
-_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".tiff", ".tif", ".bmp", ".gif", ".webp"}
+_IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".tiff", ".tif", ".bmp", ".gif", ".webp", ".heic", ".heif"}
 _TEXT_SUFFIXES  = {".txt", ".md", ".rst", ".csv", ".json", ".xml", ".html", ".htm",
                    ".log", ".py", ".js", ".ts", ".yaml", ".yml", ".toml"}
 
@@ -639,6 +639,10 @@ def _process_single_file(
             text = clean
             using_clean_text = True
             chunks = []  # will rebuild below
+        else:
+            # Both extraction methods failed — skip to avoid indexing binary noise
+            text = ""
+            chunks = []
 
     document_row = {
         "doc_id": doc_id,
