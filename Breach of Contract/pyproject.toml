@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hacc-section1981-analysis"
+version = "0.1.0"
+description = "Formal analysis artifacts for the HACC 42 USC 1981 supportive-services record."
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4.0",
+]
+
+[tool.setuptools.packages.find]
+include = [
+  "formal_logic",
+  "formal_logic.*",
+]
