@@ -21,6 +21,7 @@ The current record, as presently described, is:
 - The tenant's doctor supported a two-bedroom accommodation.
 - The housing authority has taken the position that a one-bedroom unit is sufficient.
 - In a one-bedroom unit, the live-in aide would be forced to sleep in the living room rather than in a separate bedroom.
+- HACC's denial letter expressly states that one member of the household can use the bedroom and the second member can use the living room for sleep.
 - The live-in aide also works remotely and uses work equipment including a standing desk, chair, printers, and storage.
 - The household includes a dog that may bark or become agitated when people knock, visit, or perform work in the unit.
 - When the dog is alerting, the mother's bedroom should not have to function as the overflow containment room.
@@ -78,6 +79,10 @@ This privacy point is especially strong where:
 
 The legal inference is that privacy here is part of equal use and enjoyment and part of whether the accommodation works in reality.
 
+There is also an Oregon-specific privacy overlay that counsel may want to evaluate. HACC's stated position that the second household member can sleep in the living room does not merely reduce comfort. It forces intimate adult life out of a bedroom and into a common area visible to another household member. That matters under ORS 163.467 because Oregon's private-indecency statute applies to exposure in a place where another person has a reasonable expectation of privacy, including a residence, when the remaining statutory elements are met. The point is not that the current record already proves a criminal violation. The point is that a state housing authority should not force a living arrangement that creates avoidable risk of exposure, accusation, or conflict under a criminal privacy statute by eliminating ordinary bedroom privacy.
+
+The Oregon constitutional cases make the same privacy concern more concrete. Campbell states that a privacy interest under Article I, section 9 is an interest in freedom from particular forms of scrutiny and asks whether the government's conduct, if left wholly to its own discretion, will significantly impair the people's freedom from scrutiny. State v. Campbell, 306 Or 157, 170-71 (1988). Lien/Wilverding then restates that Oregon privacy is not defined by private property or contractual rights, although those rights may inform the analysis, and again ties Article I, section 9 to freedom from government scrutiny. State v. Lien/Wilverding, 364 Or 750, 760 (2019). Simons is the newest reaffirmation of that same framework and is useful because it rejects the idea that privacy necessarily disappears just because the arrangement includes terms, conditions, or reduced formal control. State v. Simons, 375 Or 70, 80-81 (2026). Those cases do not directly decide the housing-accommodation issue here, but they reinforce the broader Oregon privacy concern with government-imposed arrangements that force private life into unnecessary exposure.
+
 ### D. The dog and visitor-management facts help show why one bedroom fails in practice
 
 The dog facts should not be framed as a separate claim to extra space for a pet. They are better used as practical proof that a one-bedroom layout does not work. If the dog barks when someone knocks, visits, or performs work in the unit, a one-bedroom layout leaves the household with no workable separation. If the dog cannot remain in the shared space, the pressure falls on the mother's bedroom. That is precisely the sort of spillover that shows the one-bedroom arrangement is not genuinely usable.
@@ -130,6 +135,7 @@ The tenant requests a two-bedroom unit as a reasonable accommodation under Secti
 - Whether there are administrative-plan provisions, occupancy standards, or subsidy-size standards that need to be addressed directly.
 - Whether the dog is a pet, service animal, or assistance animal.
 - Whether the mother currently uses a scooter or other mobility device and what documentation exists.
+- Whether Oregon privacy theories should be pled or reserved, including the relevance of ORS 163.467 and Article I, section 9 to a state-created living-room sleeping arrangement.
 - Whether state-law claims, Fair Housing Act claims, ADA Title II claims, or local administrative claims should be joined with the Section 504 claim.
 
 ## Bottom Line
@@ -144,3 +150,7 @@ For attorney-review purposes, the case can be framed cleanly: the doctor support
 - 24 C.F.R. § 982.316: <https://www.law.cornell.edu/cfr/text/24/982.316>
 - 24 C.F.R. § 5.403: <https://www.law.cornell.edu/cfr/text/24/5.403>
 - HUD Programs of HUD 2025 summary of Section 504 obligations: <https://www.hud.gov/sites/dfiles/Main/documents/HUDPrograms2025.pdf>
+- ORS 163.467: <https://oregon.public.law/statutes/ors_163.467>
+- State v. Campbell, 306 Or 157 (1988): <https://law.justia.com/cases/oregon/supreme-court/1988/306-or-157.html>
+- State v. Lien/Wilverding, 364 Or 750 (2019): <https://law.justia.com/cases/oregon/supreme-court/2018/s064826.html>
+- State v. Simons, 375 Or 70 (2026): <https://law.justia.com/cases/oregon/supreme-court/2026/s070787.html>

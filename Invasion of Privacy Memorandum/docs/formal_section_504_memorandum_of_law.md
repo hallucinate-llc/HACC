@@ -45,7 +45,7 @@ That thread reflects that:
 
 This record matters because it shows that the two-bedroom issue was concrete, current, and expressly recognized by HACC as an accommodation question. It also supports the broader argument that the one-bedroom position was not simply a neutral bedroom-size assignment, but part of an accommodation dispute in which HACC knew the household was actively seeking a two-bedroom reasonable accommodation.
 
-Saved litigation materials in the workspace also preserve a related point: after denying the requested two-bedroom voucher increase, HACC staff apparently indicated that the household might still use the one-bedroom voucher for a two-bedroom ground-floor unit if the rent fell within the applicable affordability range. Even if that statement is ultimately presented through a supporting summary or exhibit rather than as a direct quote from the presently recovered email text, it materially supports the position that HACC itself recognized the difference between formal voucher size and the practical need to secure a physically workable two-bedroom configuration.
+The present packet now also includes direct record support for a related point: in HACC's March 26, 2026 denial letter, HACC stated that the voucher size did not determine who within the household would share a bedroom or sleeping room, stated that one household member could use the bedroom while the second member could use the living room for sleep, and then stated that the household could still use the one-bedroom voucher for a two-bedroom ground-floor unit if the rent fell within the applicable affordability range. That language materially supports the position that HACC itself recognized the difference between formal voucher size and the practical need to secure a physically workable two-bedroom configuration.
 
 ## Record Evidence of Physician-Supported Two-Bedroom Request
 
@@ -140,6 +140,10 @@ This point is especially important here because:
 
 For Section 504 purposes, privacy in this setting is not merely aesthetic or preferential. It is part of whether the dwelling remains usable and whether the accommodation affords equal use and enjoyment in practice.
 
+There is also a narrower Oregon privacy point that counsel may wish to evaluate. HACC's stated position that one household member can use the bedroom and the second member can use the living room for sleep does not merely reduce comfort. It forces intimate adult life and bodily privacy out of a bedroom and into a common space visible to another household member. That matters under ORS 163.467 because Oregon's private-indecency statute applies to exposure in a place where another person has a reasonable expectation of privacy, including a residence, when the remaining statutory elements are met. The point is not that the present record independently proves every element of a criminal offense. The point is that a state housing authority should not force a living arrangement that creates avoidable risk of exposure, accusation, or conflict under a criminal privacy statute by eliminating ordinary bedroom privacy.
+
+The same facts also fit within the broader Oregon constitutional concern with government-imposed scrutiny of private life. Campbell holds that a privacy interest under Article I, section 9 is an interest in freedom from particular forms of scrutiny and asks whether the government's practice, if engaged in wholly at the discretion of the government, will significantly impair the people's freedom from scrutiny. State v. Campbell, 306 Or 157, 170-71 (1988). Lien/Wilverding then makes explicit that the privacy protected by Article I, section 9 is not defined by private property or contractual rights, although those rights may inform the analysis. State v. Lien/Wilverding, 364 Or 750, 760 (2019). Simons recently reaffirmed that same framework in a modern setting involving long-term digital monitoring and contractual terms of service. State v. Simons, 375 Or 70, 80-81 (2026). Those cases do not themselves decide a housing-accommodation dispute, but they reinforce the argument that a government housing authority's insistence on living-room sleeping for the aide has a genuine privacy dimension under Oregon law, not merely a convenience dimension.
+
 ### IV. The dog and visitor-management facts demonstrate why one bedroom fails in practice.
 
 The dog facts should be used as practical evidence, not as a stand-alone claim to additional space for a pet. If the dog barks or becomes agitated when someone knocks, visits, or performs work in the unit, the household needs a workable way to create temporary separation. In a one-bedroom unit, that burden falls on the mother's bedroom or on the already overburdened common space. That is a concrete example of why the one-bedroom arrangement does not function.
@@ -227,9 +231,9 @@ The point of Exhibit A is not that the household seeks extra space for convenien
 
 Exhibit A supports the conclusion that privacy is not incidental to the accommodation request. Privacy is one of the concrete functional interests that a two-bedroom unit protects and a one-bedroom unit destroys.
 
-## Exhibit B: Reasonable Accommodation Record Reflecting Two-Bedroom Request
+## Exhibit B: Doctor Verification And Reasonable Accommodation Form Reflecting Two-Bedroom Request
 
-The memorandum also relies on the filled reasonable-accommodation verification form as record support for the proposition that the second-bedroom request was medically supported.
+The memorandum also relies on the doctor's verification letter and the filled reasonable-accommodation form as record support for the proposition that the second-bedroom request was medically supported.
 
 ### Record Summary
 
@@ -237,7 +241,7 @@ The filled "Verification of Disability for Reasonable Accommodation Request" for
 
 ### Why This Record Matters
 
-This document materially strengthens the memorandum because it shows that the two-bedroom request did not arise only from later advocacy framing. Instead, the reasonable-accommodation record itself appears to reflect a medically supported request for a two-bedroom unit. That is important to the Section 504 analysis because it confirms that the requested bedroom configuration was tied to disability-related need and medical verification.
+This exhibit materially strengthens the memorandum because it shows that the two-bedroom request did not arise only from later advocacy framing. Instead, the doctor's verification and reasonable-accommodation record itself appear to reflect a medically supported request for a two-bedroom unit. That is important to the Section 504 analysis because it confirms that the requested bedroom configuration was tied to disability-related need and medical verification.
 
 ## Exhibit C: Preserved Record Support That Staff Indicated A Two-Bedroom Ground-Floor Unit Might Still Be Used With The One-Bedroom Voucher If Affordable
 
@@ -245,9 +249,9 @@ The memorandum also relies on a preserved workspace summary reflecting a narrowe
 
 ### Record Summary
 
-Saved litigation materials in the workspace preserve that, after denying the requested two-bedroom voucher increase, HACC staff apparently indicated that the household might still use the one-bedroom voucher for a two-bedroom ground-floor unit if the rent fell within the applicable affordability range.
+The packet now includes HACC's March 26, 2026 denial letter directly stating that the household could use the one-bedroom voucher for a two-bedroom ground-floor unit within the applicable affordability range.
 
-The clearest currently preserved version of that point appears in the workspace summary file stating that, on March 26, 2026, HACC denied the requested two-bedroom increase but stated that plaintiffs could use the one-bedroom voucher for a two-bedroom ground-floor unit within the affordability range. At present, this point is preserved most clearly through the saved litigation summary rather than through a directly quoted primary email sentence recovered in the current packet.
+That same letter also states that the voucher size does not determine who within the household will share a bedroom or sleeping room and gives, as HACC's example, that one member of the household can use the bedroom while the second member can use the living room for sleep. That direct language is significant because it shows HACC was not merely applying a mechanical occupancy rule. HACC was expressly proposing a living-room sleeping arrangement as its answer to the household's privacy and accommodation concerns.
 
 ### Why This Record Matters
 
@@ -271,3 +275,7 @@ That distinction helps counsel argue that the dispute is not merely semantic or 
 - Wren v. City of Cherryvale, No. 22-1180-JWB (D. Kan. Aug. 30, 2022): <https://ecf.ksd.uscourts.gov/cgi-bin/show_public_doc?2022cv1180-15=>
 - Huynh v. Sanchez, No. 14-cv-02367-LHK (N.D. Cal. Sept. 2, 2014): <https://www.govinfo.gov/content/pkg/USCOURTS-cand-5_14-cv-02367/pdf/USCOURTS-cand-5_14-cv-02367-0.pdf>
 - Binns v. City of Marietta, No. 16-14924 (11th Cir. Aug. 3, 2017): <https://media.ca11.uscourts.gov/opinions/unpub/files/201614924.pdf>
+- ORS 163.467: <https://oregon.public.law/statutes/ors_163.467>
+- State v. Campbell, 306 Or 157 (1988): <https://law.justia.com/cases/oregon/supreme-court/1988/306-or-157.html>
+- State v. Lien/Wilverding, 364 Or 750 (2019): <https://law.justia.com/cases/oregon/supreme-court/2018/s064826.html>
+- State v. Simons, 375 Or 70 (2026): <https://law.justia.com/cases/oregon/supreme-court/2026/s070787.html>
