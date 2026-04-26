@@ -1,0 +1,49 @@
+{
+  "corpus_quality": {
+    "corpus_key": "municipal_laws",
+    "identified_row_count": 415,
+    "identified_row_ratio": 1.0,
+    "issues": [],
+    "navigation_like_ratio": 0.1108433734939759,
+    "navigation_like_row_count": 46,
+    "row_count": 415,
+    "sample_rows": [
+      {
+        "classification": "navigation_like",
+        "identifier": "Buncombe, N.C., County Code, \u00a710-164 (1998)",
+        "source_id": "bafkreierwnp4xvwp7eqzfitou6swwlj4jvs5ko4bsiadmuurabdr3tnz3u",
+        "title": "Sec. 10-164. - Enforcement"
+      },
+      {
+        "classification": "navigation_like",
+        "identifier": "Buncombe, N.C., County Code, \u00a714-122 (1999)",
+        "source_id": "bafkreidwcux6vuylqain65lodi3q3c2gt4wfx7sypwxm3yd2mkymbdriw4",
+        "title": "Sec. 14-122. - Definitions"
+      },
+      {
+        "classification": "navigation_like",
+        "identifier": "Buncombe, N.C., County Code, \u00a722-27 (2014)",
+        "source_id": "bafkreicqacl4frb42ulmus24mfejcwv3cxahfiuseudk4tyafd6m2cbh3y",
+        "title": "Sec. 22-27. - Enforcement"
+      },
+      {
+        "classification": "navigation_like",
+        "identifier": "Buncombe, N.C., County Code, \u00a722-43 (2014)",
+        "source_id": "bafkreigjn4f3ynjbvoppf2oyoe7meq2n6zujkqs4bi3dwxpcqptwwvzmhe",
+        "title": "Sec. 22-43. - Granting"
+      },
+      {
+        "classification": "navigation_like",
+        "identifier": "Buncombe, N.C., County Code, \u00a730-49 (2023)",
+        "source_id": "bafkreibiu4a33nxtgxjyz2htkueqfzogseanvhx7sxminewmm2ttswiyya",
+        "title": "Sec. 30-49. - Control and prohibition of open burning"
+      }
+    ],
+    "section_like_identifier_count": 415,
+    "section_like_identifier_ratio": 1.0,
+    "status": "healthy"
+  },
+  "document_count": 415,
+  "entity_count": 1797,
+  "relationship_count": 1381
+}
