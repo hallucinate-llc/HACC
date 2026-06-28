@@ -4,6 +4,7 @@ research_env
 research_venv
 .venv-validation
 .venv-validation/*
+*test-reports*
 __pycache__/
 .venv/
 .venv*
@@ -59,3 +60,4 @@ workspace/evidence_binder_supplemental_background_appendix_lean_2026-04-09.pdf
 workspace/exhibit-binder-court-ready/exhibit_binder_manifest.json
 workspace/municipal_laws_full_rebuild/
 data/common_crawl_indexes/state/0000.parquet
+evidence/Harassment .mp4
